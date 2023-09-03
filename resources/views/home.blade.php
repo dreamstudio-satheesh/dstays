@@ -17,6 +17,7 @@
                 defaultView: 'dayGridMonth',
                 events: '/get-bookings', // API Endpoint to get booking events
                 selectable: true,
+                selectLongPressDelay: 500,
                 select: function(info) {
                     // Here, you can show the modal
                     console.log('Date range selected');
@@ -39,9 +40,6 @@
                         alert("The selected date range is already booked.");
                     }
 
-                },
-                eventRender: function(event, element) {
-                    $(element).addTouch();
                 }
             });
             calendar.render();
