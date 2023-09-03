@@ -35,11 +35,13 @@
                         $('#bookingModal').modal('show');
                         // Optionally, you can populate the modal fields based on the selection
                         $('#start_date').val(info.startStr);
-                        console.log(info.startStr);
-                        const dateString = info.endStr;
-                        const [, , day] = dateString.split("-");
+                        var startdate= info.endStr;
+                        var enddate= info.endStr;
+                        var [, , startday] = startdate.split("-");
+                        var [, , endday] = enddate.split("-");
 
-                        console.log(`Day: ${day}`);
+                        console.log(`Day: ${startday}`);
+                        console.log(`end Day: ${endday}`);
                         $('#end_date').val(info.endStr);
                     } else {
                         alert("The selected date range is already booked.");
