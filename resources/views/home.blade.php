@@ -55,7 +55,7 @@
 
                     // Refresh the calendar or add the event directly
                     // Option 1: Reload the full calendar
-                     calendar.refetchEvents();
+                    calendar.refetchEvents();
 
                     // Option 2: Add the event directly (no need for another server request)
                     /* calendar.addEvent({
