@@ -111,10 +111,10 @@
             <div class="col-lg-12">
                 <div class="card card-default">
                     <div class="card-header justify-content-between card-header-border-bottom">
-                        <select class="form-control"  onchange="if (this.value) window.location.href=this.value" >
+                        <select class="form-control"  onchange="if (this.value) window.location=this.value" >
                             <option value="">Select</option>
                             @foreach ($properties as $property)
-                                <option value="home/{{ $property->id }}">{{ $property->name }}</option>
+                                <option value="{{ url('home/') }}{{ $property->id }}">{{ $property->name }}</option>
                             @endforeach
                         </select>
                     </div>
