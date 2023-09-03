@@ -14,6 +14,13 @@
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 plugins: ['dayGrid', 'interaction'],
+
+                titleFormat: { // will produce something like "Tuesday, September 18, 2018"
+                    month: 'short',
+                    year: 'numeric',
+                    day: 'numeric'
+                }
+
                 defaultView: 'dayGridMonth',
                 events: "/get-bookings/{{ $id }}", // API Endpoint to get booking events
                 selectable: true,
@@ -111,10 +118,11 @@
             <div class="col-lg-12">
                 <div class="card card-default">
                     <div class="card-header justify-content-between card-header-border-bottom">
-                        <select class="form-control"  onchange="if (this.value) window.location=this.value" >
+                        <select class="form-control" onchange="if (this.value) window.location=this.value">
                             <option value="">Select</option>
                             @foreach ($properties as $property)
-                                <option value="{{ url('home') }}/{{ $property->id }}"  {{ $property->id == $id ? 'selected' : '' }} >{{ $property->name }}</option>
+                                <option value="{{ url('home') }}/{{ $property->id }}"
+                                    {{ $property->id == $id ? 'selected' : '' }}>{{ $property->name }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -163,7 +171,7 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                   {{--  <div class="form-group">
+                                    {{--  <div class="form-group">
                                         <label for="property_id">Property</label>
                                         <select class="form-control" id="property_id">
                                             @foreach ($properties as $property)
