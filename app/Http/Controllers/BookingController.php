@@ -34,7 +34,7 @@ class BookingController extends Controller
     public function storeBooking(Request $request)
     {
        
-        return response()->json($request->all());
+        //return response()->json($request->all());
         $startDate = $request->input('start_date');
         $endDate = $request->input('end_date');
         $customerId = $request->input('customer_id'); 
