@@ -1,13 +1,13 @@
 @extends('layouts.admin')
 
 @push('css')
-    <link href="assets/plugins/fullcalendar/core-4.3.1/main.min.css" rel="stylesheet">
-    <link href="assets/plugins/fullcalendar/daygrid-4.3.0/main.min.css" rel="stylesheet">
+    <link href="{{ url('') }}/assets/plugins/fullcalendar/core-4.3.1/main.min.css" rel="stylesheet">
+    <link href="{{ url('') }}/assets/plugins/fullcalendar/daygrid-4.3.0/main.min.css" rel="stylesheet">
 @endpush
 @push('scripts')
-    <script src='assets/plugins/fullcalendar/core-4.3.1/main.min.js'></script>
-    <script src='assets/plugins/fullcalendar/daygrid-4.3.0/main.min.js'></script>
-    <script src='assets/plugins/fullcalendar/interaction/main.js'></script>
+    <script src="{{ url('') }}/assets/plugins/fullcalendar/core-4.3.1/main.min.js"></script>
+    <script src="{{ url('') }}/assets/plugins/fullcalendar/daygrid-4.3.0/main.min.js"></script>
+    <script src="{{ url('') }}/assets/plugins/fullcalendar/interaction/main.js"></script>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
