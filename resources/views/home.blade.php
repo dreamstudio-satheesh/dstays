@@ -181,7 +181,7 @@
                                     <input type="hidden" name="property_id" value="{{ $id }}">
 
                                     <div class="form-group">
-                                        <label for="customername-field" class="form-label">No Of people</label>
+                                        <label  class="form-label">No Of people</label>
                                         <input type="number" name="number_of_people" class="form-control"
                                             placeholder="No Of People">
 
@@ -189,7 +189,7 @@
 
 
                                     <div class="form-group">
-                                        <label for="customername-field" class="form-label">Advance Payment</label>
+                                        <label  class="form-label">Advance Payment</label>
                                         <input type="text" name="advance_payment" class="form-control"
                                             placeholder="Advance">
 
