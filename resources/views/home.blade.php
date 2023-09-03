@@ -44,7 +44,7 @@
                         // Convert the modified Date object back to a string in Y-m-d format
                         var end_date = startDateObj.toISOString().split('T')[0];
 
-                        if (info.endStr === end_date) {
+                        if (info.startStr === end_date) {
                             $('#end_date').val(info.endStr);
                         } else {
                             $('#end_date').val(end_date);
