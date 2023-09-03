@@ -10,10 +10,6 @@
                 <div class="card card-default">
                     <div class="card-header card-header-border-bottom d-flex justify-content-between">
                         <h2>Bookings</h2>
-
-                        <a  href="{{ url('bookings/create') }}"  class="btn btn-outline-primary">
-                            <i class=" mdi mdi-plus"></i> Create
-                        </a>
                     </div>
 
                     <div class="card-body">
