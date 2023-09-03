@@ -34,7 +34,7 @@
                     if (!overlap) {
                         $('#bookingModal').modal('show');
                         // Optionally, you can populate the modal fields based on the selection
-                        
+
                         var start_date = info.startStr;
                         var end_date = info.endStr;
 
@@ -51,7 +51,7 @@
                         // Check if end_date is greater than start_date by at least two days
                         if (dayDifference > 2) {
                             // Move end_date one day back
-                            endDateObj.setDate(endDateObj.getDate() - 1);
+                            endDateObj.setDate(endDateObj.getDate() - 2);
 
                             // Convert the modified Date object back to a string in Y-m-d format
                             var newEndDate = endDateObj.toISOString().split('T')[0];
