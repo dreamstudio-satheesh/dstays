@@ -21,7 +21,7 @@
                 allDay: true ,
                 select: function(info) {
                     // Here, you can show the modal
-                    console.log('Date range selected'.info.endStr);
+                    console.log('Date range selected');
                     var events = calendar.getEvents();
                     var overlap = false;
 
@@ -35,6 +35,7 @@
                         $('#bookingModal').modal('show');
                         // Optionally, you can populate the modal fields based on the selection
                         $('#start_date').val(info.startStr);
+                        console.log(info.endStr);
                         $('#end_date').val(info.endStr);
                     } else {
                         alert("The selected date range is already booked.");
