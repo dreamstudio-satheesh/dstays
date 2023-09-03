@@ -17,8 +17,6 @@
 
                 titleFormat: { // will produce something like "Tuesday, September 18, 2018"
                     month: 'short',
-                    year: 'numeric',
-                    day: 'numeric'
                 }
 
                 defaultView: 'dayGridMonth',
