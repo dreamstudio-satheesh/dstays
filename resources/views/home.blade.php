@@ -15,10 +15,10 @@
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 plugins: ['dayGrid', 'interaction'],
 
-                titleFormat: { // will produce something like "Tuesday, September 18, 2018"
+                titleFormat: { 
+                    year: 'numeric',
                     month: 'short',
-                }
-
+                },
                 defaultView: 'dayGridMonth',
                 events: "/get-bookings/{{ $id }}", // API Endpoint to get booking events
                 selectable: true,
