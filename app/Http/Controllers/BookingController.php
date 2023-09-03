@@ -94,6 +94,6 @@ class BookingController extends Controller
         $booking = Booking::findOrFail($id);
         $booking->delete();
 
-        return redirect()->route('properties.index')->with('success', 'Booking deleted successfully!');
+        return redirect()->route('bookings.index')->with('success', 'Booking deleted successfully!');
     }
 }
