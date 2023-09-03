@@ -58,6 +58,7 @@
 
                          
                         }
+                        console.log(end_date);
 
                         console.log(`Updated end_date: ${newEndDate}`);
 
