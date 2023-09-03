@@ -114,7 +114,7 @@
                         <select class="form-control"  onchange="if (this.value) window.location.href=this.value" >
                             <option value="">Select</option>
                             @foreach ($properties as $property)
-                                <option value="/{{ $property->id }}">{{ $property->name }}</option>
+                                <option value="home/{{ $property->id }}">{{ $property->name }}</option>
                             @endforeach
                         </select>
                     </div>
