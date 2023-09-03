@@ -113,7 +113,7 @@
                     <div class="card-header justify-content-between card-header-border-bottom">
                         <select class="form-control"  onchange="window.location.href=this.value" >
                             @foreach ($properties as $property)
-                                <option value="{{ $property->id }}">{{ $property->name }}</option>
+                                <option value="/{{ $property->id }}">{{ $property->name }}</option>
                             @endforeach
                         </select>
                     </div>
