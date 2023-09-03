@@ -36,21 +36,23 @@
                         // Optionally, you can populate the modal fields based on the selection
 
                         $('#start_date').val(info.startStr);
+                        $('#end_date').val(info.endStr);
 
+                        /* 
+                                var end_date = info.endStr;
+                                var startDateObj = new Date(end_date);
+                                startDateObj.setDate(startDateObj.getDate() - 1);
+                                // Convert the modified Date object back to a string in Y-m-d format
+                                var end_date = startDateObj.toISOString().split('T')[0];
 
-                        var end_date = info.endStr;
-                        var startDateObj = new Date(end_date);
-                        startDateObj.setDate(startDateObj.getDate() - 1);
-                        // Convert the modified Date object back to a string in Y-m-d format
-                        var end_date = startDateObj.toISOString().split('T')[0];
+                                if (info.startStr === end_date) {
+                                    $('#end_date').val(info.endStr);
+                                } else {
+                                    $('#end_date').val(end_date);
+                                } 
 
-                        if (info.startStr === end_date) {
-                            $('#end_date').val(info.endStr);
-                        } else {
-                            $('#end_date').val(end_date);
-                        }
-
-                        console.log(`Updated end_date: ${end_date}`);
+                                console.log(`Updated end_date: ${end_date}`); 
+                        */
 
                     } else {
                         alert("The selected date range is already booked.");
