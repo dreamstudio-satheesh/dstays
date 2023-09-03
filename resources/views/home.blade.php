@@ -20,16 +20,31 @@
                 select: function(info) {
                     // Here, you can show the modal
                     console.log('Date range selected');
-                    $('#bookingModal').modal('show');
-                    // Optionally, you can populate the modal fields based on the selection
-                    $('#start_date').val(info.startStr);
-                    $('#end_date').val(info.endStr);
+                    var events = calendar.getEvents();
+                    var overlap = false;
+
+                    events.forEach(function(event) {
+                        if (info.start < event.end && info.end > event.start) {
+                            overlap =
+                                true; // The selected date range overlaps with an existing event
+                        }
+                    });
+
+                    if (!overlap) {
+                        $('#bookingModal').modal('show');
+                        // Optionally, you can populate the modal fields based on the selection
+                        $('#start_date').val(info.startStr);
+                        $('#end_date').val(info.endStr);
+                    } else {
+                        alert("The selected date range is already booked.");
+                    }
+
                 }
             });
             calendar.render();
         });
 
-    
+
         $('#saveBooking').click(function() {
             // Get form values
             let startDate = $('#start_date').val();
