@@ -18,30 +18,51 @@
                 events: '/get-bookings', // API Endpoint to get booking events
                 selectable: true,
                 selectLongPressDelay: 500,
-                allDay: true ,
+                allDay: true,
                 select: function(info) {
                     // Here, you can show the modal
                     console.log('Date range selected');
                     var events = calendar.getEvents();
                     var overlap = false;
 
-                 /*    events.forEach(function(event) {
-                        if (info.start < event.end && info.end > event.start) {
-                            overlap = true; // The selected date range overlaps with an existing event
-                        }
-                    }); */
+                    /*    events.forEach(function(event) {
+                           if (info.start < event.end && info.end > event.start) {
+                               overlap = true; // The selected date range overlaps with an existing event
+                           }
+                       }); */
 
                     if (!overlap) {
                         $('#bookingModal').modal('show');
                         // Optionally, you can populate the modal fields based on the selection
-                        $('#start_date').val(info.startStr);
-                        var startdate= info.endStr;
-                        var enddate= info.endStr;
-                        var [, , startday] = startdate.split("-");
-                        var [, , endday] = enddate.split("-");
+                        
+                        var start_date = info.startStr;
+                        var end_date = info.endStr;
 
-                        console.log(`Day: ${startday}`);
-                        console.log(`end Day: ${endday}`);
+                        // Convert start_date and end_date to Date objects
+                        var startDateObj = new Date(start_date);
+                        var endDateObj = new Date(end_date);
+
+                        // Calculate the time difference in milliseconds
+                        var timeDifference = endDateObj - startDateObj;
+
+                        // Calculate the time difference in days
+                        var dayDifference = timeDifference / (1000 * 60 * 60 * 24);
+
+                        // Check if end_date is greater than start_date by at least two days
+                        if (dayDifference > 2) {
+                            // Move end_date one day back
+                            endDateObj.setDate(endDateObj.getDate() - 1);
+
+                            // Convert the modified Date object back to a string in Y-m-d format
+                            var newEndDate = endDateObj.toISOString().split('T')[0];
+
+                            // Update the end_date variable
+                            end_date = newEndDate;
+                        }
+
+                        console.log(`Updated end_date: ${end_date}`);
+
+                        $('#start_date').val(info.startStr);
                         $('#end_date').val(info.endStr);
                     } else {
                         alert("The selected date range is already booked.");
