@@ -154,11 +154,11 @@
                             <div class="modal-body">
                                 <form id="bookingForm">
                                     <div class="form-group">
-                                        <label for="start_date">Start Date</label>
+                                        <label for="start_date">Check-In Date</label>
                                         <input type="date" class="form-control" id="start_date">
                                     </div>
                                     <div class="form-group">
-                                        <label for="end_date">End Date</label>
+                                        <label for="end_date">Check-Out Date</label>
                                         <input type="date" class="form-control" id="end_date">
                                     </div>
                                     <div class="form-group">
