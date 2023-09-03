@@ -16,9 +16,9 @@ class BookingController extends Controller
         return view('bookings.index', compact('bookings'));
     }
 
-    public function getBookings()
+    public function getBookings($id)
     {
-        $bookings = Booking::all(); // Fetch bookings from database
+        $bookings = Booking::where('property_id', $id)->get(); // Fetch bookings from database
         $bookingArray = [];
 
         foreach ($bookings as $booking) {
