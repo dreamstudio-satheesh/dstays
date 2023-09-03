@@ -45,6 +45,7 @@ class BookingController extends Controller
             'check_out' => $endDate,
             'customer_id' => $customerId, 
             'property_id' => $propertyId, 
+            'status' => 'pending', 
         ]);
 
         $booking->save();
