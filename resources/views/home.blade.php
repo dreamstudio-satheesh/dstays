@@ -37,7 +37,8 @@
                         $('#start_date').val(info.startStr);
                         console.log(info.endStr);
                         vsr d =info.endStr;
-                        conlsole.log(d.getDate() - 3);
+                        d.setDate(d.getDate() - 1);
+                        console.log('3 days ago was: ' + d.toLocaleString());
                         $('#end_date').val(info.endStr);
                     } else {
                         alert("The selected date range is already booked.");
