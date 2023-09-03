@@ -28,6 +28,6 @@ class HomeController extends Controller
         $customers = Customer::all();
         $properties = Property::all();
        
-        return view('home', compact('customers','properties'));
+        return view('home', compact('customers','properties','id'));
     }
 }

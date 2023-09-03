@@ -15,7 +15,7 @@
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 plugins: ['dayGrid', 'interaction'],
                 defaultView: 'dayGridMonth',
-                events: '/get-bookings', // API Endpoint to get booking events
+                events: "/get-bookings/{{ $id }}", // API Endpoint to get booking events
                 selectable: true,
                 selectLongPressDelay: 500,
                 allDay: true,
