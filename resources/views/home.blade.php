@@ -37,6 +37,7 @@
                         $('#start_date').val(info.startStr);
                         console.log(info.endStr);
                         var d = new Date(info.endStr);
+                        console.log('3 days ago was: ' + d);
                         d= date.setDate(d.getDate() - 1);
                         console.log('3 days ago was: ' + d);
                         $('#end_date').val(info.endStr);
