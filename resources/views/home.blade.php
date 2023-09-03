@@ -178,7 +178,7 @@
                                         </select>
                                     </div> --}}
 
-                                    <input type="hidden" name="property_id" value="{{ $id }}">
+                                    <input type="text" name="property_id" value="{{ $id }}">
 
                                     <div class="form-group">
                                         <label  class="form-label">No Of people</label>
