@@ -112,7 +112,7 @@
 
                         <li>
                             <a class="sidenav-item-link" href="{{ url('customers') }}">
-                                <i class="mdi mdi-image-outline"></i>
+                                <i class="mdi mdi-account-circle-outline"></i>
                                 <span class="nav-text">Customers</span>
 
                             </a>
