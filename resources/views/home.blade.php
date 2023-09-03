@@ -35,11 +35,11 @@
                         $('#bookingModal').modal('show');
                         // Optionally, you can populate the modal fields based on the selection
                         $('#start_date').val(info.startStr);
-                        console.log(info.endStr);
-                        var d = new Date(info.endStr);
-                        console.log('3 days ago was: ' + d);
-                        d= date.setDate(d.getDate() - 1);
-                        console.log('3 days ago was: ' + d);
+                        console.log(info.startStr);
+                        const dateString = info.endStr;
+                        const [, , day] = dateString.split("-");
+
+                        console.log(`Day: ${day}`);
                         $('#end_date').val(info.endStr);
                     } else {
                         alert("The selected date range is already booked.");
