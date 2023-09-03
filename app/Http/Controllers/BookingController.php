@@ -41,8 +41,8 @@ class BookingController extends Controller
 
         // Validate, then create a new booking
         $booking = new Booking([
-            'start_date' => $startDate,
-            'end_date' => $endDate,
+            'check_in' => $startDate,
+            'check_out' => $endDate,
             'customer_id' => $customerId, 
             'property_id' => $propertyId, 
         ]);
