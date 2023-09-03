@@ -111,7 +111,7 @@
             <div class="col-lg-12">
                 <div class="card card-default">
                     <div class="card-header justify-content-between card-header-border-bottom">
-                        <h2>Badges </h2>  <select class="form-control" id="property_id">
+                        <select class="form-control" id="property_id">
                             @foreach ($properties as $property)
                                 <option value="{{ $property->id }}">{{ $property->name }}</option>
                             @endforeach
