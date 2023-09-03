@@ -36,7 +36,8 @@
                         // Optionally, you can populate the modal fields based on the selection
                         $('#start_date').val(info.startStr);
                         console.log(info.endStr);
-                        conlsole.log(info.endStr.getDate() - 1);
+                        vsr d =info.endStr;
+                        conlsole.log(d.getDate() - 3);
                         $('#end_date').val(info.endStr);
                     } else {
                         alert("The selected date range is already booked.");
