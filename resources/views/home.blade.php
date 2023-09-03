@@ -24,12 +24,11 @@
                     var events = calendar.getEvents();
                     var overlap = false;
 
-                    events.forEach(function(event) {
+                 /*    events.forEach(function(event) {
                         if (info.start < event.end && info.end > event.start) {
-                            overlap =
-                                true; // The selected date range overlaps with an existing event
+                            overlap = true; // The selected date range overlaps with an existing event
                         }
-                    });
+                    }); */
 
                     if (!overlap) {
                         $('#bookingModal').modal('show');
