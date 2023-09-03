@@ -38,7 +38,7 @@
                         $('#start_date').val(info.startStr);
                         $('#end_date').val(info.endStr);
 
-                        var start_date = "info.endStr";
+                        var start_date = info.endStr;
 
                         // Convert start_date to a Date object
                         var startDateObj = new Date(start_date);
