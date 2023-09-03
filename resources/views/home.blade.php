@@ -18,7 +18,7 @@
                 events: '/get-bookings', // API Endpoint to get booking events
                 selectable: true,
                 selectLongPressDelay: 500,
-                allDay: false ,
+                allDaySlot: false ,
                 select: function(info) {
                     // Here, you can show the modal
                     console.log('Date range selected');
