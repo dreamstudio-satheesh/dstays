@@ -29,6 +29,12 @@
             calendar.render();
         });
 
+        eventAfterAllRender: function() {
+            // hack to trigger event binding on android chrome, which doesn't trigger mouseover events
+            $('.fc-event').each(function(i, element) {
+                $(element).trigger('mouseover', {});
+            });
+        }
 
         $('#saveBooking').click(function() {
             // Get form values
@@ -88,7 +94,7 @@
 
             <div>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal">
-                    <i class="mdi mdi-plus mr-1"></i> Add New Event
+                    <i class="mdi mdi-plus mr-1"></i> New Booking
                 </button>
             </div>
 
@@ -133,14 +139,16 @@
 
                                     <div class="form-group">
                                         <label for="customername-field" class="form-label">No Of people</label>
-                                        <input type="number" name="number_of_people" class="form-control" placeholder="No Of People">
+                                        <input type="number" name="number_of_people" class="form-control"
+                                            placeholder="No Of People">
 
                                     </div>
 
 
                                     <div class="form-group">
                                         <label for="customername-field" class="form-label">Advance Payment</label>
-                                        <input type="text" name="advance_payment" class="form-control" placeholder="Advance">
+                                        <input type="text" name="advance_payment" class="form-control"
+                                            placeholder="Advance">
 
                                     </div>
 
