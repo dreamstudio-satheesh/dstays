@@ -23,7 +23,7 @@ class BookingController extends Controller
 
         foreach ($bookings as $booking) {
             $bookingArray[] = [
-                'title' => 'Booking: ' . $booking->customer->name, // Assuming the customer relation
+                'title' => $booking->property->name.': ' . $booking->customer->name, // Assuming the customer relation
                 'start' => $booking->check_in,
                 'end' => $booking->check_out,
             ];
