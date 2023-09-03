@@ -33,7 +33,7 @@
             // hack to trigger event binding on android chrome, which doesn't trigger mouseover events
             $('.fc-event').each(function(i, element) {
                 $(element).trigger('mouseover', {});
-            });
+            })
         }
 
         $('#saveBooking').click(function() {
