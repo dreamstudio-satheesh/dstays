@@ -46,3 +46,5 @@ Route::delete('/properties/{id}', [PropertyController::class, 'destroy'])->name(
 
 Route::get('/get-bookings', [BookingController::class, 'getBookings']);
 
+Route::post('/store-booking', [BookingController::class, 'storeBooking']);
+
