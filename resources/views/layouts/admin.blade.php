@@ -97,15 +97,15 @@
                         <li>
                             <a class="sidenav-item-link" href="{{ url('tenders') }}">
                                 <i class="mdi mdi-script-text-outline"></i>
-                                <span class="nav-text">abc</span>
+                                <span class="nav-text">Food</span>
 
                             </a>
                         </li>
 
                         <li>
-                            <a class="sidenav-item-link" href="{{ url('news_events') }}">
+                            <a class="sidenav-item-link" href="{{ url('bookings') }}">
                                 <i class="mdi mdi-newspaper"></i>
-                                <span class="nav-text">News & Events</span>
+                                <span class="nav-text">Bookings</span>
 
                             </a>
                         </li>
@@ -188,7 +188,7 @@
                                     <li class="dropdown-header">
                                         <img src="{{url('') }}/assets/img/user/user.png" class="img-circle" alt="User Image" />
                                         <div class="d-inline-block">
-                                            {{ Auth::user()->name }} <small class="pt-1">admin@app.com</small>
+                                            {{ Auth::user()->name }} <small class="pt-1">admin</small>
                                         </div>
                                     </li>
                                     <li>
@@ -231,7 +231,7 @@
         <footer class="footer mt-auto">
             <div class="copyright bg-white">
                 <p>
-                    &copy; <span id="copy-year">2023</span> Salem Corporation . All rights reserved.
+                    &copy; <span id="copy-year">2023</span> Dstays.com . All rights reserved.
                 </p>
             </div>
             <script>
