@@ -56,11 +56,10 @@
                             // Convert the modified Date object back to a string in Y-m-d format
                             var newEndDate = endDateObj.toISOString().split('T')[0];
 
-                            // Update the end_date variable
-                            end_date = newEndDate;
+                         
                         }
 
-                        console.log(`Updated end_date: ${end_date}`);
+                        console.log(`Updated end_date: ${newEndDate}`);
 
                         $('#start_date').val(info.startStr);
                         $('#end_date').val(info.endStr);
