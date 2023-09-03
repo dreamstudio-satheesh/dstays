@@ -36,7 +36,7 @@
                         // Optionally, you can populate the modal fields based on the selection
                         $('#start_date').val(info.startStr);
                         console.log(info.endStr);
-                        vsr d =info.endStr;
+                        var d =info.endStr;
                         d.setDate(d.getDate() - 1);
                         console.log('3 days ago was: ' + d.toLocaleString());
                         $('#end_date').val(info.endStr);
