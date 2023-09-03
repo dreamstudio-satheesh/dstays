@@ -36,24 +36,19 @@
                         // Optionally, you can populate the modal fields based on the selection
 
                         $('#start_date').val(info.startStr);
-                       
+
 
                         var end_date = info.endStr;
-
-                        // Convert start_date to a Date object
                         var startDateObj = new Date(end_date);
-
-                        // Subtract one day
                         startDateObj.setDate(startDateObj.getDate() - 1);
-
                         // Convert the modified Date object back to a string in Y-m-d format
                         var end_date = startDateObj.toISOString().split('T')[0];
 
-                       if (info.endStr == end_date) {
-                         $('#end_date').val(info.endStr);
-                       } else {
-                        $('#end_date').val(end_date);
-                       }
+                        if (info.endStr === end_date) {
+                            $('#end_date').val(info.endStr);
+                        } else {
+                            $('#end_date').val(end_date);
+                        }
 
                         console.log(`Updated end_date: ${end_date}`);
 
