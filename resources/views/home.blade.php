@@ -19,7 +19,7 @@
                 selectable: true,
                 selectLongPressDelay: 500,
                 allDay: true ,
-                select: function(info) {
+                dateClick: function(info) {
                     // Here, you can show the modal
                     console.log('Date range selected');
                     var events = calendar.getEvents();
