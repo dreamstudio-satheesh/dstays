@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Booking;
+use App\Models\Customer;
+use App\Models\Property;
 use Illuminate\Http\Request;
 
 class BookingController extends Controller
@@ -10,6 +12,7 @@ class BookingController extends Controller
     public function index()
     {
         $bookings = Booking::all();
+        $customers = Customer::all();
         return view('bookings.index', compact('bookings'));
     }
 
