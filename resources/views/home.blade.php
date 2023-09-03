@@ -36,8 +36,8 @@
                         // Optionally, you can populate the modal fields based on the selection
                         $('#start_date').val(info.startStr);
                         console.log(info.endStr);
-                        var d =info.endStr;
-                        d =date.setDate(d.getDate() - 1);
+                        var d = new Date(info.endStr);
+                        d= date.setDate(d.getDate() - 1);
                         console.log('3 days ago was: ' + d);
                         $('#end_date').val(info.endStr);
                     } else {
