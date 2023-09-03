@@ -32,7 +32,6 @@
                                     <tr>
                                         <th scope="row"><a href="#" class="fw-semibold">#{{ $book->id }}</a>
                                         </th>
-                                        <td>{{ $book->name }}</td>
                                         <td>{{ $book->customer->name }}</td>
                                         <td>{{ $book->property->name }}</td>
                                         <td>{{ $book->check_in }} - {{ $book->check_out }}</td>
