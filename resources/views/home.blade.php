@@ -39,6 +39,9 @@
                         alert("The selected date range is already booked.");
                     }
 
+                },
+                eventRender: function(event, element) {
+                    $(element).addTouch();
                 }
             });
             calendar.render();
