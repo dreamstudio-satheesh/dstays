@@ -163,14 +163,16 @@
                                             @endforeach
                                         </select>
                                     </div>
-                                    <div class="form-group">
+                                   {{--  <div class="form-group">
                                         <label for="property_id">Property</label>
                                         <select class="form-control" id="property_id">
                                             @foreach ($properties as $property)
                                                 <option value="{{ $property->id }}"  {{ $property->id == $id ? 'selected' : '' }} >{{ $property->name }}</option>
                                             @endforeach
                                         </select>
-                                    </div>
+                                    </div> --}}
+
+                                    <input type="hidden" name="property_id" value="{{ $id }}">
 
                                     <div class="form-group">
                                         <label for="customername-field" class="form-label">No Of people</label>
