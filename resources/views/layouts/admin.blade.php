@@ -96,7 +96,7 @@
 
                         <li>
                             <a class="sidenav-item-link" href="{{ url('tenders') }}">
-                                <i class="mdi mdi-script-text-outline"></i>
+                                <i class="mdi mdi-food-fork-drink"></i>
                                 <span class="nav-text">Food</span>
 
                             </a>
