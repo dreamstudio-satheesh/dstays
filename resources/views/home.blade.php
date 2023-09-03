@@ -35,35 +35,24 @@
                         $('#bookingModal').modal('show');
                         // Optionally, you can populate the modal fields based on the selection
 
-                        var start_date = info.startStr;
-                        var end_date = info.endStr;
-
-                        // Convert start_date and end_date to Date objects
-                        var startDateObj = new Date(start_date);
-                        var endDateObj = new Date(end_date);
-
-                        // Calculate the time difference in milliseconds
-                        var timeDifference = endDateObj - startDateObj;
-
-                        // Calculate the time difference in days
-                        var dayDifference = timeDifference / (1000 * 60 * 60 * 24);
-
-                        // Check if end_date is greater than start_date by at least two days
-                        if (dayDifference > 2) {
-                            // Move end_date one day back
-                            endDateObj.setDate(endDateObj.getDate() - 2);
-
-                            // Convert the modified Date object back to a string in Y-m-d format
-                            var newEndDate = endDateObj.toISOString().split('T')[0];
-
-                         
-                        }
-                        console.log(end_date);
-
-                        console.log(`Updated end_date: ${newEndDate}`);
-
                         $('#start_date').val(info.startStr);
                         $('#end_date').val(info.endStr);
+
+                        var start_date = "info.endStr";
+
+                        // Convert start_date to a Date object
+                        var startDateObj = new Date(start_date);
+
+                        // Subtract one day
+                        startDateObj.setDate(startDateObj.getDate() - 1);
+
+                        // Convert the modified Date object back to a string in Y-m-d format
+                        var newStartDate = startDateObj.toISOString().split('T')[0];
+
+                        // Update the start_date variable
+                        start_date = newStartDate;
+
+                        console.log(`Updated start_date: ${start_date}`);
                     } else {
                         alert("The selected date range is already booked.");
                     }
