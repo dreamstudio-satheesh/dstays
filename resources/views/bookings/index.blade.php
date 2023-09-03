@@ -21,7 +21,9 @@
                             <thead>
                                 <tr>
                                     <th scope="col">ID</th>
-                                    <th scope="col">Name</th>
+                                    <th scope="col">Customer Name</th>
+                                    <th scope="col">Property</th>
+                                    <th scope="col">date</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -31,6 +33,9 @@
                                         <th scope="row"><a href="#" class="fw-semibold">#{{ $book->id }}</a>
                                         </th>
                                         <td>{{ $book->name }}</td>
+                                        <td>{{ $booking->customer->name }}</td>
+                                        <td>{{ $booking->property->name }}</td>
+                                        <td>{{ $booking->check_in }} - {{ $booking->check_out }}</td>
                                         <td>
 
                                             <div class="d-flex gap-2">
