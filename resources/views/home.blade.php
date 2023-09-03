@@ -167,7 +167,7 @@
                                         <label for="property_id">Property</label>
                                         <select class="form-control" id="property_id">
                                             @foreach ($properties as $property)
-                                                <option value="{{ $property->id }}"  {{ $property->id == $id ? 'selected' : '' }} >{{ $property->name }}>{{ $property->name }}</option>
+                                                <option value="{{ $property->id }}"  {{ $property->id == $id ? 'selected' : '' }} >{{ $property->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
