@@ -77,7 +77,7 @@
                                 <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
                             </g>
                         </svg>
-                        <span class="brand-name text-truncate">Admin Panel </span>
+                        <span class="brand-name text-truncate">D Stays</span>
                     </a>
                 </div>
                 <!-- begin sidebar scrollbar -->
