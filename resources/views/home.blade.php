@@ -34,6 +34,8 @@
             // Get form values
             let startDate = $('#start_date').val();
             let endDate = $('#end_date').val();
+            let customerId = $('#customer_id').val();
+            let propertyId = $('#property_id').val();
             // Add more fields here
 
             // Send an AJAX request to your Laravel back-end
@@ -116,7 +118,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="customer_id">Customer</label>
-                                        <select class="form-control" id="customer_id">
+                                        <select class="form-control" name="customer_id" id="customer_id">
                                             @foreach ($customers as $customer)
                                                 <option value="{{ $customer->id }}">{{ $customer->name }}</option>
                                             @endforeach
