@@ -22,6 +22,7 @@
                                 <tr>
                                     <th scope="col">ID</th>
                                     <th scope="col">Name</th>
+                                    <th scope="col">Mobile</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -31,6 +32,7 @@
                                         <th scope="row"><a href="#" class="fw-semibold">#{{ $customer->id }}</a>
                                         </th>
                                         <td>{{ $customer->name }}</td>
+                                        <td>{{ $customer->mobile_number }}</td>
                                         <td>
 
                                             <div class="d-flex gap-2">
