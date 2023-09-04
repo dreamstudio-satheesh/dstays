@@ -190,7 +190,7 @@
                                     <div class="form-group">
                                         <label  class="form-label">Bill Amount</label>
                                         <input type="text" name="bill_amount" id="bill_amount" class="form-control"
-                                            placeholder="Advance">
+                                            placeholder="Advance" required>
 
                                     </div>
                                     
