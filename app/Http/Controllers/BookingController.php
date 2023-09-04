@@ -33,33 +33,32 @@ class BookingController extends Controller
 
     public function storeBooking(Request $request)
     {
-  
-        //return response()->json($request->all());
-        $startDate = $request->input('start_date');
-        $endDate = $request->input('end_date');
-        $customerId = $request->input('customer_id');         
-        $propertyId = $request->input('property_id'); 
-        $numberOfPeople = $request->input('number_of_people'); 
-        $advanceType = $request->input('advance_type'); 
-        $advancePayment = $request->input('advance_payment'); 
-        $billAmount = $request->input('bill_amount'); 
-
-        // Validate, then create a new booking
-        $booking = new Booking([
-            'check_in' => $startDate,
-            'check_out' => $endDate,
-            'customer_id' => $customerId, 
-            'property_id' => $propertyId, 
-            'number_of_people' => $numberOfPeople, 
-            'advance_type' => $advanceType, 
-            'advance_payment' => $advancePayment, 
-            'bill_amount' => $billAmount, 
-            'status' => 'active', 
+        // Validate incoming request
+        $validatedData = $request->validate([
+            'start_date' => 'required|date',
+            'end_date' => 'required|date|after_or_equal:start_date',
+            'customer_id' => 'required|integer|exists:customers,id',
+            'property_id' => 'required|integer|exists:properties,id',
+            'number_of_people' => 'required|integer|min:1',
+            'advance_type' => ['required','string'],
+            'advance_payment' => 'required|numeric|min:0',
+            'bill_amount' => 'required|numeric|min:0',
         ]);
 
-        $booking->save();
+        // Create a new booking
+        $booking = Booking::create([
+            'check_in' => $validatedData['start_date'],
+            'check_out' => $validatedData['end_date'],
+            'customer_id' => $validatedData['customer_id'],
+            'property_id' => $validatedData['property_id'],
+            'number_of_people' => $validatedData['number_of_people'],
+            'advance_type' => $validatedData['advance_type'],
+            'advance_payment' => $validatedData['advance_payment'],
+            'bill_amount' => $validatedData['bill_amount'],
+            'status' => 'active',
+        ]);
 
-        return response()->json(['message' => 'Booking created']);
+        return response()->json(['message' => 'Booking created successfully']);
     }
 
     public function store(Request $request)
@@ -91,7 +90,7 @@ class BookingController extends Controller
 
     public function edit(Booking $booking)
     {
-       // return view('bookings.edit', compact('booking'));
+        // return view('bookings.edit', compact('booking'));
     }
 
     public function update(Request $request, Booking $booking)
@@ -104,6 +103,8 @@ class BookingController extends Controller
         $booking = Booking::findOrFail($id);
         $booking->delete();
 
-        return redirect()->route('bookings.index')->with('success', 'Booking deleted successfully!');
+        return redirect()
+            ->route('bookings.index')
+            ->with('success', 'Booking deleted successfully!');
     }
 }

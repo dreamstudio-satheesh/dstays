@@ -92,24 +92,26 @@
                     property_id: propertyId,
                     number_of_people: numberOfPeople,
                     advance_type: advanceType,
-                    advance_payment:advancePayment,
-                    bill_amount:billAmount,
+                    advance_payment: advancePayment,
+                    bill_amount: billAmount,
                     _token: '{{ csrf_token() }}'
                 },
                 success: function(response) {
-                    // Close the modal
                     $('#bookingModal').modal('hide');
-
-                    // Refresh the calendar or add the event directly
-                    // Option 1: Reload the full calendar
                     calendar.refetchEvents();
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    if (jqXHR.status === 422) { // When status code is 422, it's a validation issue
+                        // Display errors on each form field
+                        var errors = jqXHR.responseJSON.errors;
+                        $('.error').html(''); // Clear previous errors
 
-                    // Option 2: Add the event directly (no need for another server request)
-                    /* calendar.addEvent({
-                        title: 'New Booking', // Replace with your dynamic data
-                        start: startDate,
-                        end: endDate
-                    }); */
+                        Object.keys(errors).forEach(function(key) {
+                            $('#' + key + 'Error').html(errors[key][0]);
+                        });
+                    } else {
+                        console.error("Request failed: " + textStatus);
+                    }
                 }
             });
         });
@@ -192,12 +194,12 @@
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">No Of people</label>
-                                            <input type="number" name="number_of_people" id="number_of_people" class="form-control"
-                                                placeholder="No Of People">
+                                            <input type="number" name="number_of_people" id="number_of_people"
+                                                class="form-control" placeholder="No Of People">
 
                                         </div>
 
-                                       
+
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Advance Type</label>
