@@ -37,7 +37,7 @@
 
                                             <div class="d-flex gap-2">
                                                 <div class="edit">
-                                                    <a href="{{ route('customers.edit',$customer->id) }}" class="btn btn-sm btn-success edit-item-btn">Edit</a>
+                                                    <a href="{{ route('customers.edit',$customer->id) }}" class="btn btn-sm btn-success edit-item-btn">Edit</a> &nbsp; &nbsp;
                                                 </div>
                                                
                                                 <div class="remove">
