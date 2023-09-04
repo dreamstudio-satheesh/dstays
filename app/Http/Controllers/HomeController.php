@@ -23,9 +23,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($id)
+    public function index($id=null)
     {
-        isset($id) ? : $id=1;
+        ($id) ? : $id=1;
         
         $customers = Customer::all();
         $properties = Property::all();
