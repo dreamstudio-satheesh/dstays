@@ -83,7 +83,7 @@ class BookingController extends Controller
 
     public function edit(Booking $booking)
     {
-        //
+       // return view('bookings.edit', compact('booking'));
     }
 
     public function update(Request $request, Booking $booking)
