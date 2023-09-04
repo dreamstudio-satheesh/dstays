@@ -33,12 +33,16 @@ class BookingController extends Controller
 
     public function storeBooking(Request $request)
     {
-       
+  
         //return response()->json($request->all());
         $startDate = $request->input('start_date');
         $endDate = $request->input('end_date');
-        $customerId = $request->input('customer_id'); 
+        $customerId = $request->input('customer_id');         
         $propertyId = $request->input('property_id'); 
+        $numberOfPeople = $request->input('number_of_people'); 
+        $advanceType = $request->input('advance_type'); 
+        $advancePayment = $request->input('advance_payment'); 
+        $billAmount = $request->input('bill_amount'); 
 
         // Validate, then create a new booking
         $booking = new Booking([
@@ -46,7 +50,11 @@ class BookingController extends Controller
             'check_out' => $endDate,
             'customer_id' => $customerId, 
             'property_id' => $propertyId, 
-            'status' => 'pending', 
+            'number_of_people' => $numberOfPeople, 
+            'advance_type' => $advanceType, 
+            'advance_payment' => $advancePayment, 
+            'bill_amount' => $billAmount, 
+            'status' => 'active', 
         ]);
 
         $booking->save();

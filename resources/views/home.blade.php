@@ -75,6 +75,10 @@
             let endDate = $('#end_date').val();
             let customerId = $('#customer_id').val();
             let propertyId = $('#property_id').val();
+            let numberOfPeople = $('#number_of_people').val();
+            let advanceType = $('#advance_type').val();
+            let advancePayment = $('#advance_payment').val();
+            let billAmount = $('#bill_amount').val();
             // Add more fields here
 
             // Send an AJAX request to your Laravel back-end
@@ -86,6 +90,10 @@
                     end_date: endDate,
                     customer_id: customerId,
                     property_id: propertyId,
+                    number_of_people: numberOfPeople,
+                    advance_type: advanceType,
+                    advance_payment:advancePayment,
+                    bill_amount:billAmount,
                     _token: '{{ csrf_token() }}'
                 },
                 success: function(response) {
@@ -184,7 +192,7 @@
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">No Of people</label>
-                                            <input type="number" name="number_of_people" class="form-control"
+                                            <input type="number" name="number_of_people" id="number_of_people" class="form-control"
                                                 placeholder="No Of People">
 
                                         </div>
