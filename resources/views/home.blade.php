@@ -189,12 +189,7 @@
 
                                         </div>
 
-                                        <div class="col-xs-6 col-md-6 form-group">
-                                            <label class="form-label">Bill Amount</label>
-                                            <input type="text" name="bill_amount" id="bill_amount" class="form-control"
-                                                placeholder="Advance" required>
-
-                                        </div>
+                                       
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Advance Type</label>
@@ -213,6 +208,13 @@
                                                 class="form-control" placeholder="Advance">
 
                                         </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-md-6 form-group">
+                                        <label class="form-label">Bill Amount</label>
+                                        <input type="text" name="bill_amount" id="bill_amount" class="form-control"
+                                            placeholder="Amount" required>
+
                                     </div>
 
 
