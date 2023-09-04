@@ -187,10 +187,27 @@
 
                                     </div>
 
+                                    <div class="form-group">
+                                        <label  class="form-label">Bill Amount</label>
+                                        <input type="text" name="bill_amount" id="bill_amount" class="form-control"
+                                            placeholder="Advance">
+
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label  class="form-label">Advance Type</label>
+                                            <select class="form-control" name="advance_type" id="advance_type">
+                                               <option value="Full Payment">Full Payment</option>
+                                               <option value="Full Payment">partial Payment</option>
+                                               <option value="Full Payment">Nill Payment</option>
+                                            </select>
+
+                                    </div>
+
 
                                     <div class="form-group">
                                         <label  class="form-label">Advance Payment</label>
-                                        <input type="text" name="advance_payment" class="form-control"
+                                        <input type="text" name="advance_payment" id="advance_payment" class="form-control"
                                             placeholder="Advance">
 
                                     </div>
