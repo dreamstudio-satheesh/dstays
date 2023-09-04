@@ -15,7 +15,7 @@
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 plugins: ['dayGrid', 'interaction'],
 
-                titleFormat: { 
+                titleFormat: {
                     year: 'numeric',
                     month: 'short',
                 },
@@ -153,23 +153,24 @@
                             </div>
                             <div class="modal-body">
                                 <form id="bookingForm">
-                                    <div class="form-group">
-                                        <label for="start_date">Check-In Date</label>
-                                        <input type="date" class="form-control" id="start_date">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="end_date">Check-Out Date</label>
-                                        <input type="date" class="form-control" id="end_date">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="customer_id">Customer</label>
-                                        <select class="form-control" name="customer_id" id="customer_id">
-                                            @foreach ($customers as $customer)
-                                                <option value="{{ $customer->id }}">{{ $customer->name }}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                    {{--  <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-6 form-group">
+                                            <label for="start_date">Check-In Date</label>
+                                            <input type="date" class="form-control" id="start_date">
+                                        </div>
+                                        <div class="col-6 form-group">
+                                            <label for="end_date">Check-Out Date</label>
+                                            <input type="date" class="form-control" id="end_date">
+                                        </div>
+                                        <div class="col-6 form-group">
+                                            <label for="customer_id">Customer</label>
+                                            <select class="form-control" name="customer_id" id="customer_id">
+                                                @foreach ($customers as $customer)
+                                                    <option value="{{ $customer->id }}">{{ $customer->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        {{--  <div class="col-6 form-group">
                                         <label for="property_id">Property</label>
                                         <select class="form-control" id="property_id">
                                             @foreach ($properties as $property)
@@ -178,41 +179,43 @@
                                         </select>
                                     </div> --}}
 
-                                    <input type="hidden" id="property_id" name="property_id" value="{{ $id }}">
+                                        <input type="hidden" id="property_id" name="property_id"
+                                            value="{{ $id }}">
 
-                                    <div class="form-group">
-                                        <label  class="form-label">No Of people</label>
-                                        <input type="number" name="number_of_people" class="form-control"
-                                            placeholder="No Of People">
+                                        <div class="col-6 form-group">
+                                            <label class="form-label">No Of people</label>
+                                            <input type="number" name="number_of_people" class="form-control"
+                                                placeholder="No Of People">
 
-                                    </div>
+                                        </div>
 
-                                    <div class="form-group">
-                                        <label  class="form-label">Bill Amount</label>
-                                        <input type="text" name="bill_amount" id="bill_amount" class="form-control"
-                                            placeholder="Advance" required>
+                                        <div class="col-6 form-group">
+                                            <label class="form-label">Bill Amount</label>
+                                            <input type="text" name="bill_amount" id="bill_amount" class="form-control"
+                                                placeholder="Advance" required>
 
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label  class="form-label">Advance Type</label>
+                                        </div>
+
+                                        <div class="col-6 form-group">
+                                            <label class="form-label">Advance Type</label>
                                             <select class="form-control" name="advance_type" id="advance_type">
-                                               <option value="Full Payment">Full Payment</option>
-                                               <option value="Full Payment">partial Payment</option>
-                                               <option value="Full Payment">Nill Payment</option>
+                                                <option value="Full Payment">Full Payment</option>
+                                                <option value="Full Payment">partial Payment</option>
+                                                <option value="Full Payment">Nill Payment</option>
                                             </select>
 
+                                        </div>
+
+
+                                        <div class="col-6 form-group">
+                                            <label class="form-label">Advance Payment</label>
+                                            <input type="text" name="advance_payment" id="advance_payment"
+                                                class="form-control" placeholder="Advance">
+
+                                        </div>
                                     </div>
 
 
-                                    <div class="form-group">
-                                        <label  class="form-label">Advance Payment</label>
-                                        <input type="text" name="advance_payment" id="advance_payment" class="form-control"
-                                            placeholder="Advance">
-
-                                    </div>
-
-                                </form>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
