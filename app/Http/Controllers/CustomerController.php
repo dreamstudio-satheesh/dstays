@@ -59,9 +59,18 @@ class CustomerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request,  $id)
     {
-        //
+        $customer = Customer::findOrFail($id);
+        $data = $request->validate([
+            'name' => 'required|string|max:255',
+            'mobile_number' => 'required|integer|unique:customers',
+            'address' => 'nullable|string|min:6',
+        ]);
+
+        $customer->update($data);
+
+        return redirect()->route('customers.index')->with('success', 'Customer updated successfully!');
     }
 
     /**
