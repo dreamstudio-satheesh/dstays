@@ -41,7 +41,7 @@
 
                             <div class="form-group">
                                 <label for="address" class="form-label">Address</label>
-                                <input type="text" name="address" class="form-control" >
+                                <textarea class="form-control"  name="address" rows="3"></textarea>
                             </div>
                           
 
