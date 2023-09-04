@@ -196,6 +196,7 @@
                                             <label class="form-label">No Of people</label>
                                             <input type="number" name="number_of_people" id="number_of_people"
                                                 class="form-control" placeholder="No Of People">
+                                            <span id="number_of_peopleError" class="text-danger error"></span>
 
                                         </div>
 
@@ -216,7 +217,7 @@
                                             <label class="form-label">Advance Payment</label>
                                             <input type="text" name="advance_payment" id="advance_payment"
                                                 class="form-control" placeholder="Advance">
-
+                                                <span id="advance_paymentError" class="text-danger error"></span>
                                         </div>
                                     </div>
 
@@ -224,6 +225,7 @@
                                         <label class="form-label">Rent Per Day</label>
                                         <input type="text" name="bill_amount" id="bill_amount" class="form-control"
                                             placeholder="Amount" required>
+                                            <span id="bill_amountError" class="text-danger error"></span>
 
                                     </div>
 
