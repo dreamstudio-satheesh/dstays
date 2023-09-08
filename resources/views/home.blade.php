@@ -74,6 +74,7 @@
             let advanceType = $('#advance_type').val();
             let advancePayment = $('#advance_payment').val();
             let billAmount = $('#bill_amount').val();
+            let PackageAmount = $('#package_amount').val();
 
 
 
@@ -93,6 +94,7 @@
                     booking_type: bookingType,
                     advance_payment: advancePayment,
                     bill_amount: billAmount,
+                    package_amount: PackageAmount,
                     _token: '{{ csrf_token() }}'
                 },
                 success: function(response) {
