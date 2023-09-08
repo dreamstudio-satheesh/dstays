@@ -69,16 +69,11 @@
         });
 
         
-        let bookingType = $('#booking_type').val();
+       
 
-        function getChecked() {
-
-            if (bookingType == "Rent") {
-                console.log(bookingType);
-
-            } else {
-                console.log(bookingType);
-            }
+          
+        function showInputBox(bookingType) {
+            console.log(bookingType);
 
         }
 
@@ -221,8 +216,8 @@
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Booking Type</label>
-                                            <select class="form-control" onchange="getChecked()" name="booking_type"
-                                                id="booking_type">
+                                            <select class="form-control" onchange="showInputBox(this..value)" name="booking_type"  id="booking_type">
+                                                <option value="">Select</option>
                                                 <option value="Rent">Rent</option>
                                                 <option value="Package">Package</option>
                                             </select>
@@ -251,9 +246,9 @@
 
 
                                         <div class="col-xs-6 col-md-6 form-group">
-                                            <label class="form-label">Rent Per Day</label>
-                                            <input type="text" name="bill_amount" id="bill_amount" value=""
-                                                class="form-control" placeholder="Amount" required>
+                                            <label class="form-label">Rent / Booking Amount</label>
+                                            <input type="text" id="package_amount" name="package_amount" class="form-control"  placeholder="Rent Amount"  style="display: none;" >
+                                            <input type="text" id="bill_amount" name="bill_amount"  class="form-control" placeholder="Booking Amount"   style="display: none;">
                                             <span id="bill_amountError" class="text-danger error"></span>
 
                                         </div>
