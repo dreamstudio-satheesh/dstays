@@ -52,14 +52,12 @@
         function showInputBox(bookingType) {
             const Bill = document.getElementById('bill_amount');
             const Package = document.getElementById('package_amount');
-            if (bookingType == 'Rent') {
+            if (bookingType == 'Rent') {                
+                Package.style.display = 'block';
+                Bill.style.display = 'none';  
+            } else {
                 Bill.style.display = 'block';
                 Package.style.display = 'none';
-                
-            } else {
-                Package.style.display = 'block';
-                Bill.style.display = 'none';                
-                
             }
 
         }
