@@ -228,7 +228,7 @@
                                                 class="form-control" placeholder="Advance">
                                                 <span id="advance_paymentError" class="text-danger error"></span>
                                         </div>
-                                    </div>
+                                  
 
                                     <div class="col-xs-6 col-md-6 form-group">
                                         <label class="form-label">Rent Per Day</label>
