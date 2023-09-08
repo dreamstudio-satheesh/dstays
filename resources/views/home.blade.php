@@ -200,10 +200,19 @@
 
                                         </div>
 
+                                        <div class="col-xs-6 col-md-6 form-group">
+                                            <label class="form-label">Booking Type</label>
+                                            <select class="form-control" name="booking_type" id="booking_type">
+                                                <option value="Rent">Rent</option>
+                                                <option value="Packages">partial Payment</option>
+                                            </select>
+
+                                        </div>
+
 
 
                                         <div class="col-xs-6 col-md-6 form-group">
-                                            <label class="form-label">Advance Type</label>
+                                            <label class="form-label">Payment Mode</label>
                                             <select class="form-control" name="advance_type" id="advance_type">
                                                 <option value="Full Payment">Full Payment</option>
                                                 <option value="Full Payment">partial Payment</option>
@@ -223,7 +232,7 @@
 
                                     <div class="col-xs-6 col-md-6 form-group">
                                         <label class="form-label">Rent Per Day</label>
-                                        <input type="text" name="bill_amount" id="bill_amount" class="form-control"
+                                        <input type="text" name="bill_amount" id="bill_amount" value="" class="form-control"
                                             placeholder="Amount" required>
                                             <span id="bill_amountError" class="text-danger error"></span>
 
