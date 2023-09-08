@@ -68,6 +68,20 @@
             calendar.render();
         });
 
+        
+        let bookingType = $('#booking_type').val();
+
+        function getChecked() {
+
+            if (bookingType == "Rent") {
+                console.log(bookingType);
+
+            } else {
+                console.log(bookingType);
+            }
+
+        }
+
 
         $('#saveBooking').click(function() {
             // Get form values
@@ -82,16 +96,7 @@
             let billAmount = $('#bill_amount').val();
 
 
-            function getChecked() {
 
-                if (bookingType == "Rent") {
-                    console.log(bookingType);
-                    
-                } else {
-                    console.log(bookingType);
-                }
-
-            }
             // Add more fields here
 
             // Send an AJAX request to your Laravel back-end
@@ -216,7 +221,8 @@
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Booking Type</label>
-                                            <select class="form-control" onchange="getChecked()" name="booking_type" id="booking_type">
+                                            <select class="form-control" onchange="getChecked()" name="booking_type"
+                                                id="booking_type">
                                                 <option value="Rent">Rent</option>
                                                 <option value="Package">Package</option>
                                             </select>
@@ -240,29 +246,31 @@
                                             <label class="form-label">Advance Payment</label>
                                             <input type="text" name="advance_payment" id="advance_payment"
                                                 class="form-control" placeholder="Advance">
-                                                <span id="advance_paymentError" class="text-danger error"></span>
+                                            <span id="advance_paymentError" class="text-danger error"></span>
                                         </div>
-                                  
 
-                                    <div class="col-xs-6 col-md-6 form-group">
-                                        <label class="form-label">Rent Per Day</label>
-                                        <input type="text" name="bill_amount" id="bill_amount" value="" class="form-control"
-                                            placeholder="Amount" required>
+
+                                        <div class="col-xs-6 col-md-6 form-group">
+                                            <label class="form-label">Rent Per Day</label>
+                                            <input type="text" name="bill_amount" id="bill_amount" value=""
+                                                class="form-control" placeholder="Amount" required>
                                             <span id="bill_amountError" class="text-danger error"></span>
 
+                                        </div>
+
+
                                     </div>
-
-
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" id="saveBooking">Save
+                                            Booking</button>
+                                    </div>
+                                </form>
                             </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary" id="saveBooking">Save Booking</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
+
+
             </div>
-
-
-        </div>
-    @endsection
+        @endsection
