@@ -50,15 +50,15 @@
 
           
         function showInputBox(bookingType) {
-            console.log(bookingType);
+            const Bill = document.getElementById('bill_amount');
+            const Package = document.getElementById('package_amount');
             if (bookingType == 'Rent') {
-                const Package = document.getElementById('bill_amount');
+                Bill.style.display = 'block';
                 Package.style.display = 'none';
                 
             } else {
-
-                const Package = document.getElementById('package_amount');
-                Package.style.display = 'none';
+                Package.style.display = 'block';
+                Bill.style.display = 'none';                
                 
             }
 
