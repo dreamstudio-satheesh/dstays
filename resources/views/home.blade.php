@@ -76,9 +76,22 @@
             let customerId = $('#customer_id').val();
             let propertyId = $('#property_id').val();
             let numberOfPeople = $('#number_of_people').val();
+            let bookingType = $('#booking_type').val();
             let advanceType = $('#advance_type').val();
             let advancePayment = $('#advance_payment').val();
             let billAmount = $('#bill_amount').val();
+
+
+            function getChecked() {
+
+                if (bookingType == "Rent") {
+                    console.log(bookingType);
+                    
+                } else {
+                    console.log(bookingType);
+                }
+
+            }
             // Add more fields here
 
             // Send an AJAX request to your Laravel back-end
@@ -92,6 +105,7 @@
                     property_id: propertyId,
                     number_of_people: numberOfPeople,
                     advance_type: advanceType,
+                    booking_type: bookingType,
                     advance_payment: advancePayment,
                     bill_amount: billAmount,
                     _token: '{{ csrf_token() }}'
@@ -202,7 +216,7 @@
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Booking Type</label>
-                                            <select class="form-control" name="booking_type" id="booking_type">
+                                            <select class="form-control" onchange="getChecked()" name="booking_type" id="booking_type">
                                                 <option value="Rent">Rent</option>
                                                 <option value="Package">Package</option>
                                             </select>
