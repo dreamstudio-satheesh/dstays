@@ -14,7 +14,6 @@
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 plugins: ['dayGrid', 'interaction'],
-
                 titleFormat: {
                     year: 'numeric',
                     month: 'short',
@@ -25,14 +24,11 @@
                 selectLongPressDelay: 500,
                 allDay: true,
                 select: function(info) {
-                    // Here, you can show the modal
-                    console.log('Date range selected');
+                    // console.log('Date range selected');
                     var events = calendar.getEvents();
-                    var overlap = false; 
+                    var overlap = false;
                     if (!overlap) {
                         $('#bookingModal').modal('show');
-                        // Optionally, you can populate the modal fields based on the selection
-
                         $('#start_date').val(info.startStr);
                         $('#end_date').val(info.endStr);
 
@@ -45,16 +41,13 @@
             calendar.render();
         });
 
-        
-       
 
-          
         function showInputBox(bookingType) {
             const Bill = document.getElementById('bill_amount');
             const Package = document.getElementById('package_amount');
-            if (bookingType == 'Rent') {                
+            if (bookingType == 'Rent') {
                 Package.style.display = 'block';
-                Bill.style.display = 'none';  
+                Bill.style.display = 'none';
             } else {
                 Bill.style.display = 'block';
                 Package.style.display = 'none';
@@ -75,10 +68,6 @@
             let advancePayment = $('#advance_payment').val();
             let billAmount = $('#bill_amount').val();
             let PackageAmount = $('#package_amount').val();
-
-
-
-            // Add more fields here
 
             // Send an AJAX request to your Laravel back-end
             $.ajax({
@@ -136,10 +125,7 @@
                         </select>
                     </div>
                     <div class="card-body">
-
                         <div id="calendar"></div>
-
-
                     </div>
                 </div>
             </div>
@@ -151,8 +137,7 @@
             </div>
 
 
-            <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel"
-                aria-hidden="true">
+            <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel"   aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <form id="bookingForm">
@@ -163,16 +148,20 @@
                                 </button>
                             </div>
                             <div class="modal-body">
+                                
                                 <form id="bookingForm">
+
                                     <div class="row">
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label for="start_date">Check-In Date</label>
                                             <input type="date" class="form-control" id="start_date">
                                         </div>
+
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label for="end_date">Check-Out Date</label>
                                             <input type="date" class="form-control" id="end_date">
                                         </div>
+
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label for="customer_id">Customer</label>
                                             <select class="form-control" name="customer_id" id="customer_id">
@@ -190,9 +179,7 @@
                                         </select>
                                     </div> --}}
 
-                                        <input type="hidden" id="property_id" name="property_id"
-                                            value="{{ $id }}">
-
+                                        <input type="hidden" id="property_id" name="property_id"   value="{{ $id }}">
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">No Of people</label>
                                             <input type="number" name="number_of_people" id="number_of_people"
@@ -203,15 +190,14 @@
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Booking Type</label>
-                                            <select class="form-control" onchange="showInputBox(this.value)" name="booking_type"  id="booking_type">
+                                            <select class="form-control" onchange="showInputBox(this.value)"
+                                                name="booking_type" id="booking_type">
                                                 <option value="">Select</option>
                                                 <option value="Rent">Rent</option>
                                                 <option value="Package">Package</option>
                                             </select>
 
                                         </div>
-
-
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Payment Mode</label>
@@ -233,11 +219,12 @@
 
 
                                         <div class="col-xs-6 col-md-6 form-group">
-                                            <label class="form-label">Rent / Booking Amount</label>
-                                            <input type="text" id="package_amount" name="package_amount" class="form-control"  placeholder="Rent Amount"  style="display: none;" >
-                                            <input type="text" id="bill_amount" name="bill_amount"  class="form-control" placeholder="Booking Amount"   style="display: none;">
+                                            <label class="form-label">Rent / Package Amount</label>
+                                            <input type="text" id="package_amount" name="package_amount"
+                                                class="form-control" placeholder="Rent Amount" style="display: none;">
+                                            <input type="text" id="bill_amount" name="bill_amount"
+                                                class="form-control" placeholder="Package Amount" style="display: none;">
                                             <span id="bill_amountError" class="text-danger error"></span>
-
                                         </div>
 
 

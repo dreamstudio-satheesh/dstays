@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index($id=null)
     {
-        ($id) ? : $id=1;
+        ($id) ? : $id=Property::first()->id;
         
         $customers = Customer::all();
         $properties = Property::all();
