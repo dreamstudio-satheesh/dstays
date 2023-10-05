@@ -113,31 +113,36 @@
 
         <div class="row">
 
-            <div class="col-lg-12">
-                <div class="card card-default">
-                    <div class="card-header justify-content-between card-header-border-bottom">
-                        <select class="form-control" onchange="if (this.value) window.location=this.value">
-                            <option value="">Select</option>
-                            @foreach ($properties as $property)
-                                <option value="{{ url('home') }}/{{ $property->id }}"
-                                    {{ $property->id == $id ? 'selected' : '' }}>{{ $property->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="card-body">
-                        <div id="calendar"></div>
+            @if ($id)
+                <div class="col-lg-12">
+                    <div class="card card-default">
+                        <div class="card-header justify-content-between card-header-border-bottom">
+                            <select class="form-control" onchange="if (this.value) window.location=this.value">
+                                <option value="">Select</option>
+                                @foreach ($properties as $property)
+                                    <option value="{{ url('home') }}/{{ $property->id }}"
+                                        {{ $property->id == $id ? 'selected' : '' }}>{{ $property->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="card-body">
+                            <div id="calendar"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div>
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal">
-                    <i class="mdi mdi-plus mr-1"></i> New Booking
-                </button>
-            </div>
+                <div>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#bookingModal">
+                        <i class="mdi mdi-plus mr-1"></i> New Booking
+                    </button>
+                </div>
+            @endif
 
 
-            <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel"   aria-hidden="true">
+
+
+            <div class="modal fade" id="bookingModal" tabindex="-1" role="dialog" aria-labelledby="bookingModalLabel"
+                aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <form id="bookingForm">
@@ -148,7 +153,7 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                
+
                                 <form id="bookingForm">
 
                                     <div class="row">
@@ -179,7 +184,8 @@
                                         </select>
                                     </div> --}}
 
-                                        <input type="hidden" id="property_id" name="property_id"   value="{{ $id }}">
+                                        <input type="hidden" id="property_id" name="property_id"
+                                            value="{{ $id }}">
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">No Of people</label>
                                             <input type="number" name="number_of_people" id="number_of_people"

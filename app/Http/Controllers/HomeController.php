@@ -28,12 +28,9 @@ class HomeController extends Controller
     {
         $id = $id ?: (Property::first() ? Property::first()->id : null);
 
+        $customers = Customer::all();
+        $properties = Property::all();
 
-        if ($id) {
-            $customers = Customer::all();
-            $properties = Property::all();
-
-            return view('home', compact('customers', 'properties', 'id'));
-        }
+        return view('home', compact('customers', 'properties', 'id'));
     }
 }
