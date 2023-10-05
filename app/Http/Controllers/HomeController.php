@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Customer;
 use App\Models\Property;
+use Hamcrest\Core\IsNull;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -25,7 +26,8 @@ class HomeController extends Controller
      */
     public function index($id = null)
     {
-        $id ?: ($id = Property::first()->id);
+        $id = $id ?: (Property::first() ? Property::first()->id : null);
+
 
         if ($id) {
             $customers = Customer::all();
