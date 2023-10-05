@@ -6,6 +6,7 @@ use App\Models\Booking;
 use App\Models\Customer;
 use App\Models\Property;
 use Illuminate\Http\Request;
+use App\Rules\EitherAdvancePaymentOrBillAmountRequired;
 
 class BookingController extends Controller
 {
@@ -41,8 +42,9 @@ class BookingController extends Controller
             'property_id' => 'required|integer|exists:properties,id',
             'number_of_people' => 'required|integer|min:1',
             'advance_type' => ['required','string'],
-            'advance_payment' => 'required|numeric|min:0',
-            'bill_amount' => 'required|numeric|min:0',
+            'advance_payment' => 'nullable|numeric|min:0',
+            'bill_amount' => 'nullable|numeric|min:0',
+            'either_payment' => [new EitherAdvancePaymentOrBillAmountRequired],
         ]);
 
         // Create a new booking
