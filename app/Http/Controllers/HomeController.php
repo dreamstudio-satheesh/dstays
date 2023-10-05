@@ -23,13 +23,15 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($id=null)
+    public function index($id = null)
     {
-        ($id) ? : $id=Property::first()->id;
-        
-        $customers = Customer::all();
-        $properties = Property::all();
-       
-        return view('home', compact('customers','properties','id'));
+        $id ?: ($id = Property::first()->id);
+
+        if ($id) {
+            $customers = Customer::all();
+            $properties = Property::all();
+
+            return view('home', compact('customers', 'properties', 'id'));
+        }
     }
 }
