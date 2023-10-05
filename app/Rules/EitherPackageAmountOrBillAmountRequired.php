@@ -5,7 +5,7 @@ namespace App\Rules;
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;
 
-class EitherAdvancePaymentOrBillAmountRequired implements ValidationRule
+class EitherPackageAmountOrBillAmountRequired implements ValidationRule
 {
     /**
      * Run the validation rule.
@@ -15,7 +15,7 @@ class EitherAdvancePaymentOrBillAmountRequired implements ValidationRule
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {
 
-        $advancePayment = request()->input('advance_payment');
+        $advancePayment = request()->input('package_amount');
         $billAmount = request()->input('bill_amount');
 
           // Check if at least one of them has a value
