@@ -19,7 +19,7 @@ class EitherPackageAmountOrBillAmountRequired implements ValidationRule
         $billAmount = request()->input('bill_amount');
 
           // Check if at least one of them has a value
-        if (empty($advancePayment) &&  empty($billAmount)) {
+        if (is_null($advancePayment) &&  is_null($billAmount)) {
             $fail(' bill amount or payment  amount field is required');
         }
 
