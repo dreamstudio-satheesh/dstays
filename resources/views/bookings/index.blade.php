@@ -35,7 +35,7 @@
 
                                             <div class="d-flex gap-2">
 
-                                                <a target="blank" href="#" ><i class="fa fa-whatsapp" style="font-size:24px; color:green"></i></a>
+                                                <a target="blank" href="#" ><i class="fa fa-whatsapp" style="font-size:24px; color:#43ab43;"></i></a>
                                                
                                                 &nbsp;  &nbsp;  &nbsp;
 
