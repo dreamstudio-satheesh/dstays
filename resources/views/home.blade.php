@@ -54,7 +54,7 @@
             let bookingType = $('#booking_type').val();
             let advanceType = $('#advance_type').val();
             let advancePayment = $('#advance_payment').val();
-            let billAmount = $('#bil_package_amount').val();
+            let bill_package_amount = $('#bil_package_amount').val();
 
 
             // Send an AJAX request to your Laravel back-end
@@ -70,7 +70,7 @@
                     advance_type: advanceType,
                     booking_type: bookingType,
                     advance_payment: advancePayment,
-                    bill_package_amount: billAmount,
+                    bill_package_amount: bill_package_amount,
                     _token: '{{ csrf_token() }}'
                 },
                 success: function(response) {
@@ -214,9 +214,9 @@
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Rent / Package Amount</label>
 
-                                            <input type="text" id="bil_package_amount" name="bil_package_amount"
+                                            <input type="text" id="bill_package_amount" name="bill_package_amount"
                                                 class="form-control" placeholder="Rent / Package Amount">
-                                            <span id="bil_package_amountError" class="text-danger error"></span>
+                                            <span id="bill_package_amountError" class="text-danger error"></span>
                                         </div>
 
 
