@@ -69,6 +69,13 @@
             let billAmount = $('#bill_amount').val();
             let PackageAmount = $('#package_amount').val();
 
+            // Check if either billAmount or PackageAmount is empty
+            if (billAmount === '' && PackageAmount === '') {
+                // Show an error message here, for example:
+                alert('Either Bill Amount or Package Amount must have a value.');
+                return; // Stop further execution
+            }
+
             // Send an AJAX request to your Laravel back-end
             $.ajax({
                 url: '/store-booking', // Replace with your POST route
@@ -194,7 +201,7 @@
 
                                         </div>
 
-                                      
+
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Payment Mode</label>
