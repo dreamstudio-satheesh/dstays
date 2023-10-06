@@ -101,8 +101,8 @@ class BookingController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->validate([
-            'start_date' => 'required|date',
-            'end_date' => 'required|date|after_or_equal:start_date',
+            'check_in' => 'required|date',
+            'check_out' => 'required|date|after_or_equal:check_in',
             'customer_id' => 'required|integer|exists:customers,id',
             'property_id' => 'required|integer|exists:properties,id',
             'number_of_people' => 'required|integer|min:1',
