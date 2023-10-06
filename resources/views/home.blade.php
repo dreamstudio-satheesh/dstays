@@ -42,7 +42,7 @@
         });
 
 
-          
+
 
         $('#saveBooking').click(function() {
             // Get form values
@@ -54,8 +54,8 @@
             let bookingType = $('#booking_type').val();
             let advanceType = $('#advance_type').val();
             let advancePayment = $('#advance_payment').val();
-            let billAmount = $('#bill_amount').val();
-          
+            let billAmount = $('#bil_package_amount').val();
+
 
             // Send an AJAX request to your Laravel back-end
             $.ajax({
@@ -195,8 +195,7 @@
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Booking Type</label>
-                                            <select class="form-control"
-                                                name="booking_type" id="booking_type">
+                                            <select class="form-control" name="booking_type" id="booking_type">
                                                 <option value="Rent">Rent</option>
                                                 <option value="Package">Package</option>
                                             </select>
@@ -214,10 +213,10 @@
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Rent / Package Amount</label>
-                                            
-                                            <input type="text" id="bill_amount" name="bil_package_amount"
-                                                class="form-control" placeholder="Bill / Package Amount" >
-                                            <span id="bill_amountError" class="text-danger error"></span>
+
+                                            <input type="text" id="bil_package_amount" name="bil_package_amount"
+                                                class="form-control" placeholder="Rent / Package Amount">
+                                            <span id="bil_package_amountError" class="text-danger error"></span>
                                         </div>
 
 
