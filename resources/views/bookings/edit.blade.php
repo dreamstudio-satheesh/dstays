@@ -32,7 +32,7 @@
                             <div class="row">
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label for="start_date">Check-In Date</label>
-                                    <input type="date" class="form-control" value="" name="start_date">
+                                    <input type="date" class="form-control" value="{{ date('d-m-Y', strtotime($book->check_in)) }}" name="check_in">
                                 </div>
 
                                 <div class="col-xs-6 col-md-6 form-group">
