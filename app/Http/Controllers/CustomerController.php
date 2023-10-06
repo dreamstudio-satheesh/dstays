@@ -65,7 +65,7 @@ class CustomerController extends Controller
         $data = $request->validate([
             'name' => 'required|string|max:255',
             'mobile_number' => 'required|integer|unique:customers',
-            'address' => 'nullable|string|min:6',
+            'address' => 'required|string|min:6',
         ]);
 
         $customer->update($data);
