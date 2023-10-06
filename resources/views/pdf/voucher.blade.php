@@ -28,13 +28,13 @@
                 <p><strong>Property Name:</strong> {{ $booking->property->name }}</p>
                 <p><strong>Check-in Date:</strong> {{ $booking->check_in }}</p>
                 <p><strong>Check-out Date:</strong> {{ $booking->check_out }}</p>
+                <p><strong>Booking Type:</strong> {{ $booking->name }}</p>
+                <p><strong>Status:</strong> {{ $booking->status }}</p>
             </div>
             <div class="col-md-6">
-                <p><strong>Booking Type:</strong> {{ $booking->name }}</p>
                 <p><strong>Bill/Package Amount:</strong> {{ $booking->bill_package_amount }}</p>
                 <p><strong>Advance Payment:</strong> {{ $booking->advance_payment }}</p>
                 <p><strong>Number of People:</strong> {{ $booking->number_of_people }}</p>
-                <p><strong>Status:</strong> {{ $booking->status }}</p>
             </div>
         </div>
     </div>
