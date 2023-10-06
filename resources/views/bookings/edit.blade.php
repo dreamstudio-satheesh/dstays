@@ -93,7 +93,7 @@
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Payment Amount</label>
-                                    <input type="text" name="advance_payment" value="{{ $booking->start_date }}" name="advance_payment"
+                                    <input type="text" name="advance_payment" value="{{ $booking->advance_payment }}" name="advance_payment"
                                         class="form-control" placeholder="Advance">
                                     <span id="advance_paymentError" class="text-danger error"></span>
                                 </div>
