@@ -30,7 +30,7 @@
                                         </th>
                                         <td>{{ $book->customer->name }}</td>
                                         <td>{{ $book->property->name }}</td>
-                                        <td>{{ $book->check_in }} - {{ $book->check_out }}</td>
+                                        <td>{{ date('d M', strtotime($book->check_in)) }} - {{ date('d M', strtotime($book->check_out)) }}</td>
                                         <td>
 
                                             <div class="d-flex gap-2">
