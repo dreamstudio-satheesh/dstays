@@ -56,7 +56,7 @@
             let advancePayment = $('#advance_payment').val();
             let bill_package_amount = $('#bill_package_amount').val();
 
-
+console.log(bill_package_amount);
             // Send an AJAX request to your Laravel back-end
             $.ajax({
                 url: '/store-booking', // Replace with your POST route
