@@ -195,7 +195,7 @@
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Booking Type</label>
-                                            <select class="form-control" onchange="showInputBox(this.value)"
+                                            <select class="form-control"
                                                 name="booking_type" id="booking_type">
                                                 <option value="">Select</option>
                                                 <option value="Rent">Rent</option>
