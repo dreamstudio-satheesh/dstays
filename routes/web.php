@@ -57,6 +57,7 @@ Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->name(
 Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');
 Route::get('/get-bookings', [BookingController::class, 'getBookings']);
 Route::get('/get-bookings/{id}', [BookingController::class, 'getBookings']);
+Route::get('/bookings/{id}/edit', [BookingController::class, 'edit'])->name('bookings.edit');
 Route::delete('/bookings/{id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
 
 Route::post('/store-booking', [BookingController::class, 'storeBooking']);
