@@ -32,7 +32,7 @@
                             <div class="row">
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label for="start_date">Check-In Date</label>
-                                    <input type="date" class="form-control" id="start_date">
+                                    <input type="date" class="form-control" value="{{ $booking->start_date }}" name="start_date">
                                 </div>
 
                                 <div class="col-xs-6 col-md-6 form-group">
