@@ -42,7 +42,6 @@
         });
 
 
-        function showInputBox(bookingType) {
           
 
         $('#saveBooking').click(function() {
