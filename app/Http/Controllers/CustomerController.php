@@ -31,7 +31,7 @@ class CustomerController extends Controller
     {
         $data = $request->validate([
             'name' => 'required|string|max:255',
-            'mobile_number' => 'required|numeric|digits:10|unique:customers',
+            'mobile_number' => 'required|integer|digits:10|unique:customers',
             'address' => 'required|string|min:6',
         ]);
         Customer::create($request->all());
@@ -64,7 +64,7 @@ class CustomerController extends Controller
         $customer = Customer::findOrFail($id);
         $data = $request->validate([
             'name' => 'required|string|max:255',
-            'mobile_number' => 'required|numeric|digits:10|unique:customers',
+            'mobile_number' => 'required|integer|digits:10|unique:customers',
             'address' => 'required|string|min:6',
         ]);
 

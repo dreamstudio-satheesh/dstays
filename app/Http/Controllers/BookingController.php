@@ -6,7 +6,6 @@ use App\Models\Booking;
 use App\Models\Customer;
 use App\Models\Property;
 use Illuminate\Http\Request;
-use App\Rules\EitherPackageAmountOrBillAmountRequired;
 
 class BookingController extends Controller
 {
@@ -44,7 +43,6 @@ class BookingController extends Controller
             'advance_type' => ['required','string'],
             'advance_payment' => 'nullable|numeric|min:0',
             'bill_amount' => 'nullable|numeric|min:0',
-            'package_amount' => 'nullable|numeric|min:0',
         ]);
 
         // Create a new booking
@@ -57,7 +55,6 @@ class BookingController extends Controller
             'advance_type' => $validatedData['advance_type'],
             'advance_payment' => $validatedData['advance_payment'],
             'bill_amount' => $validatedData['bill_amount'],
-            'package_amount' => $validatedData['package_amount'],
             'status' => 'active',
         ]);
 
