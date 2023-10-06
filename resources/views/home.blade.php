@@ -56,7 +56,7 @@
             let advancePayment = $('#advance_payment').val();
             let bill_package_amount = $('#bill_package_amount').val();
 
-console.log(bill_package_amount);
+            console.log(bill_package_amount);
             // Send an AJAX request to your Laravel back-end
             $.ajax({
                 url: '/store-booking', // Replace with your POST route
@@ -76,6 +76,11 @@ console.log(bill_package_amount);
                 success: function(response) {
                     $('#bookingModal').modal('hide');
                     calendar.refetchEvents();
+
+                    setTimeout(function() {
+                        location.reload();
+                    }, 400);
+
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     if (jqXHR.status === 422) { // When status code is 422, it's a validation issue
