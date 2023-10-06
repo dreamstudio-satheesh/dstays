@@ -37,14 +37,14 @@
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label for="end_date">Check-Out Date</label>
-                                    <input type="date" class="form-control" id="end_date">
+                                    <input type="date" class="form-control" value="{{ $booking->check_out }}" name="check_out">
                                 </div>
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label for="customer_id">Customer</label>
-                                    <select class="form-control" name="customer_id" id="customer_id">
+                                    <select class="form-control" name="customer_id">
                                         @foreach ($customers as $customer)
-                                            <option value="{{ $customer->id }}">{{ $customer->name }}</option>
+                                            <option value="{{ $customer->id }}" {{ $booking->customer_id == $customer->id ? 'selected' : '' }}>{{ $customer->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
