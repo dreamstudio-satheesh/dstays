@@ -34,6 +34,12 @@
                                         <td>
 
                                             <div class="d-flex gap-2">
+
+                                                <a target="blank" href="#"
+                                                    class="btn btn-sm btn-primary edit-item-btn"><i class="fa fa-whatsapp" style="font-size:48px;color:green"></i></a>
+                                               
+                                                &nbsp;  &nbsp;  &nbsp;
+
                                                 <a target="blank" href="{{ route('voucher', $book->id) }}"
                                                     class="btn btn-sm btn-primary edit-item-btn">Voucher</a>
                                                 &nbsp;  &nbsp;  &nbsp;
