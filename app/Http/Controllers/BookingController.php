@@ -90,6 +90,8 @@ class BookingController extends Controller
 
     public function edit(Booking $booking)
     {
+       
+       return $booking;
         // return view('bookings.edit', compact('booking'));
     }
 
