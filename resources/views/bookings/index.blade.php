@@ -19,7 +19,7 @@
                                     <th scope="col">ID</th>
                                     <th scope="col">Customer Name</th>
                                     <th scope="col">Property</th>
-                                    <th scope="col">date</th>
+                                    <th scope="col">Booking Date</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
