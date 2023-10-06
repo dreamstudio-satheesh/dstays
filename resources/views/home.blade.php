@@ -197,7 +197,6 @@
                                             <label class="form-label">Booking Type</label>
                                             <select class="form-control"
                                                 name="booking_type" id="booking_type">
-                                                <option value="">Select</option>
                                                 <option value="Rent">Rent</option>
                                                 <option value="Package">Package</option>
                                             </select>
