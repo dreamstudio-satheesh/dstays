@@ -96,9 +96,25 @@ class BookingController extends Controller
         return view('bookings.edit', compact('booking','customers'));
     }
 
-    public function update(Request $request, Booking $booking)
+    public function update(Request $request, $id)
     {
-        //
+        $data = $request->validate([
+            'start_date' => 'required|date',
+            'end_date' => 'required|date|after_or_equal:start_date',
+            'customer_id' => 'required|integer|exists:customers,id',
+            'property_id' => 'required|integer|exists:properties,id',
+            'number_of_people' => 'required|integer|min:1',
+            'advance_type' => ['required','string'],
+            'advance_payment' => 'nullable|numeric|min:0',
+            'bill_amount' => 'nullable|numeric|min:0',
+        ]);
+
+        $booking = Booking::findOrFail($id);
+
+        
+        $booking->update($data);
+
+        return redirect()->route('bookings.index')->with('success', 'Booking updated successfully!');
     }
 
     public function destroy($id)

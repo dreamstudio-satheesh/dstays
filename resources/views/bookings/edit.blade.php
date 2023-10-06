@@ -13,7 +13,21 @@
                     </div>
 
                     <div class="card-body">
-                        <form id="bookingForm">
+                        <form action="{{ route('booking.update',$booking->id) }}"  method="POST" >
+                            @csrf
+                            @method('PUT')
+                            @if ($errors->any())
+                                <div class="mb-3">
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach ($errors->all() as $error)
+                                                <li>{{ $error }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                </div>
+                            @endif
+
 
                             <div class="row">
                                 <div class="col-xs-6 col-md-6 form-group">

@@ -58,6 +58,7 @@ Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.ind
 Route::get('/get-bookings', [BookingController::class, 'getBookings']);
 Route::get('/get-bookings/{id}', [BookingController::class, 'getBookings']);
 Route::get('/bookings/{id}/edit', [BookingController::class, 'edit'])->name('bookings.edit');
+Route::put('/bookings/{id}', [BookingController::class, 'update'])->name('bookings.update');
 Route::delete('/bookings/{id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
 
 Route::post('/store-booking', [BookingController::class, 'storeBooking']);
