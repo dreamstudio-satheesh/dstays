@@ -75,12 +75,10 @@
                 },
                 success: function(response) {
                     $('#bookingModal').modal('hide');
-                    calendar.refetchEvents();
+                    // calendar.refetchEvents();
 
-                    setTimeout(function() {
-                        location.reload();
-                    }, 400);
-
+                    console.log('Success function executed');
+                    location.reload();
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     if (jqXHR.status === 422) { // When status code is 422, it's a validation issue
