@@ -57,7 +57,7 @@
                                     <select class="form-control" name="property_id">
                                         @foreach ($properties as $property)
                                             <option value="{{ $property->id }}"
-                                                {{ $property->id == $$booking->property_id ? 'selected' : '' }}>
+                                                {{ $property->id == $booking->property_id ? 'selected' : '' }}>
                                                 {{ $property->name }}</option>
                                         @endforeach
                                     </select>
