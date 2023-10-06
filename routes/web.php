@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PdfController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
@@ -62,4 +63,7 @@ Route::put('/bookings/{id}', [BookingController::class, 'update'])->name('bookin
 Route::delete('/bookings/{id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
 
 Route::post('/store-booking', [BookingController::class, 'storeBooking']);
+
+Route::get('/voucher/{booking}', [PdfController::class, 'generateVoucher']);
+
 
