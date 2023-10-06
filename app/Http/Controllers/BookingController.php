@@ -88,10 +88,10 @@ class BookingController extends Controller
         //
     }
 
-    public function edit(Booking $booking)
+    public function edit( $id)
     {
        
-       return $booking;
+      return  $booking=Booking::where('id',$id)->first();
         // return view('bookings.edit', compact('booking'));
     }
 
