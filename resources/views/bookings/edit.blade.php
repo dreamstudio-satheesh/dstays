@@ -44,7 +44,7 @@
                             </div> --}}
 
                                 <input type="hidden" id="property_id" name="property_id"
-                                    value="{{ $id }}">
+                                    value="">
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">No Of people</label>
                                     <input type="number" name="number_of_people" id="number_of_people"
