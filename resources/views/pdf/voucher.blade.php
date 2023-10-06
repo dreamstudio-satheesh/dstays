@@ -3,53 +3,40 @@
 <head>
     <meta charset="utf-8">
     <title>Booking Voucher</title>
+    <!-- Include Bootstrap CSS (You may need to adjust the path) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Add CSS styling for your voucher here */
+        /* Add additional CSS styling here */
+
+        /* Customize the voucher container */
+        .voucher-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
-    <h1>Booking Voucher</h1>
-    <table>
-        <tr>
-            <th>Booking ID:</th>
-            <td>{{ $booking->id }}</td>
-        </tr>
-        <tr>
-            <th>Customer Name:</th>
-            <td>{{ $booking->customer->name }}</td>
-        </tr>
-        <tr>
-            <th>Property Name:</th>
-            <td>{{ $booking->property->name }}</td>
-        </tr>
-        <tr>
-            <th>Check-in Date:</th>
-            <td>{{ $booking->check_in }}</td>
-        </tr>
-        <tr>
-            <th>Check-out Date:</th>
-            <td>{{ $booking->check_out }}</td>
-        </tr>
-        <tr>
-            <th>Booking Type:</th>
-            <td>{{ $booking->name }}</td>
-        </tr>
-        <tr>
-            <th>Bill/Package Amount:</th>
-            <td>{{ $booking->bill_package_amount }}</td>
-        </tr>
-        <tr>
-            <th>Advance Payment:</th>
-            <td>{{ $booking->advance_payment }}</td>
-        </tr>
-        <tr>
-            <th>Number of People:</th>
-            <td>{{ $booking->number_of_people }}</td>
-        </tr>
-        <tr>
-            <th>Status:</th>
-            <td>{{ $booking->status }}</td>
-        </tr>
-    </table>
+    <!-- Voucher Container -->
+    <div class="container voucher-container">
+        <h1 class="text-center">Booking Voucher</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <p><strong>Booking ID:</strong> {{ $booking->id }}</p>
+                <p><strong>Customer Name:</strong> {{ $booking->customer->name }}</p>
+                <p><strong>Property Name:</strong> {{ $booking->property->name }}</p>
+                <p><strong>Check-in Date:</strong> {{ $booking->check_in }}</p>
+                <p><strong>Check-out Date:</strong> {{ $booking->check_out }}</p>
+            </div>
+            <div class="col-md-6">
+                <p><strong>Booking Type:</strong> {{ $booking->name }}</p>
+                <p><strong>Bill/Package Amount:</strong> {{ $booking->bill_package_amount }}</p>
+                <p><strong>Advance Payment:</strong> {{ $booking->advance_payment }}</p>
+                <p><strong>Number of People:</strong> {{ $booking->number_of_people }}</p>
+                <p><strong>Status:</strong> {{ $booking->status }}</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
