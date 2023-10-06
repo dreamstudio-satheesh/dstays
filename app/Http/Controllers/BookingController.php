@@ -43,7 +43,7 @@ class BookingController extends Controller
             'advance_type' => ['required','string'],
             'booking_type' => ['required','string'],
             'advance_payment' => 'nullable|numeric|min:0',
-            'bill_package_amount' => 'required|numeric|min:0',
+            'bill_package_amount' => 'required|numeric',
         ]);
 
         // Create a new booking
