@@ -3,7 +3,7 @@
 @section('content')
     <div class="content">
         <div class="breadcrumb-wrapper">
-            
+
         </div>
         <div class="row">
             <div class="col-12">
@@ -34,7 +34,10 @@
                                         <td>
 
                                             <div class="d-flex gap-2">
-                                               
+                                                <!-- Edit Button -->
+                                                <a href="{{ route('bookings.edit', $book->id) }}"
+                                                    class="btn btn-sm btn-primary edit-item-btn">Edit</a>
+                                                    
                                                 <div class="remove">
                                                     <form action="{{ route('bookings.destroy', $book->id) }}"
                                                         method="POST">
