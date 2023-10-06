@@ -54,7 +54,7 @@
             let bookingType = $('#booking_type').val();
             let advanceType = $('#advance_type').val();
             let advancePayment = $('#advance_payment').val();
-            let bill_package_amount = $('#bil_package_amount').val();
+            let bill_package_amount = $('#bill_package_amount').val();
 
 
             // Send an AJAX request to your Laravel back-end
