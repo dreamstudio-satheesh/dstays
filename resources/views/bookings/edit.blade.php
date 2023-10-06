@@ -66,7 +66,7 @@
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">No Of people</label>
-                                    <input type="number" name="number_of_people"value="{{ $booking->number_of_people }}"
+                                    <input type="number" name="number_of_people" value="{{ $booking->number_of_people }}"
                                         class="form-control" placeholder="No Of People">
                                     <span id="number_of_peopleError" class="text-danger error"></span>
 
@@ -103,10 +103,8 @@
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Rent / Package Amount</label>
-                                    <input type="text" id="package_amount" name="package_amount" class="form-control"
-                                        placeholder="Rent Amount" style="display: none;">
-                                    <input type="text" id="bill_amount" name="bill_amount" class="form-control"
-                                        placeholder="Package Amount" style="display: none;">
+                                    <input type="text" name="bill_package_amount" value="{{ $booking->bill_package_amount }}" class="form-control"
+                                        placeholder="Rent Amount" >
                                     <span id="bill_amountError" class="text-danger error"></span>
                                 </div>
 
