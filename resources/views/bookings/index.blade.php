@@ -37,7 +37,7 @@
                                                 <!-- Edit Button -->
                                                 <a href="{{ route('bookings.edit', $book->id) }}"
                                                     class="btn btn-sm btn-primary edit-item-btn">Edit</a>
-                                                    
+                                                &nbsp;  &nbsp;  &nbsp;
                                                 <div class="remove">
                                                     <form action="{{ route('bookings.destroy', $book->id) }}"
                                                         method="POST">
