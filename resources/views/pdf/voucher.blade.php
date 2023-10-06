@@ -3,26 +3,56 @@
 <head>
     <meta charset="utf-8">
     <title>Booking Voucher</title>
-    <!-- Include Bootstrap CSS (You may need to adjust the path) -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Add additional CSS styling here */
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
 
-        /* Customize the voucher container */
-        .voucher-container {
-            margin: 20px;
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
+            background-color: #fff;
             border: 1px solid #ccc;
             border-radius: 5px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* Row and Column Styles */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px; /* Adjust for column padding */
+        }
+
+        .col {
+            flex: 1;
+            padding: 0 10px; /* Adjust for column padding */
+        }
+
+        /* Additional Styles */
+        p {
+            margin: 10px 0;
+        }
+
+        strong {
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <!-- Voucher Container -->
-    <div class="container voucher-container">
-        <h1 class="text-center">Booking Voucher</h1>
+    <div class="container">
+        <h1>Booking Voucher</h1>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col">
                 <p><strong>Booking ID:</strong> {{ $booking->id }}</p>
                 <p><strong>Customer Name:</strong> {{ $booking->customer->name }}</p>
                 <p><strong>Property Name:</strong> {{ $booking->property->name }}</p>
@@ -31,7 +61,7 @@
                 <p><strong>Booking Type:</strong> {{ $booking->name }}</p>
                 <p><strong>Status:</strong> {{ $booking->status }}</p>
             </div>
-            <div class="col-md-6">
+            <div class="col">
                 <p><strong>Bill/Package Amount:</strong> {{ $booking->bill_package_amount }}</p>
                 <p><strong>Advance Payment:</strong> {{ $booking->advance_payment }}</p>
                 <p><strong>Number of People:</strong> {{ $booking->number_of_people }}</p>
