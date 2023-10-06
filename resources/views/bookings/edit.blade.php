@@ -32,7 +32,7 @@
                             <div class="row">
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label for="start_date">Check-In Date</label>
-                                    <input type="date" class="form-control" value="{{ $booking->start_date }}" name="start_date">
+                                    <input type="date" class="form-control" value="" name="start_date">
                                 </div>
 
                                 <div class="col-xs-6 col-md-6 form-group">
@@ -93,7 +93,7 @@
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Payment Amount</label>
-                                    <input type="text" name="advance_payment" id="advance_payment"
+                                    <input type="text" name="advance_payment" value="{{ $booking->advance_payment }}" name="advance_payment"
                                         class="form-control" placeholder="Advance">
                                     <span id="advance_paymentError" class="text-danger error"></span>
                                 </div>
