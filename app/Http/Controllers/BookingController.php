@@ -89,9 +89,8 @@ class BookingController extends Controller
     }
 
     public function edit( $id)
-    {
-       
-       return $booking=Booking::where('id',$id)->first();
+    {   
+        $booking=Booking::where('id',$id)->first();
         $customers = Customer::all();
         return view('bookings.edit', compact('booking','customers'));
     }
