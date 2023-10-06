@@ -35,7 +35,7 @@
 
                                             <div class="d-flex gap-2">
 
-                                                <a target="blank" href="wa.me/send?phone=91679108040&attachment=http://dstays.dreampos.in/voucher/{{ $book->id }}" ><i class="fa fa-whatsapp" style="font-size:24px; color:#43ab43;"></i></a>
+                                                <a target="blank" href="https://wa.me/send?phone=91679108040&attachment=http://dstays.dreampos.in/voucher/{{ $book->id }}" ><i class="fa fa-whatsapp" style="font-size:24px; color:#43ab43;"></i></a>
                                                
                                                 &nbsp;  &nbsp;  &nbsp;
 
