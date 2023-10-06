@@ -35,7 +35,7 @@
 
                                             <div class="d-flex gap-2">
 
-                                                <a target="blank" href="https://wa.me/send?phone=919524848846&text=%0D%0AYour+Resort+Booking+Completed+%21+Thanks%0D%0Ahttp%3A%2F%2Fdstays.dreampos.in%2Fvoucher%2F{{ $book->id }}" ><i class="fa fa-whatsapp" style="font-size:24px; color:#43ab43;"></i></a>
+                                                <a target="blank" href="https://wa.me/send?phone=918778260271&text=%0D%0AYour+Resort+Booking+Completed+%21+Thanks%0D%0Ahttp%3A%2F%2Fdstays.dreampos.in%2Fvoucher%2F{{ $book->id }}" ><i class="fa fa-whatsapp" style="font-size:24px; color:#43ab43;"></i></a>
                                                
                                                 &nbsp;  &nbsp;  &nbsp;
 
