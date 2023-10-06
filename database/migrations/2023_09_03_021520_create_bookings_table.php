@@ -16,9 +16,9 @@ return new class extends Migration
             $table->foreignId('property_id')->constrained()->onDelete('cascade');
             $table->foreignId('customer_id')->constrained()->onDelete('cascade');
             $table->dateTime('check_in');
-            $table->dateTime('check_out')->nullable();            
-            $table->decimal('bill_amount', 10, 2)->nullable();
-            $table->decimal('package_amount', 10, 2)->nullable();
+            $table->dateTime('check_out')->nullable();
+            $table->enum('name', ['Rent', 'Package']);           
+            $table->decimal('bill_package_amount', 10, 2);
             $table->string('advance_type')->nullable();
             $table->decimal('advance_payment', 10, 2)->nullable();
             $table->integer('number_of_people')->nullable();

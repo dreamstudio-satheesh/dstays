@@ -43,18 +43,7 @@
 
 
         function showInputBox(bookingType) {
-            const Bill = document.getElementById('bill_amount');
-            const Package = document.getElementById('package_amount');
-            if (bookingType == 'Rent') {
-                Package.style.display = 'block';
-                Bill.style.display = 'none';
-            } else {
-                Bill.style.display = 'block';
-                Package.style.display = 'none';
-            }
-
-        }
-
+          
 
         $('#saveBooking').click(function() {
             // Get form values
@@ -67,14 +56,7 @@
             let advanceType = $('#advance_type').val();
             let advancePayment = $('#advance_payment').val();
             let billAmount = $('#bill_amount').val();
-            let PackageAmount = $('#package_amount').val();
-
-            // Check if either billAmount or PackageAmount is empty
-            if (billAmount === '' && PackageAmount === '') {
-                // Show an error message here, for example:
-                alert('Either Bill Amount or Package Amount must have a value.');
-                return; // Stop further execution
-            }
+          
 
             // Send an AJAX request to your Laravel back-end
             $.ajax({
@@ -89,8 +71,7 @@
                     advance_type: advanceType,
                     booking_type: bookingType,
                     advance_payment: advancePayment,
-                    bill_amount: billAmount,
-                    package_amount: PackageAmount,
+                    bill_package_amount: billAmount,
                     _token: '{{ csrf_token() }}'
                 },
                 success: function(response) {
@@ -235,10 +216,9 @@
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Rent / Package Amount</label>
-                                            <input type="text" id="package_amount" name="package_amount"
-                                                class="form-control" placeholder="Rent Amount" style="display: none;">
-                                            <input type="text" id="bill_amount" name="bill_amount"
-                                                class="form-control" placeholder="Package Amount" style="display: none;">
+                                            
+                                            <input type="text" id="bill_amount" name="bil_package_amount"
+                                                class="form-control" placeholder="Bill / Package Amount" >
                                             <span id="bill_amountError" class="text-danger error"></span>
                                         </div>
 

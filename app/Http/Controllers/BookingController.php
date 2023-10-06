@@ -41,8 +41,9 @@ class BookingController extends Controller
             'property_id' => 'required|integer|exists:properties,id',
             'number_of_people' => 'required|integer|min:1',
             'advance_type' => ['required','string'],
+            'booking_type' => ['required','string'],
             'advance_payment' => 'nullable|numeric|min:0',
-            'bill_amount' => 'nullable|numeric|min:0',
+            'bill_package_amount' => 'required|numeric|min:0',
         ]);
 
         // Create a new booking
@@ -53,8 +54,9 @@ class BookingController extends Controller
             'property_id' => $validatedData['property_id'],
             'number_of_people' => $validatedData['number_of_people'],
             'advance_type' => $validatedData['advance_type'],
+            'booking_type' => $validatedData['booking_type'],
             'advance_payment' => $validatedData['advance_payment'],
-            'bill_amount' => $validatedData['bill_amount'],
+            'bill_package_amount' => $validatedData['bill_package_amount'],
             'status' => 'active',
         ]);
 
@@ -104,8 +106,9 @@ class BookingController extends Controller
             'property_id' => 'required|integer|exists:properties,id',
             'number_of_people' => 'required|integer|min:1',
             'advance_type' => ['required','string'],
+            'booking_type' => ['required','string'],
             'advance_payment' => 'nullable|numeric|min:0',
-            'bill_amount' => 'nullable|numeric|min:0',
+            'bill_package_amount' => 'required|numeric|min:0',
         ]);
 
         $booking = Booking::findOrFail($id);
