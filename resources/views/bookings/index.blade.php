@@ -34,6 +34,9 @@
                                         <td>
 
                                             <div class="d-flex gap-2">
+                                                <a href="{{ route('voucher', $book->id) }}"
+                                                    class="btn btn-sm btn-primary edit-item-btn">Voucher</a>
+                                                &nbsp;  &nbsp;  &nbsp;
                                                 <!-- Edit Button -->
                                                 <a href="{{ route('bookings.edit', $book->id) }}"
                                                     class="btn btn-sm btn-primary edit-item-btn">Edit</a>
