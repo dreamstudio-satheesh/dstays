@@ -13,7 +13,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="{{ route('booking.update',$booking->id) }}"  method="POST" >
+                        <form action="{{ route('bookings.update',$booking->id) }}"  method="POST" >
                             @csrf
                             @method('PUT')
                             @if ($errors->any())
