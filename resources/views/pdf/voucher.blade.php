@@ -8,9 +8,8 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="ThemeMarch">
   <!-- Site Title -->
-  <title>Movie Booking Invoice</title>
+  <title>Ticket Booking Voucher</title>
   <link rel="stylesheet" href="https://ivonne-seven.vercel.app/assets/css/style.css">
 </head>
 
@@ -32,11 +31,11 @@
             <p>Seating is on a first come, first served basis unless you have purchased ticket for a Reserved Seating performance. Please arrive early for best seat section.</p>
           </div>
           <div class="cs-invoice_right cs-text_right">
-            <b class="cs-primary_color">IVONNE CINEMA</b>
+            <b class="cs-primary_color">DSTAYS</b>
             <p>
               237 Roanoke Road, North York, <br/>
               Ontario, Canada <br/>
-              demo@email.com
+              admin@dstays.com
             </p>
           </div>
         </div>
