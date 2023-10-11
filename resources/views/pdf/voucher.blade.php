@@ -75,12 +75,12 @@
                       <table>
                         <tbody>
                           <tr>
-                            <td class="cs-primary_color cs-semi_bold">Transaction NO</td>
+                            <td class="cs-primary_color cs-semi_bold">Booking ID</td>
                             <td class="cs-primary_color cs-semi_bold">Check In</td>
                             <td class="cs-primary_color cs-semi_bold">Check Out</td>
                           </tr>
                           <tr>
-                            <td>SI2534687</td>
+                            <td># {{ $booking->id }}</td>
                             <td>{{ $booking->check_in }}</td>
                             <td>{{ $booking->check_out }}</td>
                           </tr>
@@ -99,7 +99,7 @@
               <table>
                 <thead>
                   <tr class="cs-focus_bg">
-                    <th class="cs-width_8 cs-semi_bold cs-primary_color">Film / Performance</th>
+                    <th class="cs-width_8 cs-semi_bold cs-primary_color">Bill/Package Amount</th>
                     <th class="cs-width_2 cs-semi_bold cs-primary_color">QTN</th>
                     <th class="cs-width_2 cs-semi_bold cs-primary_color">Price</th>
                     <th class="cs-width_2 cs-semi_bold cs-primary_color">Tax</th>
