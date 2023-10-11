@@ -28,7 +28,7 @@
         </div>
         <div class="cs-invoice_head cs-mb10">
           <div class="cs-invoice_left">
-            <b class="cs-primary_color">Must Read:</b>
+            <b class="cs-primary_color">Food Arragments:</b>
             <p>Seating is on a first come, first served basis unless you have purchased ticket for a Reserved Seating performance. Please arrive early for best seat section.</p>
           </div>
           <div class="cs-invoice_right cs-text_right">
