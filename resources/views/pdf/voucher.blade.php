@@ -76,13 +76,13 @@
                         <tbody>
                           <tr>
                             <td class="cs-primary_color cs-semi_bold">Transaction NO</td>
-                            <td class="cs-primary_color cs-semi_bold">Booking ID</td>
-                            <td class="cs-primary_color cs-semi_bold">Date</td>
+                            <td class="cs-primary_color cs-semi_bold">Check In</td>
+                            <td class="cs-primary_color cs-semi_bold">Check Out</td>
                           </tr>
                           <tr>
                             <td>SI2534687</td>
-                            <td>{{ $booking->id }}</td>
-                            <td>25 Feb 2022</td>
+                            <td>{{ $booking->check_in }}</td>
+                            <td>{{ $booking->check_out }}</td>
                           </tr>
                         </tbody>
                       </table>
