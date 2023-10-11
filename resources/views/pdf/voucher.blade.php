@@ -1,43 +1,70 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <title>Booking Voucher</title>
-    <!-- Include Bootstrap CSS (You may need to adjust the path) -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        /* Add additional CSS styling here */
-        
 
-        /* Customize the voucher container */
-        .voucher-container {
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+<head>
+    <style>
+        body {
+            background: rgb(204, 204, 204);
         }
+
+        page {
+            background: white;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0.5cm;
+            box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+        }
+
+        page[size="A4"] {
+            width: 21cm;
+            height: 29.7cm;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid;
+        }
+
+        @media print {
+
+            body,
+            page {
+                background: white;
+                margin: 0;
+                box-shadow: 0;
+            }
+
+            table {
+                height: 100vh;
+                width: 100vw;
+            }
+
+            td {
+                width: 33.3%;
+                height: 33.3%;
+            }
     </style>
 </head>
+
 <body>
-    <!-- Voucher Container -->
-    <div class="container voucher-container">
-        <h1 class="text-center">Booking Voucher</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <p><strong>Booking ID:</strong> {{ $booking->id }}</p>
-                <p><strong>Customer Name:</strong> {{ $booking->customer->name }}</p>
-                <p><strong>Property Name:</strong> {{ $booking->property->name }}</p>
-                <p><strong>Check-in Date:</strong> {{ $booking->check_in }}</p>
-                <p><strong>Check-out Date:</strong> {{ $booking->check_out }}</p>
-            </div>
-            <div class="col-md-6">
-                <p><strong>Booking Type:</strong> {{ $booking->name }}</p>
-                <p><strong>Bill/Package Amount:</strong> {{ $booking->bill_package_amount }}</p>
-                <p><strong>Advance Payment:</strong> {{ $booking->advance_payment }}</p>
-                <p><strong>Number of People:</strong> {{ $booking->number_of_people }}</p>
-                <p><strong>Status:</strong> {{ $booking->status }}</p>
-            </div>
-        </div>
-    </div>
+    <page size="A4">
+
+        <table>
+            <tr>
+                <td>Booking ID</td>
+                <td>Customer Name:</td>
+                <td>Italy</td>
+            </tr>
+            <tr>
+                <td>{{ $booking->id }}</td>
+                <td>{{ $booking->customer->name }}</td>
+                <td>{{ $booking->property->name }}</td>
+            </tr>
+          
+        </table>
+    </page>
 </body>
+
 </html>
