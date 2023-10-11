@@ -43,7 +43,6 @@
 
             td {
                 width: 33.3%;
-                height: 33.3%;
             }
     </style>
 </head>
