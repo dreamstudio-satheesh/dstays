@@ -80,7 +80,7 @@
                           </tr>
                           <tr>
                             <td>SI2534687</td>
-                            <td>WMRI25346</td>
+                            <td>{{ $booking->id }}</td>
                             <td>25 Feb 2022</td>
                           </tr>
                         </tbody>
