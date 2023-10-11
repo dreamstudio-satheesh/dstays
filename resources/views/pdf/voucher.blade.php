@@ -48,7 +48,7 @@
                     <td class="cs-width_4 cs-text_center"><p class="cs-accent_color cs-m0 cs-bold cs-f16 cs-special_item">Purcheser INFO:</p></td>
                     <td class="cs-width_4">
                       <span class="cs-primary_color cs-semi_bold">Name:</span> {{ $booking->customer->name }} <br>
-                      <span class="cs-primary_color cs-semi_bold">Booking Type:</span> {{ $booking->name }} <br>+1-613-555-0141
+                      <span class="cs-primary_color cs-semi_bold">Booking Type:</span> {{ $booking->name }} <br>
                     </td>
                     <td class="cs-width_4">
                       <b class="cs-primary_color">Address:</b> <br>
