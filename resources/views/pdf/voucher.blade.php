@@ -1,176 +1,136 @@
 
-
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en">
 <head>
-  <!-- Meta Tags -->
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="ThemeMarch">
-  <!-- Site Title -->
-  <title>Hotel Booking Invoice</title>
-  <link rel="stylesheet" href="assets/css/print.css">
-</head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="images/favicon.png" rel="icon" />
+<title>Hotel Booking Invoice - Koice</title>
+<meta name="author" content="harnishdesign.net">
 
+<!-- Web Fonts
+======================= -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+
+<!-- Stylesheet
+======================= -->
+<link rel="stylesheet" type="text/css" href="print/bootstrap/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="print/font-awesome/css/all.min.css"/>
+<link rel="stylesheet" type="text/css" href="print/stylesheet.css"/>
+</head>
 <body>
-  <div class="cs-container">
-    <div class="cs-invoice cs-style1">
-      <div class="cs-invoice_in" id="download_section">
-        <div class="cs-invoice_head cs-type1 cs-mb25">
-          <div class="cs-invoice_left">
-            <p class="cs-invoice_number cs-primary_color cs-mb0 cs-f16"><b class="cs-primary_color">Invoice No:</b> #SM75692</p>
-          </div>
-          <div class="cs-invoice_right cs-text_right">
-            <div class="cs-logo cs-mb5"><img src="https://ivonne-seven.vercel.app/assets/img/logo.svg" alt="Logo"></div>
-          </div>
-        </div>
-        <div class="cs-invoice_head cs-mb10">
-          <div class="cs-invoice_left">
-            <p>
-              <b class="cs-primary_color cs-f22">Confirmed: 3 nights</b> <br>
-              <b class="cs-primary_color">Booked By Jenniferr Richards</b> <br>
-              Saturday, Feb 25, 2022
-            </p>
-          </div>
-          <div class="cs-invoice_right cs-text_right">
-            <b class="cs-primary_color">IVONNE HOTEL</b>
-            <p>
-              237 Roanoke Road, North York, <br>
-              Ontario, Canada <br>
-              demo@email.com
-            </p>
-          </div>
-        </div>
-        <div class="cs-invoice_head cs-50_col cs-mb25">
-          <div class="cs-invoice_left">
-            <b class="cs-primary_color">2 Travelers on this trip</b> <br>
-            Jennifer Richards <br>
-            Amit Saha
-          </div>
-          <div class="cs-invoice_right">
-            <ul class="cs-bar_list">
-              <li><b class="cs-primary_color">Check In:</b> 25-Feb-2022</li>
-              <li><b class="cs-primary_color">Check Out:</b> 27-Feb-2022</li>
-            </ul>
-          </div>
-        </div>
-        <ul class="cs-list cs-style2">
-          <li>
-            <div class="cs-list_left">
-              <b class="cs-primary_color">Hosted By</b> <br>
-              <p class="cs-mb0">
-                Jennifer Richards <br>
-                Phone: +1-613-555-0141
-              </p>
-            </div>
-            <div class="cs-list_right">
-              <b class="cs-primary_color">Room Details:</b> <br>
-              <p class="cs-mb5">Double bedroom with private bathroom Close to all major amenities, grocery stores, restaurants, bars and transit.</p>
-              <p class="cs-mb0">Toronto, Ontario, Canada</p>
-            </div>
-          </li>
-        </ul>
-        <div class="cs-table cs-style1">
-          <div class="cs-round_border">
-            <div class="cs-table_responsive">
-              <table class="cs-border_less">
-                <tbody>
-                  <tr>
-                    <td class="cs-primary_color cs-semi_bold cs-f18" colspan="3">Charges</td>
-                  </tr>
-                  <tr>
-                    <td>6 Nights - Private Room</td>
-                    <td class="cs-primary_color">6 X $60</td>
-                    <td class="cs-bold cs-primary_color cs-text_right">$360</td>
-                  </tr>
-                  <tr>
-                    <td colspan="2">Service Fee (Included VAT)</td>
-                    <td class="cs-bold cs-primary_color cs-text_right">$40</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="cs-table cs-style1 cs-mb20">
-          <div class="cs-table_responsive">
-            <table class="cs-border_less">
-              <tbody>
-                <tr>
-                  <td>Amet minim mollit non deserunt ullamco est sit</td>
-                  <td class="cs-bold cs-primary_color cs-f18">Total Amount:</td>
-                  <td class="cs-bold cs-primary_color cs-f18 cs-text_right">$400</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="cs-table cs-style1 cs-type1 cs-focus_bg">
-          <div class="cs-table_responsive">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="cs-primary_color cs-bold cs-f18">Payment Details</td>
-                  <td class="cs-text_center cs-semi_bold">Date</td>
-                  <td class="cs-text_center cs-semi_bold">Transaction ID</td>
-                  <td class="cs-text_right cs-semi_bold">Amount</td>
-                </tr>
-                <tr>
-                  <td class="cs-primary_color">American Express</td>
-                  <td class="cs-primary_color cs-text_center">25 Feb 2022</td>
-                  <td class="cs-primary_color cs-text_center">SI2534687</td>
-                  <td class="cs-primary_color cs-text_right">$400</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="cs-table cs-style1 cs-type1">
-          <div class="cs-table_responsive">
-            <table>
-              <tbody>
-                <tr class="cs-table_baseline">
-                  <td>
-                    <b class="cs-primary_color">Cost Per Person</b> <br>
-                    Per Person 66.66 per night included <br>fee & take.
-                  </td>
-                  <td>
-                    <p class="cs-mb5 cs-primary_color cs-semi_bold">Paid:</p>
-                    <p class="cs-m0 cs-primary_color cs-semi_bold">Balance Due:</p>
-                  </td>
-                  <td>
-                    <p class="cs-mb5 cs-text_right cs-primary_color cs-semi_bold">$400</p>
-                    <p class="cs-m0 cs-text_right cs-primary_color cs-semi_bold">$0</p>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div class="cs-note">
-          <div class="cs-note_left">
-            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M416 221.25V416a48 48 0 01-48 48H144a48 48 0 01-48-48V96a48 48 0 0148-48h98.75a32 32 0 0122.62 9.37l141.26 141.26a32 32 0 019.37 22.62z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 56v120a32 32 0 0032 32h120M176 288h160M176 368h160" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-          </div>
-          <div class="cs-note_right">
-            <p class="cs-mb0"><b class="cs-primary_color cs-bold">Note:</b></p>
-            <p class="cs-m0">Here we can write a additional notes for the client to get a better understanding of this invoice.</p>
-          </div>
-        </div><!-- .cs-note -->
-      </div>
-      <div class="cs-invoice_btns cs-hide_print">
-        <a href="javascript:window.print()" class="cs-invoice_btn cs-color1">
-          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M384 368h24a40.12 40.12 0 0040-40V168a40.12 40.12 0 00-40-40H104a40.12 40.12 0 00-40 40v160a40.12 40.12 0 0040 40h24" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><rect x="128" y="240" width="256" height="208" rx="24.32" ry="24.32" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M384 128v-24a40.12 40.12 0 00-40-40H168a40.12 40.12 0 00-40 40v24" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><circle cx="392" cy="184" r="24"/></svg>
-          <span>Print</span>
-        </a>
-        <button id="download_btn" class="cs-invoice_btn cs-color2">
-          <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><title>Download</title><path d="M336 176h40a40 40 0 0140 40v208a40 40 0 01-40 40H136a40 40 0 01-40-40V216a40 40 0 0140-40h40" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M176 272l80 80 80-80M256 48v288"/></svg>
-          <span>Download</span>
-        </button>
+<!-- Container -->
+<div class="container-fluid invoice-container"> 
+  <!-- Header -->
+  <header>
+    <div class="row align-items-center">
+      <div class="col-sm-7 text-center text-sm-start mb-3 mb-sm-0"> <img id="logo" src="images/logo.png" title="Koice" alt="Koice" /> </div>
+      <div class="col-sm-5 text-center text-sm-end">
+        <h4 class="mb-0">Invoice</h4>
+        <p class="mb-0">Invoice Number - 16835</p>
       </div>
     </div>
-  </div>
-
+    <hr>
+  </header>
+  
+  <!-- Main Content -->
+  <main>
+    <div class="row">
+      <div class="col-sm-6 mb-3"> <strong>Guest Name:</strong> <span>Smith Rhodes</span> </div>
+      <div class="col-sm-6 mb-3 text-sm-end"> <strong>Booking Date:</strong> <span>07/11/2020</span> </div>
+    </div>
+    <hr class="mt-0">
+    <div class="row">
+      <div class="col-sm-5"> <strong>Hotel Details:</strong>
+        <address>
+        The Orchid Hotel<br />
+        Plot No.3, Nr. HDFC Bank, Ashram Road<br />
+        Ahmedabad, Gujarat, India.<br />
+        </address>
+      </div>
+      <div class="col-sm-7">
+        <div class="row">
+          <div class="col-sm-4"> <strong>Check In:</strong>
+            <p>08/12/2020</p>
+          </div>
+          <div class="col-sm-4"> <strong>Check Out:</strong>
+            <p>08/14/2020</p>
+          </div>
+          <div class="col-sm-4"> <strong>Rooms:</strong>
+            <p>1</p>
+          </div>
+          <div class="col-sm-4"> <strong>Booking ID:</strong>
+            <p>HQM3912704</p>
+          </div>
+          <div class="col-sm-4"> <strong>Payment Mode:</strong>
+            <p>Credit Card</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      
+      <div class="card-body p-0">
+        <div class="table-responsive">
+          <table class="table mb-0">
+            <thead class="card-header">
+            <tr>
+              <td class="col-6"><strong>Description</strong></td>
+              <td class="col-4 text-end"><strong>Rate</strong></td>
+              <td class="col-2 text-end"><strong>Amount</strong></td>
+            </tr>
+          </thead>
+			<tbody>
+              <tr>
+                <td class="col-6">Room Charges</td>
+                <td class="col-4 text-end">$250.00 X 2 Night X 1 Rooms</td>
+                <td class="col-2 text-end">$500.00</td>
+              </tr>
+              <tr>
+                <td>Other Charges</td>
+                <td class="text-end">0</td>
+                <td class="text-end">0</td>
+              </tr>
+              <tr>
+                <td>Promotional Code</td>
+                <td class="text-end">SUMMERFUN - <span class="text-1">20.00% One Time Discount</span></td>
+                <td class="text-end">-$100.00</td>
+              </tr>
+            </tbody>
+			<tfoot class="card-footer">
+			  <tr>
+                <td colspan="2" class="text-end"><strong>Sub Total:</strong></td>
+                <td class="text-end">$400.00</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="text-end"><strong>Tax:</strong></td>
+                <td class="text-end">$40.00</td>
+              </tr>
+			  <tr>
+                <td colspan="2" class="text-end border-bottom-0"><strong>Total:</strong></td>
+                <td class="text-end border-bottom-0">$440.00</td>
+              </tr>
+			</tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+    <br>
+    <p class="text-1 text-muted"><strong>Please Note:</strong> Amount payable is inclusive of central & state goods & services Tax act applicable slab rates. Please ask Hotel for invoice at the time of check-out.</p>
+  </main>
+  <!-- Footer -->
+  <footer class="text-center">
+    <hr>
+    <p><strong>Koice Inc.</strong><br>
+      4th Floor, Plot No.22, Above Public Park, 145 Murphy Canyon Rd,<br>
+      Suite 100-18, San Diego CA 2028. </p>
+    <hr>
+    <p class="text-1"><strong>NOTE :</strong> This is computer generated receipt and does not require physical signature.</p>
+    <div class="btn-group btn-group-sm d-print-none"> <a href="javascript:window.print()" class="btn btn-light border text-black-50 shadow-none"><i class="fa fa-print"></i> Print</a> <a href="" class="btn btn-light border text-black-50 shadow-none"><i class="fa fa-download"></i> Download</a> </div>
+  </footer>
+</div>
+<!-- Back to My Account Link -->
+<p class="text-center d-print-none"><a href="#">&laquo; Back to My Account</a></p>
 </body>
 </html>
