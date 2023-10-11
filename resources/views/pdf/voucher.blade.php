@@ -23,7 +23,7 @@
             <p class="cs-invoice_number cs-primary_color cs-mb0 cs-f16"><b class="cs-primary_color">Invoice No:</b> #SM75692</p>
           </div>
           <div class="cs-invoice_right cs-text_right">
-            <div class="cs-logo cs-mb5"><img src="assets/img/logo.svg" alt="Logo"></div>
+            <div class="cs-logo cs-mb5"><img src="https://ivonne-seven.vercel.app/assets/img/logo.svg" alt="Logo"></div>
           </div>
         </div>
         <div class="cs-invoice_head cs-mb10">
