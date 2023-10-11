@@ -13,6 +13,7 @@ class PdfController extends Controller
         $data = [
             'booking' => $booking,
         ];
+        return $data;
 
         $pdf = PDF::loadView('pdf.voucher', $data);
        
