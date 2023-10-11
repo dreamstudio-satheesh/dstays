@@ -20,7 +20,7 @@
       <div class="cs-invoice_in" id="download_section">
         <div class="cs-invoice_head cs-type1 cs-mb25">
           <div class="cs-invoice_left">
-            <p class="cs-invoice_number cs-primary_color cs-mb0 cs-f16"><b class="cs-primary_color">Invoice No:</b> #SM75692</p>
+            <p class="cs-invoice_number cs-primary_color cs-mb0 cs-f16"><b class="cs-primary_color">Booking Conformation:</b> #SM75692</p>
           </div>
           <div class="cs-invoice_right cs-text_right">
             <b class="cs-primary_color">Must Read:</b>
