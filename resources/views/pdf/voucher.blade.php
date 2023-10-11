@@ -23,7 +23,7 @@
             <p class="cs-invoice_number cs-primary_color cs-mb0 cs-f16"><b class="cs-primary_color">Invoice No:</b> #SM75692</p>
           </div>
           <div class="cs-invoice_right cs-text_right">
-            <div class="cs-logo cs-mb5"><img  src="http://dstays.dreampos.in/print/logo.svg" style="width: 150px; height: 150px;" alt="Logo"></div>
+            <b class="cs-primary_color">Must Read:</b>
           </div>
         </div>
         <div class="cs-invoice_head cs-mb10">
