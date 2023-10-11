@@ -49,6 +49,7 @@
                     <td class="cs-width_4">
                       <span class="cs-primary_color cs-semi_bold">Name:</span> {{ $booking->customer->name }} <br>
                       <span class="cs-primary_color cs-semi_bold">Booking Type:</span> {{ $booking->name }} <br>
+                      <span class="cs-primary_color cs-semi_bold">Number of People:</span> {{ $booking->number_of_people }} <br>
                     </td>
                     <td class="cs-width_4">
                       <b class="cs-primary_color">Address:</b> <br>
