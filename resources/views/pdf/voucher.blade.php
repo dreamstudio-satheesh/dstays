@@ -80,7 +80,7 @@
                             <td class="cs-primary_color cs-semi_bold">Check Out</td>
                           </tr>
                           <tr>
-                            <td># {{ $booking->id }}</td>
+                            <td># 000{{ $booking->id }}</td>
                             <td>{{ $booking->check_in }}</td>
                             <td>{{ $booking->check_out }}</td>
                           </tr>
