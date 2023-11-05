@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PdfController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
@@ -34,9 +35,9 @@ Auth::routes([
   
   ]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
+Route::get('/home', [HomeController::class, 'index'])->name('index');
 
-Route::get('/home/{id}', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home/{id}', [HomeController::class, 'index'])->name('home');
 
 Route::get('/customers', [CustomerController::class, 'index'])->name('customers.index');
 Route::get('/customers/create', [CustomerController::class, 'create'])->name('customers.create');
