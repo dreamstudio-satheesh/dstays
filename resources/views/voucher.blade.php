@@ -58,19 +58,19 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600">  People:</h5>
-                        <p class="mb-10">Single / {{ $booking->number_of_people }}</p>
+                        <p class="mb-10">Family / {{ $booking->number_of_people }}</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-18 text-capitalize font-600"> Room type:</h5>
-                        <p class="mb-10">Double / 01</p>
+                        <h5 class="text-18 text-capitalize font-600"> Payment type:</h5>
+                        <p class="mb-10">{{ $booking->advance_type }}</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-18 text-capitalize font-600">Booking date</h5>
-                        <p class="mb-10">Double / 01</p>
+                        <h5 class="text-18 text-capitalize font-600">Advance :</h5>
+                        <p class="mb-10">{{ $booking->advance_payment }}</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
