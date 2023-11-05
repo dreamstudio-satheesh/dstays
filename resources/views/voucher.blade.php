@@ -131,17 +131,20 @@
                                 <td>Rs. {{ $booking->total_tarrif }}</td>
                                 <td>Rs. {{ $booking->gst }}</td>
                             </tr>
+                        </tbody>
+                    </table>
+                            <table class="table table-striped table-bordered table-hover">
 
                             <tr>
-                                <td colspan="2">Toatal Payable Rent :</td>
+                                <td>Toatal Payable Rent :</td>
                                 <td>{{ $booking->total_tarrif + $booking->gst}}</td>
                             </tr>
                             <tr>
-                                <td colspan="1">Advance paid to online date  {{ \Carbon\Carbon::parse($booking->created_at)->format('d-m-Y') }} </td>
+                                <td>Advance paid to online date  {{ \Carbon\Carbon::parse($booking->created_at)->format('d-m-Y') }} </td>
                                 <td>{{ $booking->total_tarrif }}</td>
                             </tr>
                          
-                        </tbody>
+                       
                     </table>
                 </div>
                 <div class="mb-4 text-right">
