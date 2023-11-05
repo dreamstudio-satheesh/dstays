@@ -26,7 +26,7 @@
                     {{ \Carbon\Carbon::parse($booking->created_at)->format('d-m-Y') }} </span>
             </div>
             <div class="title">
-                <h4 class="text-30 mb-0 mt-0">Invoice</h4>
+                <h4 class="text-30 mb-0 mt-0">Booking Conformation</h4>
                 <span class="status d-block text-capitalize"><strong>Status:</strong> Paid</span>
             </div>
         </div>
@@ -35,8 +35,8 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-18 text-capitalize font-600"> Booking Id :</h5>
-                        <p class="mb-10">#{{ str_pad($booking->id, 4, '0', STR_PAD_LEFT) }}</p>
+                        <h5 class="text-18 text-capitalize font-600"> Name :</h5>
+                        <p class="mb-10">{{ $booking->customer->name }}</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
@@ -77,8 +77,8 @@
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-18 text-capitalize font-600"> Booking Status :</h5>
-                        <p class="mb-10">Confirmed</p>
+                        <h5 class="text-18 text-capitalize font-600"> Booking Id :</h5>
+                        <p class="mb-10">#{{ str_pad($booking->id, 4, '0', STR_PAD_LEFT) }}</p>
                     </div>
                 </div>
             </div>
