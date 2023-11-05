@@ -163,7 +163,7 @@
             </div>
         </div>
         <div class="mb-10">
-            <p><span class="mb-2 text-title font-700 text-border"> Remarks : </span>
+            <p><span class="mb-2 text-title font-700"> Remarks : </span>
             {{ $booking->remarks }}  </p>   
         </div>
         <div class="mb-10">
