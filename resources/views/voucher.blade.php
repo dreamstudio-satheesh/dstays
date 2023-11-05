@@ -35,9 +35,10 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-18 text-capitalize font-600"> Name :</h5>
-                        <p class="mb-10">{{ $booking->customer->name }}</p>
+                        <h5 class="text-18 text-capitalize font-600"> Booking Id :</h5>
+                        <p class="mb-10">#{{ str_pad($booking->id, 4, '0', STR_PAD_LEFT) }}</p>
                     </div>
+                </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
@@ -77,8 +78,8 @@
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-18 text-capitalize font-600"> Booking Id :</h5>
-                        <p class="mb-10">#{{ str_pad($booking->id, 4, '0', STR_PAD_LEFT) }}</p>
+                        <h5 class="text-18 text-capitalize font-600"> Booking Status :</h5>
+                        <p class="mb-10">Conformied</p>
                     </div>
                 </div>
             </div>
