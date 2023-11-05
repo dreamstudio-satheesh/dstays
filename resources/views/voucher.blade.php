@@ -138,10 +138,10 @@
                             <tr>
                                 <th>Package Name</th>
                                 <th>Package Amount</th>
-                                <th>Package GST</th>
+                               
                             </tr>
                         </thead>
-                        <tbody
+                        <tbody>
                             <tr>
                                 <td>Toatal Payable Rent :</td>
                                 <td>{{ $booking->total_tarrif + $booking->gst}}</td>
