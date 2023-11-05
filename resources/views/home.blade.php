@@ -58,6 +58,7 @@
             let advancePayment = $('#advance_payment').val();
             let totalTarrif = $('#total_tarrif').val();
             let tarrifPerday = $('#tarrif_per_day').val();
+            let gst = $('#gst').val();
 
             console.log(total_tarrif);
             // Send an AJAX request to your Laravel back-end
@@ -76,7 +77,8 @@
                     group_type: groupType,
                     advance_payment: advancePayment,
                     total_tarrif: totalTarrif,
-                    tarrif_per_day: tarrifPerday
+                    tarrif_per_day: tarrifPerday,
+                    gst: gst,
                     _token: '{{ csrf_token() }}'
                 },
                 success: function(response) {
@@ -216,7 +218,7 @@
                                             <select class="form-control" name="advance_type" id="advance_type">
                                                 <option value="Full Payment">Full Payment</option>
                                                 <option value="Full Payment">partial Payment</option>
-                                                <option value="Full Payment">Nill Payment</option>
+                                                <option value="Full Payment">Nil Payment</option>
                                             </select>
 
                                         </div>
@@ -241,15 +243,22 @@
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Tarrif Per Day</label>
                                             <input type="text" name="tarrif_per_day" id="tarrif_per_day"
-                                                class="form-control" placeholder="Advance">
+                                                class="form-control" placeholder="Amount">
                                             <span id="tarrif_per_dayError" class="text-danger error"></span>
                                         </div>
 
                                         <div class="col-xs-6 col-md-6 form-group">
-                                            <label class="form-label">Total Tarrif </label>
+                                            <label class="form-label">Total Tarrif</label>
                                             <input type="text" name="total_tarrif" id="total_tarrif"
-                                                class="form-control" placeholder="Advance">
+                                                class="form-control" placeholder="Amount">
                                             <span id="total_tarrifError" class="text-danger error"></span>
+                                        </div>
+
+                                        <div class="col-xs-6 col-md-6 form-group">
+                                            <label class="form-label">GST</label>
+                                            <input type="text" name="gst" id="gst"
+                                                class="form-control" placeholder="Amount">
+                                            <span id="gstError" class="text-danger error"></span>
                                         </div>
 
 
