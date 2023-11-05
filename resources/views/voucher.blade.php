@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,19 +9,21 @@
     <meta name="keywords" content="bill , receipt,  invoice, booking invoice, general invoice">
     <meta name="author" content="initTheme">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>DStays - invoice & Receipt  </title>
+    <title>DStays - invoice & Receipt </title>
     <link href="http://dstays.dreampos.in/assets/img/favicon.png" rel="shortcut icon" />
-    
+
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main-style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main-style.css') }}">
 </head>
+
 <body class="section-bg-one">
     <main class="container invoice-wrapper" id="download-section">
         <!-- invoice Top -->
         <div class="card-headers d-flex flex-wrap gap-15 align-items-center justify-content-between mb-4">
             <div class="logo">
-                <a href="index.html"><img  src="{{ asset('assets/logo.png')}}" title="invoice" alt="invoice"></a>
-                <span class="status d-block"> <strong>Date :</strong> {{ \Carbon\Carbon::parse($booking->created_at)->format('d-m-Y') }} </span>
+                <a href="index.html"><img src="{{ asset('assets/logo.png') }}" title="invoice" alt="invoice"></a>
+                <span class="status d-block"> <strong>Date :</strong>
+                    {{ \Carbon\Carbon::parse($booking->created_at)->format('d-m-Y') }} </span>
             </div>
             <div class="title">
                 <h4 class="text-30 mb-0 mt-0">Invoice</h4>
@@ -36,7 +38,7 @@
                         <h5 class="text-18 text-capitalize font-600"> Name :</h5>
                         <p class="mb-10">{{ $booking->customer->name }}</p>
                     </div>
-                </div>  
+                </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600"> Type:</h5>
@@ -57,7 +59,7 @@
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-18 text-capitalize font-600">  People:</h5>
+                        <h5 class="text-18 text-capitalize font-600"> People:</h5>
                         <p class="mb-10">Family /{{ str_pad($booking->number_of_people, 2, '0', STR_PAD_LEFT) }}</p>
                     </div>
                 </div>
@@ -101,7 +103,7 @@
                                 <td class="col-4">Dhaka, Mirpur</td>
                                 <td class="col-4">04</td>
                             </tr>
-                           
+
                         </tbody>
                     </table>
                 </div>
@@ -122,7 +124,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                           
+
                             <tr>
                                 <td>Room Charges</td>
                                 <td>Private Rooms</td>
@@ -148,36 +150,49 @@
                     </table>
                 </div>
                 <div class="mb-4 text-right">
-                    <h5 class="text-15"> Total Amount : <strong> Rs .{{ $booking->bill_package_amount }} </strong> </h5>
+                    <h5 class="text-15"> Total Amount : <strong> Rs .{{ $booking->bill_package_amount }} </strong>
+                    </h5>
                 </div>
             </div>
         </div>
         <div class="mb-10">
             <h4 class="mb-2 text-title font-700 text-border"> House Rules : </h4>
-            <ul>
-                <li>Music speakers are not allowed</li>
-                <li>Smoking is allowed only in outdoors</li>
-                <li>Our place is not pet friendly</li>
-                <li>Early check in & late check out is subject to the availability</li>
-                <li>Any damages happen in our property, it will be chargeable</li>
-            </ul>
+            <p>
+                Music speakers are not allowed, Smoking is allowed only in outdoors,
+                Our place is not pet friendly, Early check in & late check out is subject to the availability </p>
+            <p> Any damages happen in our property, it will be chargeable </p>
+            
         </div>
         <div class="mb-10">
             <h4 class="mb-2 text-title font-700 text-border"> Cancellation Policy : </h4>
             <p>Cancellation policy - No refund</p>
             <p>(That amount can be used for your next visit)</p>
         </div>
-        
+
     </main>
     <!-- invoice Bottom  -->
     <div class="text-center mt-5 mb-4 regular-button">
-        <div class="d-print-none d-flex justify-content-center gap-10 mt-5"> 
+        <div class="d-print-none d-flex justify-content-center gap-10 mt-5">
             <button id="bill-download" class="btn-primary-outline">
-                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"></path></svg>
-            </button> 
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                    <path
+                        d="M320 336h76c55 0 100-21.21 100-75.6s-53-73.47-96-75.6C391.11 99.74 329 48 256 48c-69 0-113.44 45.79-128 91.2-60 5.7-112 35.88-112 98.4S70 336 136 336h56M192 400.1l64 63.9 64-63.9M256 224v224.03"
+                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="32"></path>
+                </svg>
+            </button>
             <a href="javascript:window.print()" class="btn-primary-fill">
-                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512"><path d="M384 368h24a40.12 40.12 0 0040-40V168a40.12 40.12 0 00-40-40H104a40.12 40.12 0 00-40 40v160a40.12 40.12 0 0040 40h24" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"></path><rect x="128" y="240" width="256" height="208" rx="24.32" ry="24.32" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"></rect><path d="M384 128v-24a40.12 40.12 0 00-40-40H168a40.12 40.12 0 00-40 40v24" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"></path><circle cx="392" cy="184" r="24" fill="currentColor"></circle></svg>
-            </a> 
+                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
+                    <path
+                        d="M384 368h24a40.12 40.12 0 0040-40V168a40.12 40.12 0 00-40-40H104a40.12 40.12 0 00-40 40v160a40.12 40.12 0 0040 40h24"
+                        fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"></path>
+                    <rect x="128" y="240" width="256" height="208" rx="24.32" ry="24.32"
+                        fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"></rect>
+                    <path d="M384 128v-24a40.12 40.12 0 00-40-40H168a40.12 40.12 0 00-40 40v24" fill="none"
+                        stroke="currentColor" stroke-linejoin="round" stroke-width="32"></path>
+                    <circle cx="392" cy="184" r="24" fill="currentColor"></circle>
+                </svg>
+            </a>
         </div>
     </div>
 
@@ -188,4 +203,5 @@
     <!-- Main js-->
     <script src="assets/js/mian.js"></script>
 </body>
+
 </html>
