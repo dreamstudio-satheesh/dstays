@@ -17,12 +17,15 @@ return new class extends Migration
             $table->foreignId('customer_id')->constrained()->onDelete('cascade');
             $table->dateTime('check_in');
             $table->dateTime('check_out')->nullable();
-            $table->enum('name', ['Rent', 'Package']);           
-            $table->decimal('bill_package_amount', 10, 2);
+            $table->decimal('tarrif_per_day', 10, 2)->nullable();
+            $table->decimal('total_tarrif', 10, 2)->nullable(); 
             $table->string('advance_type')->nullable();
             $table->decimal('advance_payment', 10, 2)->nullable();
-            $table->integer('number_of_people')->nullable();
-            $table->string('status')->defalut('pending');
+            $table->integer('number_of_adults')->nullable();
+            $table->integer('number_of_kids')->nullable();
+            $table->decimal('gst', 10, 2)->nullable();            
+            $table->enum('booking_type', ['Rent', 'Package']); 
+            $table->string('booking_status')->defalut('pending');
             $table->timestamps();
         });
     }
