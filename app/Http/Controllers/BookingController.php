@@ -48,7 +48,7 @@ class BookingController extends Controller
             'gst' => 'required|numeric',
             'total_tarrif' => 'required|numeric',
             'tarrif_per_day' => 'required|numeric',
-            'remarks' => 'nullable|text',
+            'remarks' => 'nullable|string|max:1000',
         ]);
 
         // Create a new booking
