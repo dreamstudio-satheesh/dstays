@@ -47,15 +47,15 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600"> Check In :</h5>
-                        <p class="mb-10">{{ \Carbon\Carbon::parse($booking->check_in)->format('d-M-y') }}</p>
-                        <p class="mb-10">{{ \Carbon\Carbon::parse($booking->check_in)->format('D') }}</p>
+                        <p class="mb-10">{{ \Carbon\Carbon::parse($booking->check_in)->format('d-M-y') }} <br>
+                            {{ \Carbon\Carbon::parse($booking->check_in)->format('D') }}</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600"> Check out :</h5>
-                        <p class="mb-10">{{ \Carbon\Carbon::parse($booking->check_out)->format('d-M-y D') }}</p>                        
-                        <p class="mb-10">{{ \Carbon\Carbon::parse($booking->check_out)->format('D') }}</p>
+                        <p class="mb-10">{{ \Carbon\Carbon::parse($booking->check_out)->format('d-M-y D') }} <br>
+                            {{ \Carbon\Carbon::parse($booking->check_out)->format('D') }}</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
