@@ -19,6 +19,14 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+
+    public function voucher(Booking $booking) {
+        return $booking;
+
+        return view('voucher', compact('booking'));
+        
+    }
+
     /**
      * Show the application dashboard.
      *
