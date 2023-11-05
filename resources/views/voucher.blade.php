@@ -48,13 +48,13 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600"> Check In :</h5>
-                        <p class="mb-10">{{ \Carbon\Carbon::parse($booking->check_in)->format('d M Y') }}</p>
+                        <p class="mb-10">{{ \Carbon\Carbon::parse($booking->check_in)->format('d-m-y / D') }}</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600"> Check out :</h5>
-                        <p class="mb-10">{{ \Carbon\Carbon::parse($booking->check_out)->format('d M Y') }}</p>
+                        <p class="mb-10">{{ \Carbon\Carbon::parse($booking->check_out)->format('d-m-y / D') }}</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
