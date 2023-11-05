@@ -21,12 +21,12 @@
         <!-- invoice Top -->
         <div class="card-headers d-flex flex-wrap gap-15 align-items-center justify-content-between mb-4">
             <div class="logo">
-                <a href="index.html"><img src="{{ asset('assets/logo.png') }}" title="invoice" alt="invoice"></a>
+                <a href=""><img src="{{ asset('assets/logo.png') }}" title="invoice" alt="invoice"></a>
                 <span class="status d-block"> <strong>Date :</strong>
                     {{ \Carbon\Carbon::parse($booking->created_at)->format('d-m-Y') }} </span>
             </div>
             <div class="title">
-                <h4 class="text-30 mb-0 mt-0">Booking Confirmation</h4>
+                <h4 class="text-30 mb-0 mt-0">Booking</h4>
                 <span class="status d-block text-capitalize"><strong>Status:</strong> Paid</span>
             </div>
         </div>
