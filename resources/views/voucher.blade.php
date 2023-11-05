@@ -13,7 +13,7 @@
     <link href="http://dstays.dreampos.in/assets/img/favicon.png" rel="shortcut icon" />
     
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="assets/css/main-style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main-style.css')}}">
 </head>
 <body class="section-bg-one">
     <main class="container invoice-wrapper" id="download-section">
