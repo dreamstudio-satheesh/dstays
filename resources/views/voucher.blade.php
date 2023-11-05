@@ -21,7 +21,7 @@
         <div class="card-headers d-flex flex-wrap gap-15 align-items-center justify-content-between mb-4">
             <div class="logo">
                 <a href="index.html"><img  src="{{ asset('assets/logo.png')}}" title="invoice" alt="invoice"></a>
-                <span class="status d-block"> <strong>Booking ID :</strong> # {{ $booking->id }}</span>
+                <span class="status d-block"> <strong>Date :</strong> 01-12-2023</span>
             </div>
             <div class="title">
                 <h4 class="text-30 mb-0 mt-0">Invoice</h4>
@@ -33,22 +33,23 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
+                        <h5 class="text-18 text-capitalize font-600"> Name :</h5>
+                        <p class="mb-10">{{ $booking->customer->name }}</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600"> Check In :</h5>
-                        <p class="mb-10">10 june 2023</p>
+                        <p class="mb-10">{{ $booking->check_in }}</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600"> Check out :</h5>
-                        <p class="mb-10">15 june 2023</p>
+                        <p class="mb-10">{{ $booking->check_out }}</p>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="invoice-details mb-20">
-                        <h5 class="text-18 text-capitalize font-600"> Nights :</h5>
-                        <p class="mb-10">06</p>
-                    </div>
-                </div>
+                
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600"> Rooms:</h5>
@@ -76,7 +77,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600"> Booking Id :</h5>
-                        <p class="mb-10">#105430</p>
+                        <p class="mb-10">#{{ $booking->id }}</p>
                     </div>
                 </div>
             </div>
