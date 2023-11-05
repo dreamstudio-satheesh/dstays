@@ -21,7 +21,7 @@
         <div class="card-headers d-flex flex-wrap gap-15 align-items-center justify-content-between mb-4">
             <div class="logo">
                 <a href="index.html"><img  src="{{ asset('assets/logo.png')}}" title="invoice" alt="invoice"></a>
-                <span class="status d-block"> <strong>Date :</strong> 01-12-2023</span>
+                <span class="status d-block"> <strong>Booking ID :</strong> # {{ $booking->id }}</span>
             </div>
             <div class="title">
                 <h4 class="text-30 mb-0 mt-0">Invoice</h4>
