@@ -26,7 +26,7 @@
                     {{ \Carbon\Carbon::parse($booking->created_at)->format('d-m-Y') }} </span>
             </div>
             <div class="title">
-                <h4 class="text-30 mb-0 mt-0">Booking</h4>
+                <h4 class="text-30 mb-0 mt-0">Invoice</h4>
                 <span class="status d-block text-capitalize"><strong>Status:</strong> Paid</span>
             </div>
         </div>
