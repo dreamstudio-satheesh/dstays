@@ -65,6 +65,6 @@ Route::delete('/bookings/{id}', [BookingController::class, 'destroy'])->name('bo
 
 Route::post('/store-booking', [BookingController::class, 'storeBooking']);
 
-Route::get('/voucher/{booking}', [HomeController::class, 'voucher'])->name('voucher');
+Route::get('/voucher/{id}', [HomeController::class, 'voucher'])->name('voucher');
 
 
