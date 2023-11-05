@@ -36,6 +36,12 @@
                         <h5 class="text-18 text-capitalize font-600"> Name :</h5>
                         <p class="mb-10">{{ $booking->customer->name }}</p>
                     </div>
+                </div>  
+                <div class="col-md-3 col-sm-6">
+                    <div class="invoice-details mb-20">
+                        <h5 class="text-18 text-capitalize font-600"> Type:</h5>
+                        <p class="mb-10">{{ $booking->name }}</p>
+                    </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
@@ -47,13 +53,6 @@
                     <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600"> Check out :</h5>
                         <p class="mb-10">{{ $booking->check_out }}</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-3 col-sm-6">
-                    <div class="invoice-details mb-20">
-                        <h5 class="text-18 text-capitalize font-600"> Rooms:</h5>
-                        <p class="mb-10">03</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
