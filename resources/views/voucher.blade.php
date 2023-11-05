@@ -119,11 +119,9 @@
                     <table class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th>Description</th>
-                                <th>Other Description</th>
-                                <th>Quantity</th>
-                                <th>Unit Price</th>
-                                <th>Sub Total</th>
+                                <th>Tarrif Per Day</th>
+                                <th>Toatl Tarrif</th>
+                                <th>GST</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -132,23 +130,8 @@
                                 <td>Room Charges</td>
                                 <td>Private Rooms</td>
                                 <td>5 person</td>
-                                <td>₹600 </td>
-                                <td>₹4200 </td>
                             </tr>
-                            <tr>
-                                <td>Lunch-Dinner</td>
-                                <td>6 packed - 2days</td>
-                                <td>5 person</td>
-                                <td>₹256 </td>
-                                <td>₹685 </td>
-                            </tr>
-                            <tr>
-                                <td>Service Fee</td>
-                                <td>Included VAT</td>
-                                <td>0</td>
-                                <td>₹56.00 </td>
-                                <td>₹05.35 </td>
-                            </tr>
+                         
                         </tbody>
                     </table>
                 </div>
