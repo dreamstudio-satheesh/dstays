@@ -20,12 +20,13 @@ return new class extends Migration
             $table->decimal('tarrif_per_day', 10, 2)->nullable();
             $table->decimal('total_tarrif', 10, 2)->nullable(); 
             $table->string('advance_type')->nullable();
+            $table->string('group_type')->nullable();
             $table->decimal('advance_payment', 10, 2)->nullable();
             $table->integer('number_of_adults')->nullable();
             $table->integer('number_of_kids')->nullable();
             $table->decimal('gst', 10, 2)->nullable();            
             $table->enum('booking_type', ['Rent', 'Package']); 
-            $table->string('booking_status')->defalut('pending');
+            $table->string('booking_status')->defalut('confirmed');
             $table->timestamps();
         });
     }

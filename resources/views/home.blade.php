@@ -58,7 +58,7 @@
             let advancePayment = $('#advance_payment').val();
             let totalTarrif = $('#total_tarrif').val();
             let tarrifPerday = $('#tarrif_per_day').val();
-            let gst = $('#gst').val();
+            let gstAmount = $('#gst').val();
 
             console.log(total_tarrif);
             // Send an AJAX request to your Laravel back-end
@@ -78,7 +78,7 @@
                     advance_payment: advancePayment,
                     total_tarrif: totalTarrif,
                     tarrif_per_day: tarrifPerday,
-                    gst: gst,
+                    gst: gstAmount,
                     _token: '{{ csrf_token() }}'
                 },
                 success: function(response) {

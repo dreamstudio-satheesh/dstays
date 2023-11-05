@@ -39,11 +39,15 @@ class BookingController extends Controller
             'end_date' => 'required|date|after_or_equal:start_date',
             'customer_id' => 'required|integer|exists:customers,id',
             'property_id' => 'required|integer|exists:properties,id',
-            'number_of_people' => 'required|integer|min:1',
+            'number_of_adults' => 'required|integer|min:1',
+            'number_of_kids' => 'required|integer|min:1',
             'advance_type' => ['required','string'],
             'booking_type' => ['required','string'],
+            'group_type' => ['required','string'],
             'advance_payment' => 'nullable|numeric|min:0',
-            'bill_package_amount' => 'required|numeric',
+            'gst' => 'required|numeric',
+            'total_tarrif' => 'required|numeric',
+            'tarrif_per_day' => 'required|numeric',
         ]);
 
         // Create a new booking
@@ -52,12 +56,15 @@ class BookingController extends Controller
             'check_out' => $validatedData['end_date'],
             'customer_id' => $validatedData['customer_id'],
             'property_id' => $validatedData['property_id'],
-            'number_of_people' => $validatedData['number_of_people'],
+            'number_of_adults' => $validatedData['number_of_adults'],
+            'number_of_kids' => $validatedData['number_of_kids'],
             'advance_type' => $validatedData['advance_type'],
             'booking_type' => $validatedData['booking_type'],
+            'group_type' => $validatedData['group_type'],
+            'gst' => $validatedData['gst'],
             'advance_payment' => $validatedData['advance_payment'],
-            'bill_package_amount' => $validatedData['bill_package_amount'],
-            'status' => 'active',
+            'tarrif_per_day' => $validatedData['tarrif_per_day'],
+            'status' => 'complited',
         ]);
 
         return response()->json(['message' => 'Booking created successfully']);
