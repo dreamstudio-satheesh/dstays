@@ -58,6 +58,12 @@
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
+                        <h5 class="text-18 text-capitalize font-600"> Group Type:</h5>
+                        <p class="mb-10">Family</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600"> No of Adults:</h5>
                         <p class="mb-10">{{ str_pad($booking->number_of_people, 2, '0', STR_PAD_LEFT) }}</p>
                     </div>
@@ -66,7 +72,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600"> No of Kids:</h5>
-                        <p class="mb-10">A00</p>
+                        <p class="mb-10">00</p>
                     </div>
                 </div>
               
