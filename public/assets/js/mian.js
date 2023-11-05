@@ -1,21 +1,4 @@
-/*----------------------------------------------
-    Index Of Script
-------------------------------------------------
 
-    @version         : 1.0.0
-    @Template Name   : initBill - invoice & Receipt HTML Template.
-    @Template author : https://themeforest.net/user/inittheme
-    
-
-    :: Sticky And Scroll Up                      
-    :: slick Nav                      
-    :: WOW active                      
-    :: Documentation sidebar                      
-    :: html2canvas                      
-
-------------------------------------------------
-    End-of Script
-------------------------------------------------*/
 
 (function ($) {
     "use strict";

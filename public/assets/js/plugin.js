@@ -4,8 +4,7 @@
 ------------------------------------------------
 
     @version         : 1.0.0
-    @Template Name   : initBill - invoice & Receipt HTML Template.
-    @Template author : https://themeforest.net/user/inittheme
+
 
     :: WOW
     :: Slick-Nav
