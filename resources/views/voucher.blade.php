@@ -154,7 +154,7 @@
                     </table>
                 </div>
                 <div class="mb-4 text-right">
-                    <h5 class="text-15"> Total Amount : <strong> 900 USD</strong> </h5>
+                    <h5 class="text-15"> Total Amount : <strong> Rs .{{ $booking->bill_package_amount }} </strong> </h5>
                 </div>
             </div>
         </div>
