@@ -122,33 +122,27 @@
                             </tr>
                         </thead>
                         <tbody>
+                           
                             <tr>
                                 <td>Room Charges</td>
-                                <td>6th floor</td>
-                                <td>3</td>
-                                <td>$43 USD</td>
-                                <td>$1,305 USD</td>
-                            </tr>
-                            <tr>
-                                <td>6 Nights</td>
                                 <td>Private Rooms</td>
                                 <td>5 person</td>
-                                <td>$600 USD</td>
-                                <td>$42000 USD</td>
+                                <td>₹600 </td>
+                                <td>₹42000 </td>
                             </tr>
                             <tr>
                                 <td>Lunch-Dinner</td>
                                 <td>6 packed - 2days</td>
                                 <td>5 person</td>
-                                <td>$256 USD</td>
-                                <td>$6854 USD</td>
+                                <td>₹256 </td>
+                                <td>₹6854 </td>
                             </tr>
                             <tr>
                                 <td>Service Fee</td>
                                 <td>Included VAT</td>
                                 <td>0</td>
-                                <td>100 USD</td>
-                                <td>200 USD</td>
+                                <td>₹56.00 </td>
+                                <td>₹05.35 </td>
                             </tr>
                         </tbody>
                     </table>
