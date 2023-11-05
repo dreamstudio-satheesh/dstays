@@ -94,7 +94,7 @@
                             </a>
                         </li>
 
-                        <li>
+                      {{--   <li>
                             <a class="sidenav-item-link" href="{{ url('tenders') }}">
                                 <i class="mdi mdi-food-fork-drink"></i>
                                 <span class="nav-text">Food</span>
@@ -116,7 +116,7 @@
                                 <span class="nav-text">Food Item</span>
 
                             </a>
-                        </li>
+                        </li> --}}
 
                         <li>
                             <a class="sidenav-item-link" href="{{ url('bookings') }}">
