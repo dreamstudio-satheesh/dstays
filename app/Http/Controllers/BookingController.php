@@ -64,7 +64,7 @@ class BookingController extends Controller
             'gst' => $validatedData['gst'],
             'advance_payment' => $validatedData['advance_payment'],
             'tarrif_per_day' => $validatedData['tarrif_per_day'],
-            'status' => 'complited',
+            'booking_status' => 'complited',
         ]);
 
         return response()->json(['message' => 'Booking created successfully']);
