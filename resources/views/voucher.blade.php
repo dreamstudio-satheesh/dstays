@@ -165,8 +165,8 @@
         </div>
         <div class="mb-10">
             <h4 class="mb-2 text-title font-700 text-border"> Cancellation Policy : </h4>
-            <p>Cancellation policy - No refund</p>
-            <p>(That amount can be used for your next visit)</p>
+            <p>Cancellation policy - No refund (That amount can be used for your next visit)</p>
+           
         </div>
 
     </main>
