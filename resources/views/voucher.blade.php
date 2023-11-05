@@ -152,7 +152,7 @@
                             </tr>
                             <tr>
                                 <td>Balance To Be Paid</td>
-                                <td>{{ ($booking->total_tarrif + $booking->gst ) -$booking->gst }}</td>
+                                <td>{{ ($booking->total_tarrif + $booking->gst ) -$booking->advance_payment }}</td>
                             </tr>
                         </tbody>
                          
