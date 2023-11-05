@@ -60,7 +60,7 @@
             let tarrifPerday = $('#tarrif_per_day').val();
             let gstAmount = $('#gst').val();
 
-            console.log(total_tarrif);
+            console.log(totalTarrif);
             // Send an AJAX request to your Laravel back-end
             $.ajax({
                 url: '/store-booking', // Replace with your POST route
