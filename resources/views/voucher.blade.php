@@ -120,16 +120,16 @@
                         <thead>
                             <tr>
                                 <th>Tarrif Per Day</th>
-                                <th>Toatl Tarrif</th>
+                                <th>Total Tarrif</th>
                                 <th>GST</th>
                             </tr>
                         </thead>
                         <tbody>
 
                             <tr>
-                                <td>Rs .{{ $booking->tarrif_per_day }}</td>
-                                <td>Rs .{{ $booking->total_tarrif }}</td>
-                                <td>Rs .{{ $booking->gst }}</td>
+                                <td>Rs. {{ $booking->tarrif_per_day }}</td>
+                                <td>Rs. {{ $booking->total_tarrif }}</td>
+                                <td>Rs. {{ $booking->gst }}</td>
                             </tr>
                          
                         </tbody>
