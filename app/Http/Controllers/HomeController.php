@@ -24,8 +24,6 @@ class HomeController extends Controller
     public function voucher($id) {
         //Booking with customer and property
         $booking = Booking::with('customer', 'property')->find($id);
-        return $booking;
-
         return view('voucher', compact('booking'));
         
     }
