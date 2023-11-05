@@ -264,10 +264,10 @@
                                         </div>
 
 
-                                        <div class="col-xs-6 col-md-6 form-group">
-                                            <label class="form-label">GST</label>
+                                        <div class="col-xs-12 col-md-12 form-group">
+                                            <label class="form-label">Remarks</label>
                                            {{-- cteate text area remarks --}}
-                                           <textarea class="form-control" name="remarks_text" id="remarks_text" cols="30" rows="10"></textarea>
+                                           <textarea class="form-control" name="remarks_text" id="remarks_text" cols="10" rows="4"></textarea>
                                             <span id="gstError" class="text-danger error"></span>
                                         </div>
 
