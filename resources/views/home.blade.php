@@ -282,6 +282,8 @@
                                             Booking</button>
                                     </div>
                                 </form>
+
+                                <br><br><hr><br><br>
                             </div>
                     </div>
                 </div>
