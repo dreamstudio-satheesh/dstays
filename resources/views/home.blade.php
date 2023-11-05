@@ -53,6 +53,7 @@
             let numberOfAdults = $('#number_of_adults').val();
             let numberOfKids = $('#number_of_kids').val();
             let bookingType = $('#booking_type').val();
+            let groupType = $('#group_type').val();
             let advanceType = $('#advance_type').val();
             let advancePayment = $('#advance_payment').val();
             let bill_package_amount = $('#bill_package_amount').val();
@@ -71,6 +72,7 @@
                     number_of_kids: numberOfKids,
                     advance_type: advanceType,
                     booking_type: bookingType,
+                    group_type: groupType,
                     advance_payment: advancePayment,
                     bill_package_amount: bill_package_amount,
                     _token: '{{ csrf_token() }}'
@@ -178,6 +180,17 @@
 
                                         <input type="hidden" id="property_id" name="property_id"
                                             value="{{ $id }}">
+
+                                        <div class="col-xs-6 col-md-6 form-group">
+                                            <label class="form-label">Group Type</label>
+                                            <select class="form-control" name="group_type" id="group_type">
+                                                <option value="Family">Family</option>
+                                                <option value="Friends">Friends</option>
+                                            </select>
+
+                                        </div>
+
+
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">No of Adults</label>
                                             <input type="number" name="number_of_adults" id="number_of_adults"
