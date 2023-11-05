@@ -159,8 +159,8 @@
             <h4 class="mb-2 text-title font-700 text-border"> House Rules : </h4>
             <p>
                 Music speakers are not allowed, Smoking is allowed only in outdoors,
-                Our place is not pet friendly, Early check in & late check out is subject to the availability </p>
-            <p> Any damages happen in our property, it will be chargeable </p>
+                Our place is not pet friendly,  </p>
+            <p>Early check in & late check out is subject to the availability, Any damages happen in our property, it will be chargeable </p>
             
         </div>
         <div class="mb-10">
