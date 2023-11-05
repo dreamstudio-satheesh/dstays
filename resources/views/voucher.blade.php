@@ -72,7 +72,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600">Advance :</h5>
-                        <p class="mb-10">{{ $booking->advance_payment }}</p>
+                        <p class="mb-10">₹{{ $booking->advance_payment }}</p>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6">
@@ -98,10 +98,10 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="col-3">Rafsan jani</td>
-                                <td class="col-3">02654545145</td>
-                                <td class="col-4">Dhaka, Mirpur</td>
-                                <td class="col-4">04</td>
+                                <td class="col-3">{{ $booking->customer->name }}</td>
+                                <td class="col-3">{{ $booking->customer->mobile_number }}</td>
+                                <td class="col-4">{{ $booking->customer->address }}</td>
+                                <td class="col-4">{{ str_pad($booking->number_of_people, 2, '0', STR_PAD_LEFT) }}</td>
                             </tr>
 
                         </tbody>
