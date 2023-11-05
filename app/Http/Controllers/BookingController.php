@@ -64,7 +64,7 @@ class BookingController extends Controller
             'gst' => $validatedData['gst'],
             'advance_payment' => $validatedData['advance_payment'],
             'tarrif_per_day' => $validatedData['tarrif_per_day'],
-            'tarrif_per_day' => $validatedData['total_tarrif'],
+            'total_tarrif' => $validatedData['total_tarrif'],
             'booking_status' => 'complited',
         ]);
 
