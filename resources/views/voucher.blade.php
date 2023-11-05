@@ -101,12 +101,7 @@
                                 <td class="col-4">Dhaka, Mirpur</td>
                                 <td class="col-4">04</td>
                             </tr>
-                            <tr>
-                                <td class="col-3">Abr. Farhan</td>
-                                <td class="col-3">+2589365452</td>
-                                <td class="col-4">sylhet,Moulvibazar </td>
-                                <td class="col-4">01</td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>
