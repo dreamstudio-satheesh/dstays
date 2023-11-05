@@ -104,7 +104,7 @@
                                 <td class="col-3">{{ $booking->customer->name }}</td>
                                 <td class="col-3">{{ $booking->customer->mobile_number }}</td>
                                 <td class="col-4">{{ $booking->customer->address }}</td>
-                                <td class="col-4">{{ str_pad($booking->number_of_people, 2, '0', STR_PAD_LEFT) }}</td>
+                                <td class="col-4">{{ str_pad($booking->number_of_adults+$booking->number_of_kids, 2, '0', STR_PAD_LEFT) }}</td>
                             </tr>
 
                         </tbody>
