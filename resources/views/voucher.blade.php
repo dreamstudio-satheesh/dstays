@@ -143,7 +143,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Toatal Payable Rent :</td>
+                                <td>Toatal Payable {{ $booking->advance_type }} :</td>
                                 <td>{{ $booking->total_tarrif + $booking->gst }}</td>
                             </tr>
                             <tr>
