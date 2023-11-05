@@ -147,7 +147,7 @@
                                 <td>{{ $booking->total_tarrif + $booking->gst }}</td>
                             </tr>
                             <tr>
-                                <td>Advance paid ( {{ $booking->advance_type }}) to online date  {{ \Carbon\Carbon::parse($booking->created_at)->format('d-M-Y') }} </td>
+                                <td>Advance paid to online date  {{ \Carbon\Carbon::parse($booking->created_at)->format('d-M-Y') }} </td>
                                 <td>{{ $booking->advance_payment }}</td>
                             </tr>
                             <tr>
