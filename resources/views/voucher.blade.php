@@ -127,9 +127,9 @@
                         <tbody>
 
                             <tr>
-                                <td>Room Charges</td>
-                                <td>Private Rooms</td>
-                                <td>5 person</td>
+                                <td>Rs .{{ $booking->tarrif_per_day }}</td>
+                                <td>Rs .{{ $booking->total_tarrif }}</td>
+                                <td>Rs .{{ $booking->gst }}</td>
                             </tr>
                          
                         </tbody>
