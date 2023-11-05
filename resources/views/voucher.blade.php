@@ -130,7 +130,7 @@
                                 <td>Private Rooms</td>
                                 <td>5 person</td>
                                 <td>₹600 </td>
-                                <td>₹42000 </td>
+                                <td>₹4200 </td>
                             </tr>
                             <tr>
                                 <td>Lunch-Dinner</td>
