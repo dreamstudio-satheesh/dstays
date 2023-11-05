@@ -20,7 +20,7 @@
         <!-- invoice Top -->
         <div class="card-headers d-flex flex-wrap gap-15 align-items-center justify-content-between mb-4">
             <div class="logo">
-                <a href="index.html"><img src="assets/images/logo/logo.png" title="invoice" alt="invoice"></a>
+                <a href="index.html"><img src="{{ asset('assets/logo.png')}}" title="invoice" alt="invoice"></a>
                 <span class="status d-block"> <strong>Date :</strong> 01-12-2023</span>
             </div>
             <div class="title">
