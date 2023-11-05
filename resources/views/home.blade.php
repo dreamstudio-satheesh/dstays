@@ -56,9 +56,10 @@
             let groupType = $('#group_type').val();
             let advanceType = $('#advance_type').val();
             let advancePayment = $('#advance_payment').val();
-            let bill_package_amount = $('#bill_package_amount').val();
+            let totalTarrif = $('#total_tarrif').val();
+            let tarrifPerday = $('#tarrif_per_day').val();
 
-            console.log(bill_package_amount);
+            console.log(total_tarrif);
             // Send an AJAX request to your Laravel back-end
             $.ajax({
                 url: '/store-booking', // Replace with your POST route
@@ -74,7 +75,8 @@
                     booking_type: bookingType,
                     group_type: groupType,
                     advance_payment: advancePayment,
-                    bill_package_amount: bill_package_amount,
+                    total_tarrif: totalTarrif,
+                    tarrif_per_day: tarrifPerday
                     _token: '{{ csrf_token() }}'
                 },
                 success: function(response) {
@@ -230,21 +232,28 @@
 
 
                                         <div class="col-xs-6 col-md-6 form-group">
-                                            <label class="form-label">Payment Amount</label>
+                                            <label class="form-label">Advance Amount</label>
                                             <input type="text" name="advance_payment" id="advance_payment"
                                                 class="form-control" placeholder="Advance">
                                             <span id="advance_paymentError" class="text-danger error"></span>
                                         </div>
 
-
                                         <div class="col-xs-6 col-md-6 form-group">
-                                            <label class="form-label">Rent / Package Amount</label>
-
-                                            <input type="text" id="bill_package_amount" name="bill_package_amount"
-                                                class="form-control" placeholder="Rent / Package Amount">
-                                            <span id="bill_package_amountError" class="text-danger error"></span>
+                                            <label class="form-label">Tarrif Per Day</label>
+                                            <input type="text" name="tarrif_per_day" id="tarrif_per_day"
+                                                class="form-control" placeholder="Advance">
+                                            <span id="tarrif_per_dayError" class="text-danger error"></span>
                                         </div>
 
+                                        <div class="col-xs-6 col-md-6 form-group">
+                                            <label class="form-label">Total Tarrif </label>
+                                            <input type="text" name="total_tarrif" id="total_tarrif"
+                                                class="form-control" placeholder="Advance">
+                                            <span id="total_tarrifError" class="text-danger error"></span>
+                                        </div>
+
+
+                                        
 
                                     </div>
                                     <div class="modal-footer">
