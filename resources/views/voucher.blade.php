@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main-style.css') }}">
 </head>
 
-<body class="section-bg-one">
-    <main class="container invoice-wrapper" id="download-section">
+<body class="section-bg-two">
+    <main class="container modern-invoice3" id="download-section">
         <!-- invoice Top -->
         <div class="card-headers d-flex flex-wrap gap-15 align-items-center justify-content-between mb-4">
             <div class="logo">

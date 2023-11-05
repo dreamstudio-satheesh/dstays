@@ -13274,7 +13274,7 @@ table tbody .border-bottom-warning td {
 
 /*-------------  Color Witch Class Name  --------------*/
 .section-bg-one {
-  background: #666dc7;
+  background: var(--section-bg-one);
 }
 
 .section-bg-two {
