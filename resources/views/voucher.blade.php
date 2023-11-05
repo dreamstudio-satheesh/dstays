@@ -197,11 +197,11 @@
     </div>
 
     <!-- jquery-->
-    <script src="assets/js/jquery-3.7.0.min.js"></script>
+    <script src="{{ asset('assets/plugins/jquery/jquery.min.js')}}"></script>
     <!-- Plugin -->
-    <script src="assets/js/plugin.js"></script>
+    <script src="{{ asset('assets/js/plugin.js')}}"></script>
     <!-- Main js-->
-    <script src="assets/js/mian.js"></script>
+    <script src="{{ asset('assets/js/mian.js')}}"></script>
 </body>
 
 </html>
