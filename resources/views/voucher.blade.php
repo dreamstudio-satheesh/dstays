@@ -59,7 +59,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
                         <h5 class="text-18 text-capitalize font-600"> People:</h5>
-                        <p class="mb-10">Family /{{ str_pad($booking->number_of_people, 2, '0', STR_PAD_LEFT) }}</p>
+                        <p class="mb-10">Adults /{{ str_pad($booking->number_of_people, 2, '0', STR_PAD_LEFT) }} Child/ 0</p>
                     </div>
                 </div>
               
