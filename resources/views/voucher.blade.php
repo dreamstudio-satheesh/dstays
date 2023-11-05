@@ -135,7 +135,7 @@
                                 <td>6 packed - 2days</td>
                                 <td>5 person</td>
                                 <td>₹256 </td>
-                                <td>₹6854 </td>
+                                <td>₹685 </td>
                             </tr>
                             <tr>
                                 <td>Service Fee</td>
@@ -153,14 +153,21 @@
             </div>
         </div>
         <div class="mb-10">
-            <h4 class="mb-2 text-title font-700 text-border"> Return Policy : </h4>
-            <p>This is an electronic generated receipt so doesn't require any signature. </p>
+            <h4 class="mb-2 text-title font-700 text-border"> House Rules : </h4>
+            <ul>
+                <li>Music speakers are not allowed</li>
+                <li>Smoking is allowed only in outdoors</li>
+                <li>Our place is not pet friendly</li>
+                <li>Early check in & late check out is subject to the availability</li>
+                <li>Any damages happen in our property, it will be chargeable</li>
+            </ul>
         </div>
         <div class="mb-10">
-            <h4 class="mb-2 text-title font-700 text-border"> Terms & Conditions : </h4>
-            <p>If you want to cancel the booking please inform us before 3 days, otherwise, you will not get any refund.
-                Invoice was created on a computer and is valid without the signature and seal.</p>
+            <h4 class="mb-2 text-title font-700 text-border"> Cancellation Policy : </h4>
+            <p>Cancellation policy - No refund</p>
+            <p>(That amount can be used for your next visit)</p>
         </div>
+        
     </main>
     <!-- invoice Bottom  -->
     <div class="text-center mt-5 mb-4 regular-button">
