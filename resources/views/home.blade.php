@@ -256,7 +256,7 @@
 
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">GST</label>
-                                            <input type="text" name="gst" id="gst"
+                                            <input type="text" name="gst" id="gst" value="0"
                                                 class="form-control" placeholder="Amount">
                                             <span id="gstError" class="text-danger error"></span>
                                         </div>
