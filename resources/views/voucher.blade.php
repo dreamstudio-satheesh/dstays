@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="different types of invoice/bill/tally designed with friendly and markup using modern technology, you can use it on any type of website invoice, fully responsive and w3 validated.">
-    <meta name="keywords" content="bill , receipt, tally, invoice, cash memo, invoice html, invoice pdf, invoice print, invoice templates, multipurpose invoice, template, booking invoice, general invoice, clean invoice, catalog, estimate, proposal">
+    <meta name="description" content="">
+    <meta name="keywords" content="bill , receipt,  invoice, booking invoice, general invoice">
     <meta name="author" content="initTheme">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>initBill - invoice & Receipt HTML Template </title>
+	<title>DStays - invoice & Receipt  </title>
     <link href="http://dstays.dreampos.in/assets/img/favicon.png" rel="shortcut icon" />
     
     <!-- Style -->
