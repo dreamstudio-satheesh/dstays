@@ -57,7 +57,7 @@
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-18 text-capitalize font-600"> Number of People:</h5>
+                        <h5 class="text-18 text-capitalize font-600">  People:</h5>
                         <p class="mb-10">Single / {{ $booking->number_of_people }}</p>
                     </div>
                 </div>
