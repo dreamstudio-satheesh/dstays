@@ -48,6 +48,7 @@ class BookingController extends Controller
             'gst' => 'required|numeric',
             'total_tarrif' => 'required|numeric',
             'tarrif_per_day' => 'required|numeric',
+            'remarks' => 'nullable|text',
         ]);
 
         // Create a new booking
@@ -65,6 +66,7 @@ class BookingController extends Controller
             'advance_payment' => $validatedData['advance_payment'],
             'tarrif_per_day' => $validatedData['tarrif_per_day'],
             'total_tarrif' => $validatedData['total_tarrif'],
+            'remarks' => $validatedData['remarks'],
             'booking_status' => 'complited',
         ]);
 

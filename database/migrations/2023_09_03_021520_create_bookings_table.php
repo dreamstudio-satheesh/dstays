@@ -27,6 +27,7 @@ return new class extends Migration
             $table->decimal('gst', 10, 2)->nullable();            
             $table->enum('booking_type', ['Rent', 'Package']); 
             $table->string('booking_status')->defalut('confirmed');
+            $table->text('remarks')->nullable(); 
             $table->timestamps();
         });
     }

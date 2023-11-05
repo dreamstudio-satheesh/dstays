@@ -59,6 +59,7 @@
             let totalTarrif = $('#total_tarrif').val();
             let tarrifPerday = $('#tarrif_per_day').val();
             let gstAmount = $('#gst').val();
+            let remarksText = $('#remarks_text').val();
 
             console.log(totalTarrif);
             // Send an AJAX request to your Laravel back-end
@@ -79,6 +80,7 @@
                     total_tarrif: totalTarrif,
                     tarrif_per_day: tarrifPerday,
                     gst: gstAmount,
+                    remarks: remarksText,
                     _token: '{{ csrf_token() }}'
                 },
                 success: function(response) {
@@ -258,6 +260,14 @@
                                             <label class="form-label">GST</label>
                                             <input type="text" name="gst" id="gst" value="0"
                                                 class="form-control" placeholder="Amount">
+                                            <span id="gstError" class="text-danger error"></span>
+                                        </div>
+
+
+                                        <div class="col-xs-6 col-md-6 form-group">
+                                            <label class="form-label">GST</label>
+                                           {{-- cteate text area remarks --}}
+                                           <textarea class="form-control" name="remarks_text" id="remarks_text" cols="30" rows="10"></textarea>
                                             <span id="gstError" class="text-danger error"></span>
                                         </div>
 
