@@ -50,7 +50,8 @@
             let endDate = $('#end_date').val();
             let customerId = $('#customer_id').val();
             let propertyId = $('#property_id').val();
-            let numberOfPeople = $('#number_of_people').val();
+            let numberOfAdults = $('#number_of_adults').val();
+            let numberOfKids = $('#number_of_kids').val();
             let bookingType = $('#booking_type').val();
             let advanceType = $('#advance_type').val();
             let advancePayment = $('#advance_payment').val();
@@ -66,7 +67,8 @@
                     end_date: endDate,
                     customer_id: customerId,
                     property_id: propertyId,
-                    number_of_people: numberOfPeople,
+                    number_of_adults: numberOfAdults,
+                    number_of_kids: numberOfKids,
                     advance_type: advanceType,
                     booking_type: bookingType,
                     advance_payment: advancePayment,
@@ -177,10 +179,18 @@
                                         <input type="hidden" id="property_id" name="property_id"
                                             value="{{ $id }}">
                                         <div class="col-xs-6 col-md-6 form-group">
-                                            <label class="form-label">No Of people</label>
-                                            <input type="number" name="number_of_people" id="number_of_people"
-                                                class="form-control" placeholder="No Of People">
-                                            <span id="number_of_peopleError" class="text-danger error"></span>
+                                            <label class="form-label">No of Adults</label>
+                                            <input type="number" name="number_of_adults" id="number_of_adults"
+                                                class="form-control" placeholder="No Of Adults">
+                                            <span id="number_of_adultsError" class="text-danger error"></span>
+
+                                        </div>
+
+                                        <div class="col-xs-6 col-md-6 form-group">
+                                            <label class="form-label">No of Kids</label>
+                                            <input type="number" name="number_of_kids" id="number_of_kids"
+                                                class="form-control" placeholder="No Of Kids">
+                                            <span id="number_of_kidsError" class="text-danger error"></span>
 
                                         </div>
 
