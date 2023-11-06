@@ -64,14 +64,7 @@
                                 </div>
 
 
-                                <div class="col-xs-6 col-md-6 form-group">
-                                    <label class="form-label">Group Type</label>
-                                    <select class="form-control" name="group_type" id="group_type">
-                                        <option value="Family" {{ $booking->group_type == 'Family' ? 'selected' : '' }}>Family</option>
-                                        <option value="Friends" {{ $booking->group_type == 'Friends' ? 'selected' : '' }}>Friends</option>
-                                    </select>
-                                </div>
-                                
+                               
 
 
 
@@ -90,6 +83,15 @@
                                     <span id="" class="text-danger error"></span>
 
                                 </div>
+
+                                <div class="col-xs-6 col-md-6 form-group">
+                                    <label class="form-label">Group Type</label>
+                                    <select class="form-control" name="group_type" id="group_type">
+                                        <option value="Family" {{ $booking->group_type == 'Family' ? 'selected' : '' }}>Family</option>
+                                        <option value="Friends" {{ $booking->group_type == 'Friends' ? 'selected' : '' }}>Friends</option>
+                                    </select>
+                                </div>
+                                
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Payment Mode</label>
