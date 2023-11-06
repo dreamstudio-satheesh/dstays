@@ -28,7 +28,7 @@
                             @endif
 
                             @php
-                                $categories = \App\ExpenseCategory::all();
+                                $categories = \App\Moels\ExpenseCategory::all();
                             @endphp
 
 
