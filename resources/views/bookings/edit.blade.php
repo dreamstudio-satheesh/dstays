@@ -65,12 +65,22 @@
 
 
                                 <div class="col-xs-6 col-md-6 form-group">
-                                    <label class="form-label">No Of people</label>
-                                    <input type="number" name="number_of_people" value="{{ $booking->number_of_people }}"
-                                        class="form-control" placeholder="No Of People">
-                                    <span id="number_of_peopleError" class="text-danger error"></span>
+                                    <label class="form-label">No Of Adults</label>
+                                    <input type="number" name="number_of_adults" value="{{ $booking->number_of_adults }}"
+                                        class="form-control" placeholder="No Of Adults">
+                                    <span id="" class="text-danger error"></span>
 
                                 </div>
+
+                                <div class="col-xs-6 col-md-6 form-group">
+                                    <label class="form-label">No Of Kids</label>
+                                    <input type="number" name="number_of_kids" value="{{ $booking->number_of_kids }}"
+                                        class="form-control" placeholder="No Of Kids">
+                                    <span id="" class="text-danger error"></span>
+
+                                </div>
+
+
 
 
 
@@ -107,6 +117,36 @@
                                         placeholder="Rent Amount" >
                                     <span id="bill_amountError" class="text-danger error"></span>
                                 </div>
+
+                                <div class="col-xs-6 col-md-6 form-group">
+                                    <label class="form-label">Tarrif Per Day</label>
+                                    <input type="text" name="tarrif_per_day" id="tarrif_per_day"
+                                        class="form-control" value="{{ $booking->tarrif_per_day }}" placeholder="Amount">
+                                    <span id="tarrif_per_dayError" class="text-danger error"></span>
+                                </div>
+
+                                <div class="col-xs-6 col-md-6 form-group">
+                                    <label class="form-label">Total Tarrif</label>
+                                    <input type="text" name="total_tarrif" id="total_tarrif"
+                                        class="form-control"  value="{{ $booking->total_tarrif }}"   placeholder="Amount">
+                                    <span id="total_tarrifError" class="text-danger error"></span>
+                                </div>
+
+                                <div class="col-xs-6 col-md-6 form-group">
+                                    <label class="form-label">GST</label>
+                                    <input type="text" name="gst" id="gst" value="0"
+                                        class="form-control" placeholder="Amount"  value="{{ $booking->gst }}" >
+                                    <span id="gstError" class="text-danger error"></span>
+                                </div>
+
+
+                                <div class="col-xs-12 col-md-12 form-group">
+                                    <label class="form-label">Remarks</label>
+                                   {{-- cteate text area remarks --}}
+                                   <textarea class="form-control" name="remarks" id="remarks_text" cols="10" rows="3"> {{ $booking->remarks }}</textarea>
+                                    <span id="gstError" class="text-danger error"></span>
+                                </div>
+
 
 
                             </div>
