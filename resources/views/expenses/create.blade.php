@@ -5,6 +5,7 @@
 
 <script>
     document.getElementById('category_id').addEventListener('change', function() {
+        console.log("Dropdown changed"); 
         if (this.value === 'add_new') {
             // Show the modal when "+ Add New Category" is selected
             $('#addCategoryModal').modal('show');
