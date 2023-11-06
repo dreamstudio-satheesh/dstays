@@ -3,6 +3,8 @@
 
 @push('scripts')
     <script>
+        console.log("Script is loaded");
+        
         $(document).ready(function() {
             $('#addCategoryModal').modal({
                 show: false // Don't show it on page load
