@@ -109,6 +109,7 @@
                             <div class="col-xs-6 col-md-6 form-group">
                                 <label for="property_id">Property</label>
                                 <select class="form-control" name="property_id">
+                                    <option value="">Select Property</option>
                                     @foreach ($properties as $property)
                                         <option value="{{ $property->id }}"> {{ $property->name }}</option>
                                     @endforeach
