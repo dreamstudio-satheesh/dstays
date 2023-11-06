@@ -7,50 +7,53 @@
             $('#addCategoryModal').modal({
                 show: false // Don't show it on page load
             });
-        });
 
-        document.getElementById('category_id').addEventListener('change', function() {
-            console.log("Dropdown changed");
-            if (this.value === 'add_new') {
-                // Show the modal when "+ Add New Category" is selected
-                $('#addCategoryModal').modal('show');
+            document.getElementById('category_id').addEventListener('change', function() {
+                console.log("Dropdown changed");
+                if (this.value === 'add_new') {
+                    // Show the modal when "+ Add New Category" is selected
+                    $('#addCategoryModal').modal('show');
 
-                // Reset the dropdown to its default value
-                this.value = '';
-            }
-        });
+                    // Reset the dropdown to its default value
+                    this.value = '';
+                }
+            });
 
-        document.getElementById('saveNewCategory').addEventListener('click', function() {
-            const newCategoryName = document.getElementById('newCategoryName').value;
 
-            if (newCategoryName) {
-                $.ajax({
-                    url: "{{ route('categories.store') }}",
-                    method: 'POST',
-                    data: {
-                        name: newCategoryName,
-                        _token: "{{ csrf_token() }}" // CSRF token for security
-                    },
-                    success: function(response) {
-                        if (response.message) {
-                            alert(response.message);
+            document.getElementById('saveNewCategory').addEventListener('click', function() {
+                const newCategoryName = document.getElementById('newCategoryName').value;
 
-                            // Optionally, you can also append the new category to the dropdown
-                            const newOption = new Option(response.category.name, response.category.id,
-                                true, true);
-                            $('#category_id').append(newOption).trigger('change');
+                if (newCategoryName) {
+                    $.ajax({
+                        url: "{{ route('categories.store') }}",
+                        method: 'POST',
+                        data: {
+                            name: newCategoryName,
+                            _token: "{{ csrf_token() }}" // CSRF token for security
+                        },
+                        success: function(response) {
+                            if (response.message) {
+                                alert(response.message);
 
-                            // Close the modal
-                            $('#addCategoryModal').modal('hide');
+                                // Optionally, you can also append the new category to the dropdown
+                                const newOption = new Option(response.category.name, response
+                                    .category.id,
+                                    true, true);
+                                $('#category_id').append(newOption).trigger('change');
+
+                                // Close the modal
+                                $('#addCategoryModal').modal('hide');
+                            }
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            alert('Error: ' + errorThrown);
                         }
-                    },
-                    error: function(jqXHR, textStatus, errorThrown) {
-                        alert('Error: ' + errorThrown);
-                    }
-                });
-            } else {
-                alert('Please enter a category name.');
-            }
+                    });
+                } else {
+                    alert('Please enter a category name.');
+                }
+            });
+
         });
     </script>
 @endpush
