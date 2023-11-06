@@ -115,10 +115,16 @@ class BookingController extends Controller
             'check_out' => 'required|date|after_or_equal:check_in',
             'customer_id' => 'required|integer|exists:customers,id',
             'property_id' => 'required|integer|exists:properties,id',
-            'number_of_people' => 'required|integer|min:1',
+            'number_of_adults' => 'required|integer|min:1',
+            'number_of_kids' => 'required|integer|min:1',
             'advance_type' => ['required','string'],
+            'booking_type' => ['required','string'],
+            'group_type' => ['required','string'],
             'advance_payment' => 'nullable|numeric|min:0',
-            'bill_package_amount' => 'required|numeric|min:0',
+            'gst' => 'required|numeric',
+            'total_tarrif' => 'required|numeric',
+            'tarrif_per_day' => 'required|numeric',
+            'remarks' => 'nullable|string|max:1000',
         ]);
 
         $booking = Booking::findOrFail($id);

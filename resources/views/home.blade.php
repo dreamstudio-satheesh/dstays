@@ -268,7 +268,7 @@
                                             <label class="form-label">Remarks</label>
                                            {{-- cteate text area remarks --}}
                                            <textarea class="form-control" name="remarks" id="remarks_text" cols="10" rows="3"></textarea>
-                                            <span id="gstError" class="text-danger error"></span>
+                                          
                                         </div>
 
 

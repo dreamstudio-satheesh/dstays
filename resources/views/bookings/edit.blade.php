@@ -65,6 +65,17 @@
 
 
                                 <div class="col-xs-6 col-md-6 form-group">
+                                    <label class="form-label">Group Type</label>
+                                    <select class="form-control" name="group_type" id="group_type">
+                                        <option value="Family">Family</option>
+                                        <option value="Friends">Friends</option>
+                                    </select>
+
+                                </div>
+
+
+
+                                <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">No Of Adults</label>
                                     <input type="number" name="number_of_adults" value="{{ $booking->number_of_adults }}"
                                         class="form-control" placeholder="No Of Adults">
@@ -79,10 +90,6 @@
                                     <span id="" class="text-danger error"></span>
 
                                 </div>
-
-
-
-
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Payment Mode</label>
@@ -100,8 +107,6 @@
 
                                 </div>
 
-                               
-
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Payment Amount</label>
@@ -109,9 +114,7 @@
                                         name="advance_payment" class="form-control" placeholder="Advance">
                                     <span id="advance_paymentError" class="text-danger error"></span>
                                 </div>
-
-
-                               
+                           
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Tarrif Per Day</label>
@@ -137,12 +140,9 @@
 
                                 <div class="col-xs-12 col-md-12 form-group">
                                     <label class="form-label">Remarks</label>
-                                   {{-- cteate text area remarks --}}
                                    <textarea class="form-control" name="remarks" id="remarks_text" cols="10" rows="3"> {{ $booking->remarks }}</textarea>
-                                    <span id="gstError" class="text-danger error"></span>
+                                    <span id="" class="text-danger error"></span>
                                 </div>
-
-
 
                             </div>
                             <div class="modal-footer">
