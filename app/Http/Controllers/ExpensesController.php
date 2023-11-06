@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Expense;
+use App\Models\Property;
 use Illuminate\Http\Request;
 use App\Models\ExpenseCategory;
 
@@ -21,7 +22,7 @@ class ExpensesController extends Controller
     public function create()
     {
         $categories=ExpenseCategory::all();
-        $properties =Propery::all();
+        $properties =Property::all();
         return view('expenses.create', compact('categories','properties));
     }
 
