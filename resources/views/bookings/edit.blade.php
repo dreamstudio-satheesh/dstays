@@ -153,15 +153,14 @@
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Food Description</label>
-                                    <input type="text" name="food_description" id="gst" class="form-control"
-                                        placeholder="description" value="{{ $booking->food_description }}">
-
+                                    <textarea class="form-control" name="remarks" id="food_description" cols="10" rows="3"> {{ $booking->food_description }}</textarea>
+                                  
                                 </div>
 
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Food Amount</label>
-                                    <input type="text" name="food_admount" id="gst" class="form-control"
+                                    <input type="text" name="food_admount" id="food_admount" class="form-control"
                                         placeholder="Amount" value="{{ $booking->food_admount }}">
 
                                 </div>
