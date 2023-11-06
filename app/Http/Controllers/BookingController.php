@@ -121,10 +121,12 @@ class BookingController extends Controller
             'booking_type' => ['required','string'],
             'group_type' => ['required','string'],
             'advance_payment' => 'nullable|numeric|min:0',
+            'food_amount' => 'nullable|numeric|min:0',
             'gst' => 'required|numeric',
             'total_tarrif' => 'required|numeric',
             'tarrif_per_day' => 'required|numeric',
             'remarks' => 'nullable|string|max:1000',
+            'food_description' => 'nullable|string|max:1000',
         ]);
 
         $booking = Booking::findOrFail($id);
