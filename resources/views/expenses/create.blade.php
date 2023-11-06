@@ -4,11 +4,13 @@
 @push('scripts')
     <script>
         console.log("Script is loaded");
-        
+
         $(document).ready(function() {
             $('#addCategoryModal').modal({
                 show: false // Don't show it on page load
             });
+
+            console.log(document.getElementById('category_id'));
 
             document.getElementById('category_id').addEventListener('change', function() {
                 console.log("Dropdown changed");
