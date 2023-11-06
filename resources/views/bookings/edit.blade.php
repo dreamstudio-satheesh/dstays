@@ -111,12 +111,7 @@
                                 </div>
 
 
-                                <div class="col-xs-6 col-md-6 form-group">
-                                    <label class="form-label">Rent / Package Amount</label>
-                                    <input type="text" name="bill_package_amount" value="{{ $booking->bill_package_amount }}" class="form-control"
-                                        placeholder="Rent Amount" >
-                                    <span id="bill_amountError" class="text-danger error"></span>
-                                </div>
+                               
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Tarrif Per Day</label>
