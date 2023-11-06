@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Expense;
 use Illuminate\Http\Request;
+use App\Models\ExpenseCategory;
 
 class ExpensesController extends Controller
 {
@@ -19,7 +20,8 @@ class ExpensesController extends Controller
 
     public function create()
     {
-        return view('expenses.create');
+        $categories=ExpenseCategory::all();
+        return view('expenses.create', compact('categories'));
     }
 
     public function store(Request $request)

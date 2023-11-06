@@ -27,10 +27,6 @@
                                 </div>
                             @endif
 
-                            @php
-                                $categories = \App\Moels\ExpenseCategory::all();
-                            @endphp
-
 
                             <div class="col-xs-6 col-md-6 form-group">
                                 <label for="category_id">Category</label>
