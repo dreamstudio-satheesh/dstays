@@ -93,12 +93,14 @@
                             <div class="col-xs-6 col-md-6 form-group">
                                 <label for="category_id">Category</label>
                                 <select class="form-control" name="category_id" id="category_id">
-                                    <option>Select Category</option>
+                                    <option disabled>Select Category</option>
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
+                                    <optgroup label="──────────"></optgroup>
                                     <option value="add_new">+ Add New Category</option>
                                 </select>
+                                
                             </div>
 
                             <!-- Modal -->
