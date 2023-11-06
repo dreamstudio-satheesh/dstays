@@ -67,11 +67,11 @@
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Group Type</label>
                                     <select class="form-control" name="group_type" id="group_type">
-                                        <option value="Family">Family</option>
-                                        <option value="Friends">Friends</option>
+                                        <option value="Family" {{ $booking->group_type == 'Family' ? 'selected' : '' }}>Family</option>
+                                        <option value="Friends" {{ $booking->group_type == 'Friends' ? 'selected' : '' }}>Friends</option>
                                     </select>
-
                                 </div>
+                                
 
 
 
