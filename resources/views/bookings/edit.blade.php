@@ -64,7 +64,7 @@
                                 </div>
 
 
-                               
+
 
 
 
@@ -87,11 +87,13 @@
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Group Type</label>
                                     <select class="form-control" name="group_type" id="group_type">
-                                        <option value="Family" {{ $booking->group_type == 'Family' ? 'selected' : '' }}>Family</option>
-                                        <option value="Friends" {{ $booking->group_type == 'Friends' ? 'selected' : '' }}>Friends</option>
+                                        <option value="Family" {{ $booking->group_type == 'Family' ? 'selected' : '' }}>
+                                            Family</option>
+                                        <option value="Friends" {{ $booking->group_type == 'Friends' ? 'selected' : '' }}>
+                                            Friends</option>
                                     </select>
                                 </div>
-                                
+
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Payment Mode</label>
@@ -116,40 +118,56 @@
                                         name="advance_payment" class="form-control" placeholder="Advance">
                                     <span id="advance_paymentError" class="text-danger error"></span>
                                 </div>
-                           
+
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Tarrif Per Day</label>
-                                    <input type="text" name="tarrif_per_day" id="tarrif_per_day"
-                                        class="form-control" value="{{ $booking->tarrif_per_day }}" placeholder="Amount">
+                                    <input type="text" name="tarrif_per_day" id="tarrif_per_day" class="form-control"
+                                        value="{{ $booking->tarrif_per_day }}" placeholder="Amount">
                                     <span id="tarrif_per_dayError" class="text-danger error"></span>
                                 </div>
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Total Tarrif</label>
-                                    <input type="text" name="total_tarrif" id="total_tarrif"
-                                        class="form-control"  value="{{ $booking->total_tarrif }}"   placeholder="Amount">
+                                    <input type="text" name="total_tarrif" id="total_tarrif" class="form-control"
+                                        value="{{ $booking->total_tarrif }}" placeholder="Amount">
                                     <span id="total_tarrifError" class="text-danger error"></span>
                                 </div>
 
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">GST</label>
-                                    <input type="text" name="gst" id="gst" value="0"
-                                        class="form-control" placeholder="Amount"  value="{{ $booking->gst }}" >
+                                    <input type="text" name="gst" id="gst" class="form-control"
+                                        placeholder="Amount" value="{{ $booking->gst }}">
                                     <span id="gstError" class="text-danger error"></span>
                                 </div>
+
+                                <div class="col-xs-6 col-md-6 form-group">
+                                    <label class="form-label">Food Description</label>
+                                    <input type="text" name="food_description" id="gst" class="form-control"
+                                        placeholder="description" value="{{ $booking->food_description }}">
+
+                                </div>
+
+
+                                <div class="col-xs-6 col-md-6 form-group">
+                                    <label class="form-label">Food Amount</label>
+                                    <input type="text" name="food_admount" id="gst" class="form-control"
+                                        placeholder="Amount" value="{{ $booking->food_admount }}">
+
+                                </div>
+
 
 
                                 <div class="col-xs-12 col-md-12 form-group">
                                     <label class="form-label">Remarks</label>
-                                   <textarea class="form-control" name="remarks" id="remarks_text" cols="10" rows="3"> {{ $booking->remarks }}</textarea>
+                                    <textarea class="form-control" name="remarks" id="remarks_text" cols="10" rows="3"> {{ $booking->remarks }}</textarea>
                                     <span id="" class="text-danger error"></span>
                                 </div>
 
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-primary" >Save
+                                <button type="submit" class="btn btn-primary">Save
                                     Booking</button>
                             </div>
                         </form>
