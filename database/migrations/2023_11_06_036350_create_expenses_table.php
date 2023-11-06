@@ -12,14 +12,20 @@ return new class extends Migration {
     {
         Schema::create('expenses', function (Blueprint $table) {
             $table->id(); // Primary key
-            $table->string('description'); // Description of the expense
+            $table->string('description')->nullable(); // Description of the expense
             $table->decimal('amount', 8, 2); // Amount of the expense with 8 digits in total and 2 after the decimal point
+            $table->unsignedBigInteger('category_id')->nullable(); // relation to an expense_categories table
             $table->date('expense_date'); // Date of the expense
             $table->unsignedBigInteger('user_id'); // relation to a users table
             $table->unsignedBigInteger('property_id')->nullable();
             $table->timestamps(); // created_at and updated_at timestamps
 
             // Foreign key constraint
+            $table
+                ->foreign('category_id')
+                ->references('id')
+                ->on('expense_categories')
+                ->onDelete('set null');
             $table
                 ->foreign('property_id')
                 ->references('id')
