@@ -98,40 +98,40 @@
                                     <input type="date" class="form-control" value="{{ date('Y-m-d') }}" name="date">
                                 </div>
 
-                           </div>
-
-                           
-                           <div class="col-xs-6 col-md-6 form-group">
-                            <label for="property_id">Property</label>
-                            <select class="form-control" name="property_id">
-                                <option value="">Select Property</option>
-                                @foreach ($properties as $property)
-                                    <option value="{{ $property->id }}"> {{ $property->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-
-                        <div class="col-xs-6 col-md-6 form-group">
-                            <label class="form-label">Amount</label>
-                            <input type="text" name="amount" id="amount" value="0"
-                                class="form-control" placeholder="Amount">
-                        </div>
+                            </div>
 
 
-                           
-                           <div class="col-xs-6 col-md-6 form-group">
-                            <label for="category_id">Category</label>
-                            <select class="form-control" name="category_id" id="category_id">
-                                <option value="">Select Category</option>
-                                @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                @endforeach
+                            <div class="col-xs-6 col-md-6 form-group">
+                                <label for="property_id">Property</label>
+                                <select class="form-control" name="property_id">
+                                    <option value="">Select Property</option>
+                                    @foreach ($properties as $property)
+                                        <option value="{{ $property->id }}"> {{ $property->name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+
+                            <div class="col-xs-6 col-md-6 form-group">
+                                <label for="category_id">Category</label>
+                                <select class="form-control" name="category_id" id="category_id">
+                                    <option value="">Select Category</option>
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
 
 
-                                <option value="add_new">+ Add New Category</option>
-                            </select>
+                                    <option value="add_new">+ Add New Category</option>
+                                </select>
 
-                        </div>
+                            </div>
+
+
+                            <div class="col-xs-6 col-md-6 form-group">
+                                <label class="form-label">Amount</label>
+                                <input type="text" name="amount" id="amount" value="0" class="form-control"
+                                    placeholder="Amount">
+                            </div>
+
 
 
 
