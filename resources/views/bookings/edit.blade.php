@@ -96,6 +96,16 @@
 
 
                                 <div class="col-xs-6 col-md-6 form-group">
+                                    <label class="form-label">Booking Type</label>
+                                    <select class="form-control" name="booking_type" id="booking_type">
+                                        <option value="Rent" {{ $booking->booking_type == 'Rent' ? 'selected' : '' }}>Rent</option>
+                                        <option value="Package" {{ $booking->booking_type == 'Package' ? 'selected' : '' }}>Package</option>
+                                    </select>
+                                </div>
+                                
+
+
+                                <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Payment Mode</label>
                                     <select class="form-control" name="advance_type" id="advance_type">
                                         <option value="Full Payment"
