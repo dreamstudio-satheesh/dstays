@@ -132,6 +132,12 @@
                                     placeholder="Amount">
                             </div>
 
+                            <div class="col-xs-12 col-md-12 form-group">
+                                <label class="form-label">Description</label>
+                               <textarea class="form-control" name="description" id="remarks_text" cols="10" rows="3"></textarea>
+                              
+                            </div>
+
 
 
 
