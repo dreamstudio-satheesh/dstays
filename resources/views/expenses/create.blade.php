@@ -6,7 +6,7 @@
 
         </div>
         <div class="row">
-            <div class="col-8">
+            <div class="col-8 col-sm-12">
                 <div class="card card-default">
                     <div class="card-header card-header-border-bottom d-flex justify-content-between">
                         <h2>Add Explenses</h2>
@@ -27,13 +27,28 @@
                                 </div>
                             @endif
 
+                            @php
+                                $categories = \App\ExpenseCategory::all();
+                            @endphp
+
+
+                            <div class="col-xs-6 col-md-6 form-group">
+                                <label for="category_id">Category</label>
+                                <select class="form-control" name="category_id" id="category_id">
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                    @endforeach
+                                    <option value="add_new">+ Add New Category</option>
+                                </select>
+                            </div>
+
 
                             <div class="row">
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label for="start_date"> Date</label>
                                     <input type="date" class="form-control" value="{{ date('Y-m-d') }}" name="date">
                                 </div>
-                                
+
 
 
                             </div>
