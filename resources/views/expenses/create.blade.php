@@ -97,7 +97,8 @@
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
-                                    <optgroup label="──────────"></optgroup>
+                                   
+                                    
                                     <option value="add_new">+ Add New Category</option>
                                 </select>
                                 
