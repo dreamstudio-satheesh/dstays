@@ -167,7 +167,7 @@
 
 
 
-                                <div class="col-xs-12 col-md-12 form-group">
+                                <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Remarks</label>
                                     <textarea class="form-control" name="remarks" id="remarks_text" cols="10" rows="3"> {{ $booking->remarks }}</textarea>
                                     <span id="" class="text-danger error"></span>
