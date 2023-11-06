@@ -134,6 +134,15 @@
                             </a>
                         </li>
 
+
+                        <li>
+                            <a class="sidenav-item-link" href="{{ url('expenses/create') }}">
+                                <i class="mdi mdi-script-text-outline"></i>
+                                <span class="nav-text">Add Expenses</span>
+
+                            </a>
+                        </li>
+
                         <li>
                             <a class="sidenav-item-link" href="{{ url('properties') }}">
                                 <i class="mdi mdi-file-document-box-multiple"></i>
