@@ -68,7 +68,7 @@
 
         </div>
         <div class="row">
-            <div class="col-8  col-md-8 col-sm-12">
+            <div class="col-6  col-md-6 col-sm-10">
                 <div class="card card-default">
                     <div class="card-header card-header-border-bottom d-flex justify-content-between">
                         <h2>Add Explenses</h2>
