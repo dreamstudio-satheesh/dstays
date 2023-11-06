@@ -13,7 +13,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="{{ route('expenses') }}" method="POST">
+                        <form action="{{ route('expenses.store') }}" method="POST">
                             @csrf
                             @if ($errors->any())
                                 <div class="mb-3">
