@@ -95,7 +95,8 @@
                             <div class="row">
                                 <div class="col-xs-12 col-md-10 form-group">
                                     <label for="start_date"> Date</label>
-                                    <input type="date" class="form-control" value="{{ date('Y-m-d') }}" name="date">
+                                    <input type="date" class="form-control" value="{{ date('Y-m-d') }}" name="date"
+                                        required>
                                 </div>
 
                             </div>
@@ -103,7 +104,7 @@
 
                             <div class="col-xs-12 col-md-10 form-group">
                                 <label for="property_id">Property</label>
-                                <select class="form-control" name="property_id">
+                                <select class="form-control" name="property_id" required>
                                     <option value="">Select Property</option>
                                     @foreach ($properties as $property)
                                         <option value="{{ $property->id }}"> {{ $property->name }}</option>
@@ -111,11 +112,11 @@
                                 </select>
                             </div>
 
-                          
+
 
                             <div class="col-xs-12 col-md-10 form-group">
                                 <label for="category_id">Category</label>
-                                <select class="form-control" name="category_id" id="category_id">
+                                <select class="form-control" name="category_id" id="category_id" required>
                                     <option value="">Select Category</option>
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
@@ -130,30 +131,30 @@
 
                             <div class="col-xs-12 col-md-10 form-group">
                                 <label class="form-label">Amount</label>
-                                <input type="text" name="amount" id="amount" value="0" class="form-control"
-                                    placeholder="Amount">
+                                <input type="number" name="amount" id="amount" value="0" class="form-control"
+                                    required placeholder="Amount">
                             </div>
 
-                              
+
                             <div class="col-xs-12 col-md-12 form-group">
                                 <label class="form-label">Upload Bill</label>
                                 <input type="file" name="bill_image">
-                              
+
                             </div>
 
                             <div class="col-xs-12 col-md-12 form-group">
                                 <label class="form-label">Description</label>
-                               <textarea class="form-control" name="description" id="remarks_text" cols="10" rows="3"></textarea>
-                              
+                                <textarea class="form-control" name="description" id="remarks_text" cols="10" rows="3"></textarea>
+
                             </div>
 
-                            
+
 
 
 
 
                             <div class="modal-footer">
-                               
+
                                 <button type="submit" class="btn btn-primary">Add
                                     Expense</button>
                             </div>
