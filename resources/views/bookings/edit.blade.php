@@ -150,14 +150,7 @@
                                         placeholder="Amount" value="{{ $booking->gst }}">
                                     <span id="gstError" class="text-danger error"></span>
                                 </div>
-
-                                <div class="col-xs-6 col-md-6 form-group">
-                                    <label class="form-label">Food Description</label>
-                                    <textarea class="form-control" name="remarks" id="food_description" cols="10" rows="3"> {{ $booking->food_description }}</textarea>
-                                  
-                                </div>
-
-
+                                
                                 <div class="col-xs-6 col-md-6 form-group">
                                     <label class="form-label">Food Amount</label>
                                     <input type="text" name="food_admount" id="food_admount" class="form-control"
@@ -165,6 +158,12 @@
 
                                 </div>
 
+
+                                <div class="col-xs-6 col-md-6 form-group">
+                                    <label class="form-label">Food Description</label>
+                                    <textarea class="form-control" name="remarks" id="food_description" cols="10" rows="3"> {{ $booking->food_description }}</textarea>
+                                  
+                                </div>
 
 
                                 <div class="col-xs-6 col-md-6 form-group">
