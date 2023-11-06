@@ -12,13 +12,17 @@
 
             console.log(document.getElementById('category_id'));
 
-            $('#category_id').on('change', function() {
-                console.log("Dropdown changed via jQuery");
-                if ($(this).val() === 'add_new') {
+            document.getElementById('category_id').addEventListener('change', function() {
+                console.log("Dropdown changed");
+                if (this.value === 'add_new') {
+                    // Show the modal when "+ Add New Category" is selected
                     $('#addCategoryModal').modal('show');
-                    $(this).val(''); // Reset the dropdown to its default value
+
+                    // Reset the dropdown to its default value
+                    this.value = '';
                 }
             });
+
 
             document.getElementById('saveNewCategory').addEventListener('click', function() {
                 const newCategoryName = document.getElementById('newCategoryName').value;
@@ -92,6 +96,8 @@
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
+
+                                    <option value="hello">+ hello  Category</option>
                                     <option value="add_new">+ Add New Category</option>
                                 </select>
                             </div>
