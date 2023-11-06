@@ -111,12 +111,7 @@
                                 </select>
                             </div>
 
-                            
-                            <div class="col-xs-12 col-md-12 form-group">
-                                <label class="form-label">Upload Bill</label>
-                                <input type="file" name="bill_image">
-                              
-                            </div>
+                          
 
                             <div class="col-xs-12 col-md-10 form-group">
                                 <label for="category_id">Category</label>
@@ -137,6 +132,13 @@
                                 <label class="form-label">Amount</label>
                                 <input type="text" name="amount" id="amount" value="0" class="form-control"
                                     placeholder="Amount">
+                            </div>
+
+                              
+                            <div class="col-xs-12 col-md-12 form-group">
+                                <label class="form-label">Upload Bill</label>
+                                <input type="file" name="bill_image">
+                              
                             </div>
 
                             <div class="col-xs-12 col-md-12 form-group">
