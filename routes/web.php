@@ -52,10 +52,6 @@ Route::get('/properties/create', [PropertyController::class, 'create'])->name('p
 Route::post('/properties', [PropertyController::class, 'store'])->name('properties.store');
 Route::delete('/properties/{id}', [PropertyController::class, 'destroy'])->name('properties.destroy');
 
-Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
-Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
-Route::post('/categories', [CategoryController::class, 'store'])->name('categories.store');
-Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->name('categories.destroy');
 
 Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');
 Route::get('/get-bookings', [BookingController::class, 'getBookings']);
