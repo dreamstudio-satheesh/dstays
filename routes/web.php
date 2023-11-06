@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ExpensesController;
 use App\Http\Controllers\PropertyController;
 
 /*
@@ -66,5 +67,7 @@ Route::delete('/bookings/{id}', [BookingController::class, 'destroy'])->name('bo
 Route::post('/store-booking', [BookingController::class, 'storeBooking']);
 
 Route::get('/voucher/{id}', [HomeController::class, 'voucher'])->name('voucher');
+
+Route::get('/expenses/create', [ExpensesController::class, 'create'])->name('expenses.create');
 
 
