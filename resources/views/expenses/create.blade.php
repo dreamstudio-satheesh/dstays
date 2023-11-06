@@ -12,17 +12,13 @@
 
             console.log(document.getElementById('category_id'));
 
-            document.getElementById('category_id').addEventListener('change', function() {
-                console.log("Dropdown changed");
-                if (this.value === 'add_new') {
-                    // Show the modal when "+ Add New Category" is selected
+            $('#category_id').on('change', function() {
+                console.log("Dropdown changed via jQuery");
+                if ($(this).val() === 'add_new') {
                     $('#addCategoryModal').modal('show');
-
-                    // Reset the dropdown to its default value
-                    this.value = '';
+                    $(this).val(''); // Reset the dropdown to its default value
                 }
             });
-
 
             document.getElementById('saveNewCategory').addEventListener('click', function() {
                 const newCategoryName = document.getElementById('newCategoryName').value;
