@@ -75,7 +75,7 @@
                     </div>
 
                     <div class="card-body">
-                        <form action="{{ route('expenses.store') }}" method="POST">
+                        <form action="{{ route('expenses.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @if ($errors->any())
                                 <div class="mb-3">
@@ -111,6 +111,13 @@
                                 </select>
                             </div>
 
+                            
+                            <div class="col-xs-12 col-md-12 form-group">
+                                <label class="form-label">Upload Bill</label>
+                                <input type="file" name="bill_image">
+                              
+                            </div>
+
                             <div class="col-xs-12 col-md-10 form-group">
                                 <label for="category_id">Category</label>
                                 <select class="form-control" name="category_id" id="category_id">
@@ -137,6 +144,8 @@
                                <textarea class="form-control" name="description" id="remarks_text" cols="10" rows="3"></textarea>
                               
                             </div>
+
+                            
 
 
 

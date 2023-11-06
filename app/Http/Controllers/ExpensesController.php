@@ -21,9 +21,9 @@ class ExpensesController extends Controller
 
     public function create()
     {
-        $categories=ExpenseCategory::all();
-        $properties =Property::all();
-        return view('expenses.create', compact('categories','properties'));
+        $categories = ExpenseCategory::all();
+        $properties = Property::all();
+        return view('expenses.create', compact('categories', 'properties'));
     }
 
     public function store(Request $request)
@@ -35,9 +35,9 @@ class ExpensesController extends Controller
             'amount' => 'required|numeric|min:0',
             'property_id' => 'required|exists:properties,id', // Ensure the property_id exists in the properties table
             'category_id' => 'nullable|exists:expense_categories,id', // Ensure the category_id exists in the expense_categories table
+            'bill_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate the uploaded image
         ]);
 
-       
         // Create a new expense
         $expense = new Expense();
         $expense->date = $validatedData['date'];
@@ -47,6 +47,11 @@ class ExpensesController extends Controller
         $expense->property_id = $validatedData['property_id'];
         $expense->category_id = $validatedData['category_id'];
         $expense->save();
+
+        // Associate the uploaded bill image with the expense
+        if ($request->hasFile('bill_image')) {
+            $expense->addMediaFromRequest('bill_image')->toMediaCollection('bills');
+        }
 
         return redirect()
             ->route('expenses.index')
