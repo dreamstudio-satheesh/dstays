@@ -30,12 +30,12 @@
 
                             <div class="row">
                                 <div class="col-xs-6 col-md-6 form-group">
-                                    <label for="start_date">Check-In Date</label>
-                                    <input type="date" class="form-control" value="{{ $booking->check_in }}"
-                                        name="check_in">
+                                    <label for="start_date"> Date</label>
+                                    <input type="date" class="form-control" value="{{ date('Y-m-d') }}" name="date">
                                 </div>
+                                
 
-                   
+
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
