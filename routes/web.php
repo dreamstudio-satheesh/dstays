@@ -66,9 +66,6 @@ Route::post('/store-booking', [BookingController::class, 'storeBooking']);
 Route::get('/voucher/{id}', [HomeController::class, 'voucher'])->name('voucher');
 
 Route::get('/expenses/create', [ExpensesController::class, 'create'])->name('expenses.create');
-Route::post('/expenses', [ExpensesController::class, 'store'])->name('expenses.store');
-
-Route::post('/categories', 'ExpenseCategoryController@store')->name('categories.store');
-
+Route::post('/expenses', [ExpensesController::class, 'store'])->name('categories.store');
 
 
