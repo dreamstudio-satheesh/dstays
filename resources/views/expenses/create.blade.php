@@ -97,36 +97,22 @@
                                     @foreach ($categories as $category)
                                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                                     @endforeach
-                                   
-                                    
+
+
                                     <option value="add_new">+ Add New Category</option>
                                 </select>
-                                
+
                             </div>
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog"
-                                aria-labelledby="addCategoryModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="addCategoryModalLabel">Add New Category</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <input type="text" class="form-control" id="newCategoryName"
-                                                placeholder="Enter new category name">
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary"
-                                                id="saveNewCategory">Save</button>
-                                        </div>
-                                    </div>
-                                </div>
+
+
+                            <div class="col-xs-6 col-md-6 form-group">
+                                <label for="property_id">Property</label>
+                                <select class="form-control" name="property_id">
+                                    @foreach ($properties as $property)
+                                        <option value="{{ $property->id }}"> {{ $property->name }}</option>
+                                    @endforeach
+                                </select>
                             </div>
 
 
@@ -147,6 +133,33 @@
                                     Expense</button>
                             </div>
                         </form>
+
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="addCategoryModal" tabindex="-1" role="dialog"
+                            aria-labelledby="addCategoryModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="addCategoryModalLabel">Add New Category</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <input type="text" class="form-control" id="newCategoryName"
+                                            placeholder="Enter new category name">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" id="saveNewCategory">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
 
                     </div>
                 </div>
