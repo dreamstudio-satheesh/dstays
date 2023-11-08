@@ -95,7 +95,7 @@
                             <div class="row">
                                 <div class="col-xs-12 col-md-10 form-group">
                                     <label for="start_date"> Date</label>
-                                    <input type="expense_date" class="form-control" value="{{ date('Y-m-d') }}" name="date"
+                                    <input type="date" class="form-control" value="{{ date('Y-m-d') }}" name="expense_date"
                                         required>
                                 </div>
 
