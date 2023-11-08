@@ -29,7 +29,10 @@ return new class extends Migration
             $table->string('booking_status')->defalut('confirmed');
             $table->text('remarks')->nullable(); 
             $table->timestamps();
+            
         });
+
+        DB::statement("ALTER TABLE bookings AUTO_INCREMENT = 1001;");
     }
 
     /**
