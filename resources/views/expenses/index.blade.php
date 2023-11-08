@@ -17,46 +17,22 @@
                             <thead>
                                 <tr>
                                     <th scope="col">ID</th>
-                                    <th scope="col">Customer Name</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Amount</th>
                                     <th scope="col">Property</th>
-                                    <th scope="col">Booking Date</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col">Category</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($bookings as $book)
+                                @foreach ($expenses as $expense)
                                     <tr>
-                                        <th scope="row"><a href="#" class="fw-semibold">#{{ $book->id }}</a>
+                                        <th scope="row"><a href="#" class="fw-semibold">#{{ $expense->id }}</a>
                                         </th>
-                                        <td>{{ $book->customer->name }}</td>
-                                        <td>{{ $book->property->name }}</td>
-                                        <td>{{ date('d M', strtotime($book->check_in)) }} - {{ date('d M', strtotime($book->check_out)) }}</td>
-                                        <td>
-
-                                            <div class="d-flex gap-2">
-
-                                                <a target="blank" href="https://wa.me/send?phone=91{{$book->customer->mobile_number}}&text=%0D%0AYour+Resort+Booking+Completed+%21+Thanks%0D%0Ahttp%3A%2F%2Fdstays.dreampos.in%2Fvoucher%2F{{ $book->id }}" ><i class="fa fa-whatsapp" style="font-size:24px; color:#43ab43;"></i></a>
-                                               
-                                                &nbsp;  &nbsp;  &nbsp;
-
-                                                <a target="blank" href="{{ route('voucher', $book->id) }}"
-                                                    class="btn btn-sm btn-primary edit-item-btn">Voucher</a>
-                                                &nbsp;  &nbsp;  &nbsp;
-                                                <!-- Edit Button -->
-                                                <a href="{{ route('bookings.edit', $book->id) }}"
-                                                    class="btn btn-sm btn-primary edit-item-btn">Edit</a>
-                                                &nbsp;  &nbsp;  &nbsp;
-                                                <div class="remove">
-                                                    <form action="{{ route('bookings.destroy', $book->id) }}"
-                                                        method="POST">
-                                                        @csrf
-                                                        @method('DELETE')
-                                                        <button type="submit"
-                                                            class="btn btn-sm btn-primary remove-item-btn">Remove</button>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </td>
+                                        <td>{{ date('d M y', strtotime($expense->expense_date)) }}</td>
+                                        <td>{{ $expense->amount }}</td>
+                                        <td>{{ $expense->property->name }}</td>
+                                        <td>{{ $expense->category->name }}</td>
+                                       
 
                                     </tr>
                                 @endforeach

@@ -12,4 +12,14 @@ class Expense extends Model implements HasMedia
     use HasFactory, InteractsWithMedia;
 
     protected  $guarded = [];
+
+    public function property()
+    {
+        return $this->belongsTo(Property::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(ExpenseCategory::class);
+    }
 }

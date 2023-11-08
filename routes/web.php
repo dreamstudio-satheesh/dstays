@@ -67,6 +67,7 @@ Route::get('/voucher/{id}', [HomeController::class, 'voucher'])->name('voucher')
 
 Route::get('/expenses/create', [ExpensesController::class, 'create'])->name('expenses.create');
 Route::post('/expenses', [ExpensesController::class, 'store'])->name('expenses.store');
+Route::get('/expenses', [ExpensesController::class, 'index'])->name('expenses.index');
 
 Route::post('/categories', [ExpenseCategoryController::class,'store'])->name('categories.store');
 
