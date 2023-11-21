@@ -16,7 +16,7 @@
                         <select class="form-control" onchange="if (this.value) window.location=this.value">
                             <option value="">Select</option>
                             @foreach ($properties as $property)
-                                <option value="{{ url('home') }}/{{ $property->id }}"
+                                <option value="{{ url('bookings') }}/{{ $property->id }}"
                                     {{ $property->id == $id ? 'selected' : '' }}>{{ $property->name }}</option>
                             @endforeach
                         </select>
