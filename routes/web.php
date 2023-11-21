@@ -55,6 +55,7 @@ Route::delete('/properties/{id}', [PropertyController::class, 'destroy'])->name(
 
 
 Route::get('/bookings', [BookingController::class, 'index'])->name('bookings.index');
+Route::get('/bookings/{id}', [BookingController::class, 'index'])->name('bookings.id');
 Route::get('/get-bookings', [BookingController::class, 'getBookings']);
 Route::get('/get-bookings/{id}', [BookingController::class, 'getBookings']);
 Route::get('/bookings/{id}/edit', [BookingController::class, 'edit'])->name('bookings.edit');
