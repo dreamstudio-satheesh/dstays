@@ -27,7 +27,7 @@
             </div>
             <div class="title">
                 <h4 class="text-30 mb-0 mt-0">Booking Confirmation</h4>
-                <h5>{{ $booking->property->name }}</h5>
+                <h5 class="text-20 mb-0 mt-0">{{ $booking->property->name }}</h5>
             </div>
         </div>
         <!-- invoice Description -->
