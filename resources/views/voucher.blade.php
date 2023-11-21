@@ -148,7 +148,7 @@
                             </tr>
                             <tr>
                                 <td>Advance paid to online date  {{ \Carbon\Carbon::parse($booking->created_at)->format('d-m-Y') }} </td>
-                                <td>{{ $booking->advance_payment }}</td>
+                                <td>{{ number_format($booking->advance_payment,2) }}</td>
                             </tr>
                             <tr>
                                 <td>Balance To Be Paid</td>
