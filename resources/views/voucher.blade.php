@@ -144,7 +144,7 @@
                         <tbody>
                             <tr>
                                 <td>Toatal Payable :</td>
-                                <td>{{ $booking->total_tarrif + $booking->gst }}</td>
+                                <td>{{ number_format($booking->total_tarrif + $booking->gst,2) }}</td>
                             </tr>
                             <tr>
                                 <td>Advance paid to online date  {{ \Carbon\Carbon::parse($booking->created_at)->format('d-m-Y') }} </td>
@@ -152,7 +152,7 @@
                             </tr>
                             <tr>
                                 <td>Balance To Be Paid</td>
-                                <td>{{ ($booking->total_tarrif + $booking->gst ) -$booking->advance_payment }} &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;</td>
+                                <td>{{ number_format(($booking->total_tarrif + $booking->gst ) -$booking->advance_payment,2) }} &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp;</td>
                             </tr>
                         </tbody>
                          
