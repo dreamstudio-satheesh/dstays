@@ -15,10 +15,11 @@ class BookingController extends Controller
         $this->middleware('auth');
     }
    
-    public function index()
+    public function index($id=null)
     {
         $bookings = Booking::all();
-        return view('bookings.index', compact('bookings'));
+        $properties = Property::all();
+        return view('bookings.index', compact('bookings','properties','id'));
     }
 
     public function getBookings($id)

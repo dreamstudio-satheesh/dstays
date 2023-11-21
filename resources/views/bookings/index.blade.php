@@ -12,6 +12,16 @@
                         <h2>Bookings</h2>
                     </div>
 
+                    <div class="card-header justify-content-between card-header-border-bottom">
+                        <select class="form-control" onchange="if (this.value) window.location=this.value">
+                            <option value="">Select</option>
+                            @foreach ($properties as $property)
+                                <option value="{{ url('home') }}/{{ $property->id }}"
+                                    {{ $property->id == $id ? 'selected' : '' }}>{{ $property->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+
                     <div class="card-body">
                         <table id="basic-data-table" class="table nowrap" style="width:100%">
                             <thead>
