@@ -17,7 +17,12 @@ class BookingController extends Controller
    
     public function index($id=null)
     {
+       if ($id) {
+        $bookings = Booking::where('id',$id)->get();
+       }
+       else {
         $bookings = Booking::all();
+       }
         $properties = Property::all();
         return view('bookings.index', compact('bookings','properties','id'));
     }
