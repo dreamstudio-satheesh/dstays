@@ -121,7 +121,7 @@
                         <li>
                             <a class="sidenav-item-link" href="{{ url('bookings') }}">
                                 <i class="mdi mdi-newspaper"></i>
-                                <span class="nav-text">Bookings2</span>
+                                <span class="nav-text">Bookings</span>
 
                             </a>
                         </li>
