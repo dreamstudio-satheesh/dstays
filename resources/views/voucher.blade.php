@@ -121,8 +121,8 @@
                     <table class="table table-striped table-bordered table-hover">
                         <thead>
                             <tr>
-                                <th>Tarrif Per Day</th>
-                                <th>Total Tarrif</th>
+                                <th>Tariff Per Day</th>
+                                <th>Total Tariff</th>
                                 <th>GST</th>
                             </tr>
                         </thead>
@@ -145,7 +145,7 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Toatal Payable :</td>
+                                <td>Total Payable :</td>
                                 <td>{{ number_format($booking->total_tarrif + $booking->gst,2) }}</td>
                             </tr>
                             <tr>
