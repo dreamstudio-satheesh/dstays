@@ -52,7 +52,7 @@ class BookingController extends Controller
             'customer_id' => 'required|integer|exists:customers,id',
             'property_id' => 'required|integer|exists:properties,id',
             'number_of_adults' => 'required|integer|min:1',
-            'number_of_kids' => 'required|integer|min:1',
+            'number_of_kids' => 'nullable|integer|min:0',
             'advance_type' => ['required','string'],
             'booking_type' => ['required','string'],
             'group_type' => ['required','string'],
