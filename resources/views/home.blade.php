@@ -208,7 +208,7 @@
                                         <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">No of Kids</label>
                                             <input type="number" name="number_of_kids" id="number_of_kids"
-                                                class="form-control" placeholder="No Of Kids">
+                                                class="form-control" placeholder="No Of Kids" value="0">
                                             <span id="number_of_kidsError" class="text-danger error"></span>
 
                                         </div>
