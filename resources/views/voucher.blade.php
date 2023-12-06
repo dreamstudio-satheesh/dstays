@@ -35,66 +35,66 @@
             <div class="row">
                 <div class="col-md-2 col-sm-4">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-20 text-capitalize font-600"> Booking Id :</h5>
+                        <h5 class="text-16 text-capitalize font-600"> Booking Id :</h5>
                         <p class="mb-10">#{{ str_pad($booking->id, 4, '0', STR_PAD_LEFT) }}</p>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-20 text-capitalize font-600"> Type:</h5>
+                        <h5 class="text-16 text-capitalize font-600"> Type:</h5>
                         <p class="mb-10">{{ $booking->booking_type }}</p>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-20 text-capitalize font-600"> Check In :</h5>
+                        <h5 class="text-16 text-capitalize font-600"> Check In :</h5>
                         <p class="mb-10">{{ \Carbon\Carbon::parse($booking->check_in)->format('d-M-y') }} <br>
                             {{ \Carbon\Carbon::parse($booking->check_in)->format('l') }}</p>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-20 text-capitalize font-600"> Check out :</h5>
+                        <h5 class="text-16 text-capitalize font-600"> Check out :</h5>
                         <p class="mb-10">{{ \Carbon\Carbon::parse($booking->check_out)->format('d-M-y') }} <br>
                             {{ \Carbon\Carbon::parse($booking->check_out)->format('l') }}</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-4">
+                <div class="col-md-3 col-sm-4">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-20 text-capitalize font-600">{{ $booking->property->name }}</h5>
+                        <h5 class="text-16 text-capitalize font-600">{{ $booking->property->name }}</h5>
                         <p class="mb-10">{{ $booking->property->address }}</p>
                     </div>
                 </div>
 
                 <div class="col-md-2 col-sm-4">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-20 text-capitalize font-600"> Uint:</h5>
+                        <h5 class="text-16 text-capitalize font-600"> Uint:</h5>
                         <p class="mb-10">Entire Villa </p>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-20 text-capitalize font-600"> Group Type:</h5>
+                        <h5 class="text-16 text-capitalize font-600"> Group Type:</h5>
                         <p class="mb-10">{{ $booking->group_type }}</p>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-4">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-20 text-capitalize font-600"> No of Adults:</h5>
+                        <h5 class="text-16 text-capitalize font-600"> No of Adults:</h5>
                         <p class="mb-10">{{ str_pad($booking->number_of_adults, 2, '0', STR_PAD_LEFT) }}</p>
                     </div>
                 </div>
 
                 <div class="col-md-2 col-sm-4">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-20 text-capitalize font-600"> No of Kids:</h5>
+                        <h5 class="text-16 text-capitalize font-600"> No of Kids:</h5>
                         <p class="mb-10">{{ str_pad($booking->number_of_kids, 2, '0', STR_PAD_LEFT) }}</p>
                     </div>
                 </div>
               
                 <div class="col-md-2 col-sm-4">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-20 text-capitalize font-600">  Status :</h5>
+                        <h5 class="text-16 text-capitalize font-600">  Status :</h5>
                         <p class="mb-10">Confirmed</p>
                     </div>
                 </div>
