@@ -267,7 +267,7 @@
                                         <div class="col-xs-12 col-md-12 form-group">
                                             <label class="form-label">Property Unit:</label>
                                            {{-- cteate text area remarks --}}
-                                           <input type="text" name="remarks" id="remarks_text" value="18"
+                                           <input type="text" name="remarks" id="remarks_text" value=""
                                                 class="form-control" placeholder="Unit">
                                           
                                           
