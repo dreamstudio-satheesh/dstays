@@ -59,7 +59,7 @@
                             {{ \Carbon\Carbon::parse($booking->check_out)->format('l') }}</p>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-4">
+                <div class="col-md-4 col-sm-4">
                     <div class="invoice-details mb-20">
                         <h5 class="text-20 text-capitalize font-600">{{ $booking->property->name }}</h5>
                         <p class="mb-10">{{ $booking->property->address }}</p>
