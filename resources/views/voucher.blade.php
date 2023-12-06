@@ -66,12 +66,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-2 col-sm-4">
-                    <div class="invoice-details mb-20">
-                        <h5 class="text-16 text-capitalize font-600"> Uint:</h5>
-                        <p class="mb-10">Entire Villa </p>
-                    </div>
-                </div>
+               
                 <div class="col-md-2 col-sm-4">
                     <div class="invoice-details mb-20">
                         <h5 class="text-16 text-capitalize font-600"> Group Type:</h5>
@@ -98,6 +93,14 @@
                         <p class="mb-10">Confirmed</p>
                     </div>
                 </div>
+
+                <div class="col-md-3 col-sm-4">
+                    <div class="invoice-details mb-20">
+                        <h5 class="text-16 text-capitalize font-600"> Uint:</h5>
+                        <p class="mb-10">Entire Villa </p>
+                    </div>
+                </div>
+
             </div>
         </div>
         <!-- invoice descriptions -->
