@@ -61,8 +61,8 @@
                 </div>
                 <div class="col-md-3 col-sm-4">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-16 text-capitalize font-600">{{ $booking->property->name }}</h5>
-                        <p class="mb-10">{{ $booking->property->address }}</p>
+                        <h5 class="text-16 text-capitalize font-600">Property Name:</h5>
+                        <p class="mb-10">{{ $booking->property->name }} <br> {{ $booking->property->address }}</p>
                     </div>
                 </div>
 
@@ -96,7 +96,7 @@
 
                 <div class="col-md-3 col-sm-4">
                     <div class="invoice-details mb-20">
-                        <h5 class="text-16 text-capitalize font-600"> Uint:</h5>
+                        <h5 class="text-16 text-capitalize font-600"> Unit:</h5>
                         <p class="mb-10">Entire Villa </p>
                     </div>
                 </div>
