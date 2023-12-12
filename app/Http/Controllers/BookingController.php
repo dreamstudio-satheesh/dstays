@@ -132,6 +132,7 @@ class BookingController extends Controller
             'advance_type' => ['required','string'],
             'booking_type' => ['required','string'],
             'group_type' => ['required','string'],
+            'unit_type' => ['nullable','string'],
             'advance_payment' => 'nullable|numeric|min:0',
             'food_amount' => 'nullable|numeric|min:0',
             'gst' => 'required|numeric',

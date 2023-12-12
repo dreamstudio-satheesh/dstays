@@ -53,6 +53,7 @@
             let numberOfAdults = $('#number_of_adults').val();
             let numberOfKids = $('#number_of_kids').val();
             let bookingType = $('#booking_type').val();
+            let unitType = $('#unit_type').val();
             let groupType = $('#group_type').val();
             let advanceType = $('#advance_type').val();
             let advancePayment = $('#advance_payment').val();
@@ -75,6 +76,7 @@
                     number_of_kids: numberOfKids,
                     advance_type: advanceType,
                     booking_type: bookingType,
+                    unit_type: unitType,
                     group_type: groupType,
                     advance_payment: advancePayment,
                     total_tarrif: totalTarrif,
@@ -263,12 +265,21 @@
                                             <span id="gstError" class="text-danger error"></span>
                                         </div>
 
-
-                                        <div class="col-xs-12 col-md-12 form-group">
+                                      <div class="col-xs-6 col-md-6 form-group">
                                             <label class="form-label">Property Unit:</label>
                                            {{-- cteate text area remarks --}}
-                                           <input type="text" name="remarks" id="remarks_text" value="Enitre Villa"
+                                           <input type="text" name="unit_type" id="unit_type" value="Enitre Villa"
                                                 class="form-control" placeholder="Unit">
+                                          
+                                          
+                                        </div>
+
+
+                                      <div class="col-xs-6 col-md-6 form-group">
+                                            <label class="form-label">Remarks:</label>
+                                           {{-- cteate text area remarks --}}
+                                           <input type="text" name="remarks" id="remarks_text" value="Enitre Villa"
+                                                class="form-control" placeholder="Remarks">
                                           
                                           
                                         </div>

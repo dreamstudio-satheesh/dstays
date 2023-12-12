@@ -21,6 +21,7 @@ return new class extends Migration
             $table->decimal('total_tarrif', 10, 2)->nullable(); 
             $table->string('advance_type')->nullable();
             $table->string('group_type')->nullable();
+            table->string('unit_type')->nullable();
             $table->decimal('advance_payment', 10, 2)->nullable();
             $table->integer('number_of_adults')->nullable();
             $table->integer('number_of_kids')->nullable();
